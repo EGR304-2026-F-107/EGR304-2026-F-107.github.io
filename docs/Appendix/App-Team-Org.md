@@ -96,6 +96,6 @@ The best way to resolve conflict is to have a group conversation on the conflict
 
 ## Signatures
 
-Canyon Miller
-DunyueYang
-Yixiang Ren
+Canyon Miller<br>
+DunyueYang<br>
+Yixiang Ren<br>
