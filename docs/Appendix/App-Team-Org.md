@@ -29,8 +29,11 @@ Based on the information provided on in the "Team Member Communication Modes," t
  
 ## Communication Procedures
 
-1. How will your team communicate? Our team will communicate through discord
+1. How will your team communicate?
+    Our team will communicate through discord
 2. How will you handle instructor correspondence? Who is responsible? How will that be communicated with/back to the group?
+    Any messages from the instructor, as well as discussions among team members, will be shared with all team members. The team member who is available and able to respond will take charge of handling the matter. All relevant messages and discussions will also be uploaded to the Discord server as a backup to ensure that everyone has access to and can review them.
+
 
 ## Meeting Schedule
 
@@ -67,11 +70,12 @@ _**Table Legend for Appendix Table 2**_
 
 1. What method will you use to remind yourselves of meetings (a shared calendar?)
    A shared calendar, as well as canvas calander
-1. How will your team go about changing or adding meeting times?
+2. How will your team go about changing or adding meeting times?
    We will communicate through discord a day or two early if any changes
-1. What's the preferred format for meetings (face-to-face or virtually)?
+3. What's the preferred format for meetings (face-to-face or virtually)?
    The preferred format for meeting would be face to face 
-1. Are there any other procedures that your team feels are necessary?
+4. Are there any other procedures that your team feels are necessary?
+   Further procedures will be applied if needed.
 
 ## Roles & Responsibilities
 
