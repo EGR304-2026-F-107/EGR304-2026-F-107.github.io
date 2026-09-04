@@ -30,8 +30,10 @@ Based on the information provided on in the "Team Member Communication Modes," t
 ## Communication Procedures
 
 1. How will your team communicate?
+   
     Our team will communicate through discord
 2. How will you handle instructor correspondence? Who is responsible? How will that be communicated with/back to the group?
+ 
     Any messages from the instructor, as well as discussions among team members, will be shared with all team members. The team member who is available and able to respond will take charge of handling the matter. All relevant messages and discussions will also be uploaded to the Discord server as a backup to ensure that everyone has access to and can review them.
 
 
