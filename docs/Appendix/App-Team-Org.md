@@ -20,8 +20,8 @@ _**Appendix Table 1**: Team Member Communication Modes_
 |---------------------|----------------------------|-----------------------------|----------------------------|
 |Canyon Miller |  Discord | Email | Text messages |
 |Member 2 |  ? | ? | ? |
-|Member 3 |  ? | ? | ? |
-|Member 4 |  ? | ? | ? |
+|Dunyue Yang |  Discord | Email | Instagram |
+
 
 ### Main Method for Group Communication
 
@@ -38,15 +38,15 @@ _**Appendix Table 2**: Weekly Schedule_
 
 | Time | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
 | :------: | :----: | :----: | :----: | :----: | :----: | :----: | :-----: |
-| 8:00 AM | c | - |  -| - | - | c | c |
-| 9:00 AM | c | - | - | - | - | c | c |
-| 10:00 AM | c | - | - | - | - | c | c |
-| 11:00 AM | c | - | - | - | - | c | c |
-| 12:00 PM | c | - | - | - | - | c | c |
+| 8:00 AM | c | - |  -| - | - | c,D | c |
+| 9:00 AM | c | - | - | - | - | c,D | c |
+| 10:00 AM | c | - | - | - | - | c,D | c |
+| 11:00 AM | c | - | - | - | - | c,D | c |
+| 12:00 PM | c | - | - | - | - | c,D | c |
 | 1:00 PM | c |  | - | - | - | - | - |
-| 2:00 PM | c | - | - | - | - | - | - |
-| 3:00 PM | c | - | - | - | - | - | - |
-| 4:00 PM | c | - | - | - | - | - | - |
+| 2:00 PM | c | - | - | - | D | - | - |
+| 3:00 PM | c | - | - | - | D | - | - |
+| 4:00 PM | c | - | - | - | D | - | - |
 | 5:00 PM | c | - | - | - | - | - | - |
 | 6:00 PM | c | - | - | - | - | - | - |
 | 7:00 PM | c | c | - | c | - | - | - |
@@ -93,4 +93,4 @@ The best way to resolve conflict is to have a group conversation on the conflict
 ## Signatures
 
 Canyon Miller
-
+DunyueYang
