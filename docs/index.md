@@ -24,6 +24,5 @@ We are Team 107 in EGR 304. Our team will work collaboratively throughout the Fa
 | **Team Member**        |**Ind Datasheet Links** |
 | ---------------------- | -----------------------|
 | Canyon Miller                | https://github.com/Canyonmill60 |
-| Name #2                | link |
-| Name #3                | link |
-| Name #4                | link |
+| Yixang Ren 		       | https://crackoxide.github.io/CrackOxide_EGR304_Fall26.github.io/) |
+| Dunyue Yang 		       | https://idtrfmnhcw.github.io/idtrfmnhcw_EGR304_F26.github.io/ |
