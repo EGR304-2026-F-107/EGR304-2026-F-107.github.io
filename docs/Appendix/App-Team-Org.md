@@ -19,7 +19,7 @@ _**Appendix Table 1**: Team Member Communication Modes_
 |Name                 | First Choice Communication | Second Choice Communication | Third Choice Communication |
 |---------------------|----------------------------|-----------------------------|----------------------------|
 |Canyon Miller |  Discord | Email | Text messages |
-|Member 2 |  ? | ? | ? |
+|Yixiang Ren |  Discord | Email | Text messages |
 |Dunyue Yang |  Discord | Email | Instagram |
 
 
