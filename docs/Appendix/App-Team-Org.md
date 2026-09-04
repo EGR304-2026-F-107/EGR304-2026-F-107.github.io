@@ -8,9 +8,11 @@ tags:
 ## Team Goals
 
 List at least five shared goals that reflect a successful product with regard to EGR3X4. Focus on team / product goals that are deeper than "getting an A".
-1.) Being able to take our group experience and learn from working in this group and take it with us to the next EGR course, or real life.
-2.) Being able to work together as a group and be able to pass the course
-3.) Learn more about electrical system and being able to get better at reading schematics 
+1.Build a fully functional, demo-ready robotic arm prototype capable of reliably performing at least one clearly defined pick-and-place or manipulation task, serving as tangible proof of our engineering capability.<br>
+2.Being able to take our group experience and learn from working in this group and take it with us to the next EGR course, or real life.<br>
+3.Being able to work together as a group and be able to pass the course.<br>
+4.Learn more about electrical system and being able to get better at reading schematics. <br>
+5.Develop real engineering trade off and decision making skills through the iterative design process (requirements → design → testing → revision), not just aim for "it works."<br>
 
 ## Communication Channels
 
