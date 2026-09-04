@@ -43,16 +43,16 @@ _**Appendix Table 2**: Weekly Schedule_
 | :------: | :----: | :----: | :----: | :----: | :----: | :----: | :-----: |
 | 8:00 AM | c | - |  -| - | - | c,D,R | c |
 | 9:00 AM | c | - | - | - | - | c,D,R | c |
-| 10:00 AM | c | - | - | - | - | c,D,R | c,R |
-| 11:00 AM | c | - | - | - | - | c,D,R | c,R |
-| 12:00 PM | c | - | - | - | - | c,D,R | c,R |
-| 1:00 PM | c |  | - | - | - | - | - |
-| 2:00 PM | c | - | - | - | D,R | - | R |
-| 3:00 PM | c | - | - | - | D,R | - | R |
-| 4:00 PM | c | - | - | - | D,R | - | R |
-| 5:00 PM | c | - | - | - | - | - | - |
-| 6:00 PM | c | - | - | - | - | - | - |
-| 7:00 PM | c | c | - | c | - | - | - |
+| 10:00 AM | c,R | - | - | - | - | c,D,R | c,R |
+| 11:00 AM | c,R | - | - | - | - | c,D,R | c,R |
+| 12:00 PM | c,R | - | - | - | - | c,D,R | c,R |
+| 1:00 PM | c,R |  | - | - | - | - | - |
+| 2:00 PM | c,R | - | - | - | D,R | - | R |
+| 3:00 PM | c,R | - | - | - | D,R | - | R |
+| 4:00 PM | c,R | - | - | - | D,R | - | R |
+| 5:00 PM | c,R | - | - | - | - | - | - |
+| 6:00 PM | c,R | - | - | - | - | - | - |
+| 7:00 PM | c,R | c | - | c | - | - | - |
 | 8:00 PM | c | c | - | c | - | - | - |
 | 9:00 PM | c | c | - | c | - | - | - |
 
@@ -61,9 +61,8 @@ _**Table Legend for Appendix Table 2**_
 | Name | Abbreviation |
 | ----- | :------: |
 | Canyon | C |
-|    |
 | Ren | R |
-|  |  |
+| Yang | Y |
 
 
 ## Meeting Coordination
@@ -97,5 +96,5 @@ The best way to resolve conflict is to have a group conversation on the conflict
 ## Signatures
 
 Canyon Miller<br>
-DunyueYang<br>
+Dunyue Yang<br>
 Yixiang Ren<br>
