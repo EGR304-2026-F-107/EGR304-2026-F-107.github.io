@@ -11,7 +11,7 @@ tags:
 Fall 2026<br>
 <font size="4">Arizona State University<br>
 **EGR 304**<br>
-Professor Name Zane Reynolds<br>
+<font size="4">Zane Reynolds<br>
 
 </center>
 
