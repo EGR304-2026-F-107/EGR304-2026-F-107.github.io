@@ -6,13 +6,8 @@ tags:
 ---
 
 ## Team Charter
-
-From the ... which can be reviewed in ["Appendix: Team Organization"](https://embedded-systems-design.github.io/EGR304TeamTemplate/Appendix/App-Team-Org/), the team's charter formed to be (showing ASU's Charter as an Example):
-
-> "ASU is a comprehensive public research university, measured not by whom it excludes, but by whom it includes and how they succeed; advancing research and discovery of public value; and assuming fundamental responsibility for the economic, social, cultural and overall health of the communities it serves." (ASU's Charter)
+> Our team is committed to designing and building a robotic arm system mock up (temporary) that actually works. We value clear communication, shared accountability, and treating this project as more than just an assignment: it's a chance to build real engineering skills and something worth putting in our portfolios.<br>
+We agree to show up prepared, communicate honestly when something isn't working, and support each other so that every member leaves this project having learned something real and having contributed meaningfully to the final result.<br>
 
 ## Product Mission Statement
-
-Describe the distilled purpose, function, or reason for your product to exist. From this form a team mission statement. Google's mission statement is:
-
- > "Google's mission is to organize the world's information and make it universally accessible and useful."
+ > Our mission is to design a low-cost, modular desktop robotic arm system mock up that enables to achieve precise, repeatable automated pick-and-place tasks at a much lower barrier to entry, freeing up human effort for higher-value work.
