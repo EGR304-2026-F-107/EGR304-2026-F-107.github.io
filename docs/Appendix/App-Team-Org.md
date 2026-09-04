@@ -38,15 +38,15 @@ _**Appendix Table 2**: Weekly Schedule_
 
 | Time | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
 | :------: | :----: | :----: | :----: | :----: | :----: | :----: | :-----: |
-| 8:00 AM | c | - |  -| - | - | c,D | c |
-| 9:00 AM | c | - | - | - | - | c,D | c |
-| 10:00 AM | c | - | - | - | - | c,D | c |
-| 11:00 AM | c | - | - | - | - | c,D | c |
-| 12:00 PM | c | - | - | - | - | c,D | c |
+| 8:00 AM | c | - |  -| - | - | c,D,R | c |
+| 9:00 AM | c | - | - | - | - | c,D,R | c |
+| 10:00 AM | c | - | - | - | - | c,D,R | c,R |
+| 11:00 AM | c | - | - | - | - | c,D,R | c,R |
+| 12:00 PM | c | - | - | - | - | c,D,R | c,R |
 | 1:00 PM | c |  | - | - | - | - | - |
-| 2:00 PM | c | - | - | - | D | - | - |
-| 3:00 PM | c | - | - | - | D | - | - |
-| 4:00 PM | c | - | - | - | D | - | - |
+| 2:00 PM | c | - | - | - | D,R | - | R |
+| 3:00 PM | c | - | - | - | D,R | - | R |
+| 4:00 PM | c | - | - | - | D,R | - | R |
 | 5:00 PM | c | - | - | - | - | - | - |
 | 6:00 PM | c | - | - | - | - | - | - |
 | 7:00 PM | c | c | - | c | - | - | - |
@@ -58,8 +58,8 @@ _**Table Legend for Appendix Table 2**_
 | Name | Abbreviation |
 | ----- | :------: |
 | Canyon | C |
-|  |  |
-|  |  |
+|    |
+| Ren | R |
 |  |  |
 
 
@@ -94,3 +94,4 @@ The best way to resolve conflict is to have a group conversation on the conflict
 
 Canyon Miller
 DunyueYang
+Yixiang Ren
