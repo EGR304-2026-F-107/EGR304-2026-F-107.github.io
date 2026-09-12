@@ -25,13 +25,13 @@ Target User: The primary users identified for this project are:
 Existing robotic-arm products were reviewed to identify both desirable and undesirable characteristics. Five products were selected because they represent different approaches to desktop robotics, education, programming, and low-cost experimentation.
 Benchmark Products
 
-Product                                         Main reason for benchmarking
+Product/                                         Main reason for benchmarking
 
-1.) Elephant Robotics myCobot 280               Compact programmable 6-DOF desktop arm
+1.) Elephant Robotics myCobot 280/               Compact programmable 6-DOF desktop arm
 
-2.) Yahboom DOFBOT                              Educational arm with Raspberry Pi, ROS, Python, and vision
+2.) Yahboom DOFBOT/                              Educational arm with Raspberry Pi, ROS, Python, and vision
 
-3.) DOBOT Magician                              Desktop educational arm with multiple tools and programming options
+3.) DOBOT Magician/                              Desktop educational arm with multiple tools and programming options
 
 
 ### Benchmark 1 — Elephant Robotics myCobot 280
@@ -56,63 +56,156 @@ The review specifically requested more step-by-step AI guidance.
 
 User Needs Derived:
 
-Need                                                                            Type
+Need/                                                                            Type
 
-1.) The arm should operate stably.                                              Explicit
+1.) The arm should operate stably/                                              Explicit
 
-2.) The arm should perform repeatable movements.                                Latent
+2.) The arm should perform repeatable movements/                                Latent
 
-3.) The system should support computer-vision experiments.                      Explicit
+3.) The system should support computer-vision experiments/                      Explicit
 
-4.) The system should support software experimentation.                         Explicit
+4.) The system should support software experimentation/                         Explicit
 
-5.) The system should provide clear tutorials.                                  Explicit
+5.) The system should provide clear tutorials/                                  Explicit
 
-6.) The system should be accessible to beginners.                               Latent
+6.) The system should be accessible to beginners/                               Latent
 
-### Selected Products
+#### 1. [(https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano) < (link to the product)
 
-#### 1. [Tinkering Labs Robotics Engineering Kit](https://www.amazon.com/Tinkering-Labs-Electric-Engineering-Experiments/dp/B01M5GJFQ1/) < (link to the product)
+ <img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/9a89d1c6-ed36-46b8-b02e-0727d299448a" />
 
-![](image1.png)
+* Price: $849
 
-**(include a picture)**
-
-* Price: $65
-
-* Vendor: Amazon
+* Vendor: Elephant Robotics
 
 * Description: The kit includes over 50 high quality components and 10 Challenges that inspire kids to invent their own creations. The pieces are a combination of the everyday and the mysterious, perfect for generating creativity, boosting IQ and instilling STEM knowledge.
 
-##### Positive Comments
 
-| Voice of the Customer                                                                                                                                                                  | Restated Customer Need                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| "My son just turned 6 and he loves this due to the real tools, real wiring and building to truly make something. It is too advanced for his age to do alone but he will grow into it." | 1.  The kit is perceived as more than a toy (explicit)                              |
-|                                                                                                                                                                                        | 2.  The kit can be used by younger children without parental supervision (explicit) |
-|                                                                                                                                                                                        | 3.  The kit is safe for children of all ages (latent)                               |
-
-##### Negative Comments
-
-| Voice of the Customer                                                                                                                                                                                                                                                                                                                                                                                | Restated Customer Need                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| "I am a STEM teacher and bought a large quantity of these kits and I am disgusted by how easily the motor breaks. 12 years in STEM schools and this product is at the bottom of my list. The ladybug platform, as we call it, needs some reimagining and the materials simply can't handle the wear and tear of a classroom. Sad that I spend my own money on this with so little we got out of it." | 1.  The kit is robust. (explicit)                       |
-|                                                                                                                                                                                                                                                                                                                                                                                                      | 2.  The moving parts of the kit are reinforced.(latent) |
-|                                                                                                                                                                                                                                                                                                                                                                                                      | 3.  The kit survives multiple uses (explicit)           |
-
-#### 2. Next Product goes here
+#### Benchmark 2 — Yahboom DOFBOT
 
 ### Search #2
 
-(you don't have to perform multiple searches, but sometimes different keywords reveal slightly different results)
+ educational robotic arm, Raspberry Pi hardware, supporting ROS/Python-based development, vision applications.
 
-**Keywords:** <list an alternative search you did, if applicable>
+**Search Results Link:** (https://category.yahboom.net/products/dofbot-pi)
+## Positive Voice of the Customer
 
-**Search Results Link:** <add your link here>
+One customer reported that technical support provided useful assistance and that the system was working normally.
 
-### Selected Products
+Another review described the kit as having functions for:
 
-#### 3. Next Product goes here
+“grabbing, placing, moving”
+
+The review also stated that these functions were sufficient for beginners.
+
+Another customer described the after-sales service as:
+
+“very timely.”
+## Negative Voice of the Customer
+
+A customer reported:
+
+“Dofbot Robotic Arm Can't calibrate properly”
+
+The customer described difficulty returning the arm to the expected center and upper positions.
+
+A more recent customer also reported that after installation:
+
+“Do not see any errors start up. Do not see any errors start up.”
+
+and described the situation as frustrating when calibration and operation did not work as expected.
+
+Another review noted that color recognition required:
+
+“multiple calibrations”
+## User Needs Derived
+Need/Type
+
+1.) The arm should reliably grab objects/Explicit
+
+2.) The arm should reliably place objects/Explicit
+
+3.) The arm should support repetitive movement/Latent
+
+4.) The system should be useful to beginners/Explicit
+
+5.) The system should have effective technical support/Latent
+
+6.) Calibration should be simple/Explicit
+
+7.) Calibration should remain consistent/Latent
+
+8.) The system should provide clear startup feedback/Latent
+
+9.) Vision functions should require minimal recalibration/Latent
+
+10.) Troubleshooting should be straightforward/Explicit
+* Price: $329
+
+* Vendor: Yahboom
+Link to Vendor: https://category.yahboom.net/products/dofbot-pi 
+* Description: The DOFBOT is an educational robotic arm using Raspberry Pi hardware and supporting ROS/Python-based development and vision applications.
+* Images: <img width="1500" height="1500" alt="image" src="https://github.com/user-attachments/assets/b92563b5-d57b-4907-b85e-0a38604a3758" />
+
+
+## Benchmark 3 — DOBOT Magician
+## Search #3
+desktop educational robotic arm, interchangeable end tools
+ **Search Results Link: https:** //www.dobot-robots.com/products/education/magician.html
+ ## Positive Voice of Customer
+ Positive Voice of the Customer
+
+1.) A RobotShop customer described the product as:/“very good and has a very good precision”
+
+2.) Another customer described it as:/“Plug and play, immediate fun.”
+
+3) The same review noted that it was:/“Relatively accurate on repeats.”
+
+4.) A third customer reported that after hardware problems were resolved by DOBOT, the arm was:/“excellent for students.”
+
+## Negative Voice of the Customer
+
+The same RobotShop reviews identified several weaknesses.
+
+1.) One customer wrote:/“the software that comes with it is not user friendly”
+
+and also noted that there were not enough tutorials.
+
+2.) Another customer reported:/“Lack of tutorials and examples.”
+
+3.) A separate technical review noted that:/“Programming the Dobot is easier said than done”
+
+and that it could take time to become familiar with the system.
+## User needs derived
+Need/Type
+
+1.) The arm should provide accurate positioning./Explicit
+
+2.) The arm should repeat movements consistently./Explicit
+
+3.) The system should be easy to start using./Explicit
+
+4.) The system should support students./Explicit
+
+5.) The system should have useful accessories./Explicit
+
+6.) The software should be user friendly./Explicit
+
+7.) The system should provide enough tutorials./Explicit
+
+8.) The system should provide beginner examples./Explicit
+
+9.) Programming should have a low learning curve./Latent
+
+10.) Hardware problems should be resolved easily./Latent
+* Price: $3,780
+
+* Vendor: DOBOT
+Link to Vendor: https://www.dobot-robots.com/products/desktop-four-axis/mg400.html
+* Description: The DOBOT Magician is a desktop educational robotic arm with multiple programming methods, interchangeable end tools, and a published repeatability specification.
+* Images: <img width="365" height="547" alt="image" src="https://github.com/user-attachments/assets/d16f2727-d1ee-4a5d-bfe0-f94a0e84b9f8" />
+
+
 
 #### 4. Next Product goes here
 
