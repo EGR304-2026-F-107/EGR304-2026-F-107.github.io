@@ -33,6 +33,9 @@ Product/                                         Main reason for benchmarking
 
 3.) DOBOT Magician/                              Desktop educational arm with multiple tools and programming options
 
+4.)Hiwonder xArm 1S/                             Low-cost beginner-friendly arm with multiple control methods
+
+5.)Adeept 5-DOF Robotic Arm Kit/                 Low-cost Arduino-based educational arm for DIY assembly and programming
 
 ### Benchmark 1 — Elephant Robotics myCobot 280
 
@@ -345,7 +348,118 @@ Need/Type
 
 ### First Placement
 
+The current needs cover topics including:
+
+- Accurate and repeatable robotic motion
+- Reliable object gripping and placement
+- Calibration and setup
+- Beginner accessibility
+- Programming and software usability
+- Computer-vision integration
+- Documentation and tutorials
+- Technical support and troubleshooting
+- Mechanical durability
+- Assembly
+- Educational value
+- Software and hardware expandability
+
 ### Grouped with categories
+
+After the first placement, similar user needs were grouped into the following categories.
+
+#### 1. Motion Accuracy and Task Performance
+
+**Meta Need:** The robotic arm should perform pick-and-place tasks accurately, consistently, and reliably.
+
+- The arm should operate stably.
+- The arm should perform repeatable movements.
+- The arm should reliably grab objects.
+- The arm should reliably place objects.
+- The arm should support repetitive movement.
+- The arm should provide accurate positioning.
+- The arm should repeat movements consistently.
+- Vision functions should require minimal recalibration.
+- The arm should remain stable during repeated operation.
+- The system should operate consistently during repeated use.
+
+
+#### 2. Setup, Assembly, and Calibration
+
+**Meta Need:** The robotic arm should be easy to assemble, configure, calibrate, and begin operating.
+
+- Calibration should be simple.
+- Calibration should remain consistent.
+- The system should provide clear startup feedback.
+- The robotic arm should be easy to assemble.
+- Assembly should require minimal specialized knowledge.
+- Users should be able to begin operating the system quickly.
+- Assembly should require minimal prior robotics experience.
+- Users should be able to complete setup without extensive troubleshooting.
+
+
+#### 3. Software and Programming
+
+**Meta Need:** The robotic arm should provide programming tools that are accessible to beginners while supporting advanced development.
+
+- The system should support software experimentation.
+- The software should be user friendly.
+- The system should provide beginner examples.
+- Programming should have a low learning curve.
+- The system should provide accessible control software.
+- The control interface should have a low learning curve.
+- The robotic arm should support common robotics software platforms.
+- The system should allow future software expansion.
+- The robotic arm should support custom programming.
+
+
+#### 4. Computer Vision and System Integration
+
+**Meta Need:** The robotic arm should support integration with sensing, vision, and external robotics technologies.
+
+- The system should support computer-vision experiments.
+- Vision functions should require minimal recalibration.
+- The robotic arm should support common robotics software platforms.
+- The system should allow future software expansion.
+
+
+#### 5. Documentation and Technical Support
+
+**Meta Need:** Users should be able to find clear instructions and resolve problems without excessive difficulty.
+
+- The system should provide clear tutorials.
+- The system should have effective technical support.
+- Troubleshooting should be straightforward.
+- The system should provide enough tutorials.
+- Hardware problems should be resolved easily.
+- Software resources should be easy to locate.
+- The system should provide clear operating documentation.
+- Instructions should be accessible throughout the product's useful life.
+- The system should provide clear assembly instructions.
+- Documentation and programming resources should be easy to locate.
+- Users should be able to access instructions throughout the product's useful life.
+
+
+#### 6. Mechanical Reliability and Durability
+
+**Meta Need:** The robotic arm should remain mechanically reliable during repeated use.
+
+- The robotic arm should have a durable mechanical structure.
+- The arm should remain stable during repeated operation.
+- The robotic arm should use reliable servo motors and mechanical components.
+- The system should operate consistently during repeated use.
+- The system should have useful accessories.
+
+
+#### 7. Beginner Accessibility and Education
+
+**Meta Need:** The robotic arm should provide an approachable learning platform for students and beginning robotics users.
+
+- The system should be accessible to beginners.
+- The system should be useful to beginners.
+- The system should support students.
+- The robotic arm should provide educational value.
+- The system should help users learn robotics and programming concepts.
+- Programming should have a low learning curve.
 
 ### Ranked
 
