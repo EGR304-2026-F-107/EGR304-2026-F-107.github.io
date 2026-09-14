@@ -278,7 +278,7 @@ Need/Type
 ## Search #5
 low-cost Arduino programmable robotic arm kit for education and pick-and-place
 
-**Search Results Link:** [https://www.hiwonder.com/products/xarm-1s?variant=32436121894999](https://www.adeept.com/adeept-5-dof-robotic-arm-kit-compatible-with-arduino-ide-programmable-diy-coding-stem-educational-5-axis-robot-arm-with-oled-display-processing-code_p0360.html)
+**Search Results Link:** https://www.adeept.com/adeept-5-dof-robotic-arm-kit-compatible-with-arduino-ide-programmable-diy-coding-stem-educational-5-axis-robot-arm-with-oled-display-processing-code_p0360.html
 
 ## Positive Voice of Customer
 
