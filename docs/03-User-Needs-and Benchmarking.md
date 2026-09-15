@@ -56,7 +56,7 @@ A customer also noted:<br>
 1.) “Good Robot More Tutorials Help”<br>
 The review specifically requested more step-by-step AI guidance.
 
-**User Needs Derived:**
+**User Needs Derived:** <br>
 Need/                                                                            Type
 
 1.) The arm should operate stably/                                              Explicit
@@ -114,7 +114,7 @@ Another review noted that color recognition required:
 
 “multiple calibrations”
 <br>
-**User Needs Derived**
+**User Needs Derived** <br>
 Need/Type
 
 1.) The arm should reliably grab objects/Explicit
@@ -170,7 +170,7 @@ and also noted that there were not enough tutorials.
 3.) A separate technical review noted that:/“Programming the Dobot is easier said than done”
 
 and that it could take time to become familiar with the system.
-**User needs derived**
+**User needs derived** <br>
 Need/Type
 
 1.) The arm should provide accurate positioning./Explicit
@@ -228,7 +228,7 @@ Customers also noted:
 
 These comments indicate needs for accessible documentation, reliable software resources, and compatibility with advanced programming platforms.
 <br>
-**User needs derived**
+**User needs derived** <br>
 Need/Type
 
 1.) The robotic arm should be easy to assemble./Explicit
@@ -288,7 +288,7 @@ Customers also noted:
 
 These comments indicate needs for reliable documentation, dependable hardware, and flexible programming support.
 
-**User needs derived**
+**User needs derived** <br>
 Need/Type
 
 1.) The robotic arm should be easy to assemble./Explicit
