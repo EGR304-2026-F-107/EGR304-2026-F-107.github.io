@@ -24,8 +24,8 @@ The primary users identified for this project are:<br>
 
 ## Voice of the Customer Benchmarking
 Existing robotic-arm products were reviewed to identify both desirable and undesirable characteristics. Five products were selected because they represent different approaches to desktop robotics, education, programming, and low-cost experimentation.<br>
-Benchmark Products<br>
-
+<br>
+Benchmark Products：<br>
 Product/                                         Main reason for benchmarking
 
 1.) Elephant Robotics myCobot 280/               Compact programmable 6-DOF desktop arm
@@ -42,24 +42,22 @@ Product/                                         Main reason for benchmarking
 
 **Keywords:** " robotic motion with software development and computer-vision experimentation"
 
-**Search Results Link:** [https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano] (https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano)
-Positive Voice of the Customer
-
+**Search Results Link:** [https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano] (https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano)<br>
+<br>
+**Positive Voice of the Customer**<br>
 The reviews include comments such as:<br>
 1.) “Strong Desktop AI Robot”<br>
 2.) “Great For Object Recognition”<br>
 3.) “Useful For Computer Vision”<br>
 4.) “The robotic arm operates very stably”<br>
 These comments indicate needs for stable motion, computer-vision integration, and software experimentation.<br>
-
-Negative Voice of the Customer
-
+<br>
+**Negative Voice of the Customer**<br>
 A customer also noted:<br>
 1.) “Good Robot More Tutorials Help”<br>
 The review specifically requested more step-by-step AI guidance.
 
-User Needs Derived:
-
+**User Needs Derived:**
 Need/                                                                            Type
 
 1.) The arm should operate stably/                                              Explicit
@@ -74,26 +72,20 @@ Need/                                                                           
 
 6.) The system should be accessible to beginners/                               Latent
 
-#### 1. [(https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano) < (link to the product)
-
- <img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/9a89d1c6-ed36-46b8-b02e-0727d299448a" />
-
 * Price: $849
-
 * Vendor: Elephant Robotics
-
+* Link to Vendor: [https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano]
 * Description: The kit includes over 50 high quality components and 10 Challenges that inspire kids to invent their own creations. The pieces are a combination of the everyday and the mysterious, perfect for generating creativity, boosting IQ and instilling STEM knowledge.
+*Images: <img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/9a89d1c6-ed36-46b8-b02e-0727d299448a" />
 
 
-#### Benchmark 2 — Yahboom DOFBOT
+### Benchmark 2 — Yahboom DOFBOT
 
-### Search #2
+**Key words:** educational robotic arm, Raspberry Pi hardware, supporting ROS/Python-based development, vision applications.
 
- educational robotic arm, Raspberry Pi hardware, supporting ROS/Python-based development, vision applications.
-
-**Search Results Link:** (https://category.yahboom.net/products/dofbot-pi)
-## Positive Voice of the Customer
-
+**Search Results Link:** [https://category.yahboom.net/products/dofbot-pi]
+<br>
+**Positive Voice of the Customer**<br>
 One customer reported that technical support provided useful assistance and that the system was working normally.
 
 Another review described the kit as having functions for:
@@ -105,8 +97,8 @@ The review also stated that these functions were sufficient for beginners.
 Another customer described the after-sales service as:
 
 “very timely.”
-## Negative Voice of the Customer
-
+<br>
+**Negative Voice of the Customer**
 A customer reported:
 
 “Dofbot Robotic Arm Can't calibrate properly”
@@ -122,7 +114,8 @@ and described the situation as frustrating when calibration and operation did no
 Another review noted that color recognition required:
 
 “multiple calibrations”
-## User Needs Derived
+<br>
+**User Needs Derived**
 Need/Type
 
 1.) The arm should reliably grab objects/Explicit
@@ -147,7 +140,7 @@ Need/Type
 * Price: $329
 
 * Vendor: Yahboom
-Link to Vendor: https://category.yahboom.net/products/dofbot-pi 
+* Link to Vendor: https://category.yahboom.net/products/dofbot-pi 
 * Description: The DOFBOT is an educational robotic arm using Raspberry Pi hardware and supporting ROS/Python-based development and vision applications.
 * Images: <img width="1500" height="1500" alt="image" src="https://github.com/user-attachments/assets/b92563b5-d57b-4907-b85e-0a38604a3758" />
 
