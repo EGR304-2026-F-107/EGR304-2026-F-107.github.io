@@ -42,7 +42,7 @@ Product/                                         Main reason for benchmarking
 ### Benchmark 1 — Elephant Robotics myCobot 280
 
 **Keywords:** " robotic motion with software development and computer-vision experimentation"<br>
-**Search Results Link:** <https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano> <br>
+**Search Results Link:** <https://shop.elephantrobotics.com/search?type=product&options%5Bprefix%5D=none&q=robotic+motion+with+software+development+and+computer-vision+experimentation&options%5Bprefix%5D=last> <br>
 <br>
 **Positive Voice of the Customer**<br>
 The reviews include comments such as:<br>
@@ -205,7 +205,7 @@ Need/Type
 
 ### Benchmark 4 — Hiwonder xArm 1S
 **Key words:** low-cost programmable desktop robotic arm for education and pick-and-place applications<br>
-**Search Results Link:** <https://www.hiwonder.com/products/xarm-1s?variant=32436121894999>
+**Search Results Link:** <https://www.hiwonder.com/search?type=product&options%5Bunavailable_products%5D=show&options%5Bprefix%5D=last&q=low-cost+programmable+desktop+robotic+arm+for+education+and+pick-and-place+applications>
 <br>
 **Positive Voice of Customer**<br>
 The reviews include comments such as:
@@ -265,7 +265,7 @@ Need/Type
 
 ### Benchmark 5. Adeept 5-DOF Robotic Arm Kit
 **Key words:** low-cost Arduino programmable robotic arm kit for education and pick-and-place<br>
-**Search Results Link:** <https://www.adeept.com/adeept-5-dof-robotic-arm-kit-compatible-with-arduino-ide-programmable-diy-coding-stem-educational-5-axis-robot-arm-with-oled-display-processing-code_p0360.html>
+**Search Results Link:** <https://www.adeept.com/search/?Keyword=low-cost+Arduino+programmable+robotic+arm+kit+for+education+and+pick-and-place>
 <br>
 **Positive Voice of Customer** <br>
 The reviews include comments such as:
