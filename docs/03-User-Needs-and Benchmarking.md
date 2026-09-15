@@ -83,7 +83,7 @@ Need/                                                                           
 ### Benchmark 2 — Yahboom DOFBOT
 
 **Key words:** educational robotic arm, Raspberry Pi hardware, supporting ROS/Python-based development, vision applications.<br>
-**Search Results Link:** <https://category.yahboom.net/products/dofbot-pi>
+**Search Results Link:** <https://category.yahboom.net/search?q=educational+robotic+arm%2C+Raspberry+Pi+hardware%2C+supporting+ROS%2FPython-based+development%2C+vision+applications>
 <br>
 **Positive Voice of the Customer**<br>
 One customer reported that technical support provided useful assistance and that the system was working normally.
