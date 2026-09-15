@@ -75,7 +75,8 @@ Need/                                                                           
 * Vendor: Elephant Robotics
 * Link to Vendor: [https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano]
 * Description: The kit includes over 50 high quality components and 10 Challenges that inspire kids to invent their own creations. The pieces are a combination of the everyday and the mysterious, perfect for generating creativity, boosting IQ and instilling STEM knowledge.
-*Images: <img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/9a89d1c6-ed36-46b8-b02e-0727d299448a" />
+*Images:<br>
+<img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/9a89d1c6-ed36-46b8-b02e-0727d299448a" />
 
 
 ### Benchmark 2 — Yahboom DOFBOT
@@ -140,7 +141,8 @@ Need/Type
 * Vendor: Yahboom
 * Link to Vendor: https://category.yahboom.net/products/dofbot-pi 
 * Description: The DOFBOT is an educational robotic arm using Raspberry Pi hardware and supporting ROS/Python-based development and vision applications.
-* Images: <img width="1500" height="1500" alt="image" src="https://github.com/user-attachments/assets/b92563b5-d57b-4907-b85e-0a38604a3758" />
+* Images:<br>
+<img width="1500" height="1500" alt="image" src="https://github.com/user-attachments/assets/b92563b5-d57b-4907-b85e-0a38604a3758" />
 
 
 ### Benchmark 3 — DOBOT Magician
@@ -193,9 +195,10 @@ Need/Type
 <br>
 * Price: $3,780
 * Vendor: DOBOT
-* Link to Vendor: https://www.dobot-robots.com/products/desktop-four-axis/mg400.html
+* Link to Vendor: [https://www.dobot-robots.com/products/desktop-four-axis/mg400.html]
 * Description: The DOBOT Magician is a desktop educational robotic arm with multiple programming methods, interchangeable end tools, and a published repeatability specification.
-* Images: <img width="365" height="547" alt="image" src="https://github.com/user-attachments/assets/d16f2727-d1ee-4a5d-bfe0-f94a0e84b9f8" />
+* Images:<br>
+<img width="365" height="547" alt="image" src="https://github.com/user-attachments/assets/d16f2727-d1ee-4a5d-bfe0-f94a0e84b9f8" />
 
 
 
@@ -256,7 +259,8 @@ Need/Type
 * Vendor: Hiwonder
 * Link to Vendor: [https://www.hiwonder.com/products/xarm-1s?variant=32436121894999]
 * Description: The Hiwonder xArm 1S is a compact desktop robotic arm designed for robotic gripping, sorting, automation demonstrations, and robotics education. It uses intelligent bus servos with position and voltage feedback and supports multiple control methods including PC software, smartphone applications, wireless controller, and mouse control.
-* Images:<img width="600" alt="Denoised_beauty_fd1c2f21-c347-4e0f-ad86-938a455c8afd" src="https://github.com/user-attachments/assets/32ff6043-c913-4381-896f-10b509a33a6d" />
+* Images:<br>
+<img width="600" alt="Denoised_beauty_fd1c2f21-c347-4e0f-ad86-938a455c8afd" src="https://github.com/user-attachments/assets/32ff6043-c913-4381-896f-10b509a33a6d" />
 
 ### Benchmark 5. Adeept 5-DOF Robotic Arm Kit
 **Key words:** low-cost Arduino programmable robotic arm kit for education and pick-and-place
@@ -313,7 +317,8 @@ Need/Type
 * Vendor: Adeept
 * Link to Vendor: [https://www.adeept.com/adeept-5-dof-robotic-arm-kit-compatible-with-arduino-ide-programmable-diy-coding-stem-educational-5-axis-robot-arm-with-oled-display-processing-code_p0360.html]
 * Description: The Adeept 5-DOF Robotic Arm Kit is a low-cost educational robotic arm designed for learning assembly, programming, and robotic control. It is compatible with the Arduino IDE and includes an Arduino-compatible control board, OLED display, servo motors, and multiple control methods including manual potentiometer control and computer-based control.
-* Images:<img width="240" height="240" alt="505dcb7f59 jpg 240x240" src="https://github.com/user-attachments/assets/f93f52c2-ce5d-4ede-a74e-7efb71c171de" />
+* Images:<br>
+<img width="240" height="240" alt="505dcb7f59 jpg 240x240" src="https://github.com/user-attachments/assets/f93f52c2-ce5d-4ede-a74e-7efb71c171de" />
 <br>
 ## Organized Need Statements
 
