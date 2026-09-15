@@ -97,7 +97,7 @@ Another customer described the after-sales service as:
 
 “very timely.”
 <br>
-**Negative Voice of the Customer**
+**Negative Voice of the Customer** <br>
 A customer reported:
 
 “Dofbot Robotic Arm Can't calibrate properly”
@@ -257,7 +257,7 @@ Need/Type
 
 * Price: $199.99<br>
 * Vendor: Hiwonder<br>
-* Link to Vendor: [https://www.hiwonder.com/products/xarm-1s?variant=32436121894999]<br>
+* Link to Vendor: <https://www.hiwonder.com/products/xarm-1s?variant=32436121894999> <br>
 * Description: The Hiwonder xArm 1S is a compact desktop robotic arm designed for robotic gripping, sorting, automation demonstrations, and robotics education. It uses intelligent bus servos with position and voltage feedback and supports multiple control methods including PC software, smartphone applications, wireless controller, and mouse control.<br>
 * Images:<br>
 <img width="600" alt="Denoised_beauty_fd1c2f21-c347-4e0f-ad86-938a455c8afd" src="https://github.com/user-attachments/assets/32ff6043-c913-4381-896f-10b509a33a6d" />
