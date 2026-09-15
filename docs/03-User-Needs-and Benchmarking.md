@@ -339,6 +339,12 @@ The current needs cover topics including:
 - Assembly
 - Educational value
 - Software and hardware expandability
+<br>
+*Images:<br>
+<img width="904" height="855" alt="image" src="https://github.com/user-attachments/assets/837a8e02-ad76-43e4-8f50-92fe86f01528" /> <br>
+<img width="921" height="877" alt="image" src="https://github.com/user-attachments/assets/222b6631-ea6b-48ea-ba36-fe0fe8e41409" /> <br>
+<img width="934" height="907" alt="image" src="https://github.com/user-attachments/assets/c3821525-52a4-4105-bf06-48e3e7d99e70" /> <br>
+<img width="961" height="391" alt="image" src="https://github.com/user-attachments/assets/f3c68488-eb1b-434d-96ac-0d15ac1d88cc" /> <br>
 
 ### Grouped with categories
 
@@ -377,7 +383,13 @@ After the first placement, similar user needs were grouped into the following ca
 #### 11. Cost & Accessibility<br>
 **Meta Need:** The system should remain affordable and accessible to the intended student, hobbyist, and educational users.<br>
 <br>
+*Images: <br>
+<img width="466" height="442" alt="image" src="https://github.com/user-attachments/assets/09fbbfe2-2e17-4993-a473-8c2bb4c7912e" /> <br>
+<img width="1800" height="330" alt="image" src="https://github.com/user-attachments/assets/c7729894-132f-4dba-8333-c0a3b76a1a6c" />
+<br>
 ### Ranked
+<img width="3300" height="2550" alt="image" src="https://github.com/user-attachments/assets/d0e80672-0c6e-490c-859a-f9a2cb810391" />
+<img width="3300" height="2550" alt="image" src="https://github.com/user-attachments/assets/5b595a22-9cd9-410d-9964-5cd814734f0e" />
 
 ## Compiled list of user Needs
 
