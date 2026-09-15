@@ -73,7 +73,7 @@ Need/                                                                           
 6.) The system should be accessible to beginners/                               Latent
 <br>
 * Price: $849<br>
-* Vendor: Elephant Robotics<br>
+* Vendor: Elephant Robotics <br>
 * Link to Vendor: <https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano><br>
 * Description: The kit includes over 50 high quality components and 10 Challenges that inspire kids to invent their own creations. The pieces are a combination of the everyday and the mysterious, perfect for generating creativity, boosting IQ and instilling STEM knowledge.<br>
 *Images:<br>
