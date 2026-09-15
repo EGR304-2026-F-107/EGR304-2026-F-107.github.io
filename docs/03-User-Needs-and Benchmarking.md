@@ -3,7 +3,7 @@ title: User Needs and Benchmarking
 ---
 Project goal: Our team is developing a low-cost, modular desktop robotic arm mock-up capable of performing precise, repeatable automated pick-and-place tasks. The purpose of the project is to demonstrate how repetitive manual work can be automated while keeping the system accessible to students, makers, and beginning robotics users.
 
-The design should prioritize:
+The design should prioritize:<br>
 1.) Precise and repeatable movement<br>
 2.) Reliable pick-and-place operation<br>
 3.) Low cost<br>
@@ -13,7 +13,8 @@ The design should prioritize:
 7.) Safe operation<br>
 8.) Educational value<br>
 
-Target User: The primary users identified for this project are:
+Target User: <br>
+The primary users identified for this project are:<br>
 1.) Engineering students learning robotics, embedded systems, controls, and programming.<br>
 2.) STEM educators who need a hands-on robotics demonstration or laboratory platform.<br>
 3.) Hobbyists and makers who want an inexpensive platform for experimentation.<br>
@@ -22,8 +23,8 @@ Target User: The primary users identified for this project are:
 
 
 ## Voice of the Customer Benchmarking
-Existing robotic-arm products were reviewed to identify both desirable and undesirable characteristics. Five products were selected because they represent different approaches to desktop robotics, education, programming, and low-cost experimentation.
-Benchmark Products
+Existing robotic-arm products were reviewed to identify both desirable and undesirable characteristics. Five products were selected because they represent different approaches to desktop robotics, education, programming, and low-cost experimentation.<br>
+Benchmark Products<br>
 
 Product/                                         Main reason for benchmarking
 
@@ -44,7 +45,7 @@ Product/                                         Main reason for benchmarking
 **Search Results Link:** [https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano] (https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano)
 Positive Voice of the Customer
 
-The reviews include comments such as:
+The reviews include comments such as:<br>
 1.) “Strong Desktop AI Robot”<br>
 2.) “Great For Object Recognition”<br>
 3.) “Useful For Computer Vision”<br>
@@ -53,7 +54,7 @@ These comments indicate needs for stable motion, computer-vision integration, an
 
 Negative Voice of the Customer
 
-A customer also noted:
+A customer also noted:<br>
 1.) “Good Robot More Tutorials Help”<br>
 The review specifically requested more step-by-step AI guidance.
 
