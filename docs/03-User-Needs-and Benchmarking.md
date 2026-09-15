@@ -1,9 +1,9 @@
 ---
 title: User Needs and Benchmarking
 ---
-Project goal: Our team is developing a low-cost, modular desktop robotic arm mock-up capable of performing precise, repeatable automated pick-and-place tasks. The purpose of the project is to demonstrate how repetitive manual work can be automated while keeping the system accessible to students, makers, and beginning robotics users.
-
-The design should prioritize:<br>
+**Project goal:** Our team is developing a low-cost, modular desktop robotic arm mock-up capable of performing precise, repeatable automated pick-and-place tasks. The purpose of the project is to demonstrate how repetitive manual work can be automated while keeping the system accessible to students, makers, and beginning robotics users.
+<br>
+**The design should prioritize:** <br>
 1.) Precise and repeatable movement<br>
 2.) Reliable pick-and-place operation<br>
 3.) Low cost<br>
@@ -12,16 +12,16 @@ The design should prioritize:<br>
 6.) Modular hardware and software<br>
 7.) Safe operation<br>
 8.) Educational value<br>
-
-Target User: <br>
+<br>
+**Target User:** <br>
 The primary users identified for this project are:<br>
 1.) Engineering students learning robotics, embedded systems, controls, and programming.<br>
 2.) STEM educators who need a hands-on robotics demonstration or laboratory platform.<br>
 3.) Hobbyists and makers who want an inexpensive platform for experimentation.<br>
 4.) Beginning robotics programmers who need an approachable system for learning.<br>
 5.) Small-scale automation users who want to demonstrate simple repetitive automation.<br>
-
-
+<br>
+<br>
 ## Voice of the Customer Benchmarking
 Existing robotic-arm products were reviewed to identify both desirable and undesirable characteristics. Five products were selected because they represent different approaches to desktop robotics, education, programming, and low-cost experimentation.<br>
 <br>
