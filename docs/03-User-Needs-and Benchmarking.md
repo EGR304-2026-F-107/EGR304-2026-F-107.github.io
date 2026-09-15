@@ -343,101 +343,40 @@ The current needs cover topics including:
 ### Grouped with categories
 
 After the first placement, similar user needs were grouped into the following categories.
+<br>
+#### 1. Accuracy & Repeatability <br>
+**Meta Need:** The robotic arm should perform precise, smooth, stable, and repeatable movements for reliable pick-and-place tasks.<br>
 
-#### 1. Motion Accuracy and Task Performance
+#### 2. Gripper & Object Handling <br>
+**Meta Need:** The robotic arm should securely grasp, move, and release intended objects using a reliable and adaptable end effector.<br>
 
-**Meta Need:** The robotic arm should perform pick-and-place tasks accurately, consistently, and reliably.
+#### 3. Programming & Control<br>
+**Meta Need:** The system should provide simple, flexible, and understandable programming and control for automated robotic tasks.<br>
 
-- The arm should operate stably.
-- The arm should perform repeatable movements.
-- The arm should reliably grab objects.
-- The arm should reliably place objects.
-- The arm should support repetitive movement.
-- The arm should provide accurate positioning.
-- The arm should repeat movements consistently.
-- Vision functions should require minimal recalibration.
-- The arm should remain stable during repeated operation.
-- The system should operate consistently during repeated use.
+#### 4. Documentation & Troubleshooting<br>
+**Meta Need:** The system should provide clear instructions, examples, documentation, and troubleshooting support so users can operate and solve problems effectively.<br>
 
+#### 5. Education & User Experience<br>
+**Meta Need:** The system should provide an accessible, hands-on learning experience that encourages experimentation without unnecessary complexity.<br>
 
-#### 2. Setup, Assembly, and Calibration
+#### 6. Sensors, Vision & Expansion<br>
+**Meta Need:** The system should support sensors, vision, accessories, software features, and future modifications for expanded applications.<br>
 
-**Meta Need:** The robotic arm should be easy to assemble, configure, calibrate, and begin operating.
+#### 7. Calibration, Maintenance & Repair<br>
+**Meta Need:** The system should be easy to calibrate, maintain, repair, and upgrade without specialized tools or replacement of the entire system.<br>
 
-- Calibration should be simple.
-- Calibration should remain consistent.
-- The system should provide clear startup feedback.
-- The robotic arm should be easy to assemble.
-- Assembly should require minimal specialized knowledge.
-- Users should be able to begin operating the system quickly.
-- Assembly should require minimal prior robotics experience.
-- Users should be able to complete setup without extensive troubleshooting.
+#### 8. Assembly, Wiring & Components<br>
+**Meta Need:** The system should use accessible components and provide an organized, understandable, and durable physical assembly.<br>
 
+#### 9. Power, Stability & Physical Design<br>
+**Meta Need:** The system should provide stable, efficient power and a compact, strong, low-vibration physical platform suitable for desktop pick-and-place tasks.<br>
 
-#### 3. Software and Programming
+#### 10. Safety<br>
+**Meta Need:** The system should operate predictably and safely while providing clear status information and an accessible means of stopping motion.<br>
 
-**Meta Need:** The robotic arm should provide programming tools that are accessible to beginners while supporting advanced development.
-
-- The system should support software experimentation.
-- The software should be user friendly.
-- The system should provide beginner examples.
-- Programming should have a low learning curve.
-- The system should provide accessible control software.
-- The control interface should have a low learning curve.
-- The robotic arm should support common robotics software platforms.
-- The system should allow future software expansion.
-- The robotic arm should support custom programming.
-
-
-#### 4. Computer Vision and System Integration
-
-**Meta Need:** The robotic arm should support integration with sensing, vision, and external robotics technologies.
-
-- The system should support computer-vision experiments.
-- Vision functions should require minimal recalibration.
-- The robotic arm should support common robotics software platforms.
-- The system should allow future software expansion.
-
-
-#### 5. Documentation and Technical Support
-
-**Meta Need:** Users should be able to find clear instructions and resolve problems without excessive difficulty.
-
-- The system should provide clear tutorials.
-- The system should have effective technical support.
-- Troubleshooting should be straightforward.
-- The system should provide enough tutorials.
-- Hardware problems should be resolved easily.
-- Software resources should be easy to locate.
-- The system should provide clear operating documentation.
-- Instructions should be accessible throughout the product's useful life.
-- The system should provide clear assembly instructions.
-- Documentation and programming resources should be easy to locate.
-- Users should be able to access instructions throughout the product's useful life.
-
-
-#### 6. Mechanical Reliability and Durability
-
-**Meta Need:** The robotic arm should remain mechanically reliable during repeated use.
-
-- The robotic arm should have a durable mechanical structure.
-- The arm should remain stable during repeated operation.
-- The robotic arm should use reliable servo motors and mechanical components.
-- The system should operate consistently during repeated use.
-- The system should have useful accessories.
-
-
-#### 7. Beginner Accessibility and Education
-
-**Meta Need:** The robotic arm should provide an approachable learning platform for students and beginning robotics users.
-
-- The system should be accessible to beginners.
-- The system should be useful to beginners.
-- The system should support students.
-- The robotic arm should provide educational value.
-- The system should help users learn robotics and programming concepts.
-- Programming should have a low learning curve.
-
+#### 11. Cost & Accessibility<br>
+**Meta Need:** The system should remain affordable and accessible to the intended student, hobbyist, and educational users.<br>
+<br>
 ### Ranked
 
 ## Compiled list of user Needs
