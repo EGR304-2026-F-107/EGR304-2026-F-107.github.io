@@ -40,7 +40,7 @@ Product/                                         Main reason for benchmarking
 
 ### Benchmark 1 — Elephant Robotics myCobot 280
 
-**Keywords:** " robotic motion with software development and computer-vision experimentation"
+**Keywords:** " robotic motion with software development and computer-vision experimentation"<br>
 **Search Results Link:** <https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano> <br>
 <br>
 **Positive Voice of the Customer**<br>
@@ -81,7 +81,7 @@ Need/                                                                           
 
 ### Benchmark 2 — Yahboom DOFBOT
 
-**Key words:** educational robotic arm, Raspberry Pi hardware, supporting ROS/Python-based development, vision applications.
+**Key words:** educational robotic arm, Raspberry Pi hardware, supporting ROS/Python-based development, vision applications.<br>
 **Search Results Link:** <https://category.yahboom.net/products/dofbot-pi>
 <br>
 **Positive Voice of the Customer**<br>
@@ -146,7 +146,7 @@ Need/Type
 
 
 ### Benchmark 3 — DOBOT Magician
-**Key words:** desktop educational robotic arm, interchangeable end tools
+**Key words:** desktop educational robotic arm, interchangeable end tools<br>
 **Search Results Link:** <https://www.dobot-robots.com/products/education/magician.html>
 <br>
 **Positive Voice of Customer**<br>
@@ -203,10 +203,10 @@ Need/Type
 
 
 ### Benchmark 4 — Hiwonder xArm 1S
-**Key words:** low-cost programmable desktop robotic arm for education and pick-and-place applications
+**Key words:** low-cost programmable desktop robotic arm for education and pick-and-place applications<br>
 **Search Results Link:** <https://www.hiwonder.com/products/xarm-1s?variant=32436121894999>
 <br>
-**Positive Voice of Customer**
+**Positive Voice of Customer**<br>
 The reviews include comments such as:
 
 1.) The robotic arm is easy to assemble.
@@ -217,7 +217,7 @@ The reviews include comments such as:
 
 These comments indicate needs for easy assembly, accessible control software, and durable mechanical construction.
 <br>
-**Negative Voice of the Customer**
+**Negative Voice of the Customer**<br>
 Customers also noted:
 
 1.) Windows control software can be difficult to locate.
@@ -263,7 +263,7 @@ Need/Type
 <img width="600" alt="Denoised_beauty_fd1c2f21-c347-4e0f-ad86-938a455c8afd" src="https://github.com/user-attachments/assets/32ff6043-c913-4381-896f-10b509a33a6d" />
 
 ### Benchmark 5. Adeept 5-DOF Robotic Arm Kit
-**Key words:** low-cost Arduino programmable robotic arm kit for education and pick-and-place
+**Key words:** low-cost Arduino programmable robotic arm kit for education and pick-and-place<br>
 **Search Results Link:** <https://www.adeept.com/adeept-5-dof-robotic-arm-kit-compatible-with-arduino-ide-programmable-diy-coding-stem-educational-5-axis-robot-arm-with-oled-display-processing-code_p0360.html>
 <br>
 **Positive Voice of Customer** <br>
