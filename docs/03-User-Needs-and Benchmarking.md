@@ -4,21 +4,21 @@ title: User Needs and Benchmarking
 Project goal: Our team is developing a low-cost, modular desktop robotic arm mock-up capable of performing precise, repeatable automated pick-and-place tasks. The purpose of the project is to demonstrate how repetitive manual work can be automated while keeping the system accessible to students, makers, and beginning robotics users.
 
 The design should prioritize:
-1.) Precise and repeatable movement
-2.) Reliable pick-and-place operation
-3.) Low cost
-4.) Easy setup and calibration
-5.) Simple programming and control
-6.) Modular hardware and software
-7.) Safe operation
-8.) Educational value
+1.) Precise and repeatable movement<br>
+2.) Reliable pick-and-place operation<br>
+3.) Low cost<br>
+4.) Easy setup and calibration<br>
+5.) Simple programming and control<br>
+6.) Modular hardware and software<br>
+7.) Safe operation<br>
+8.) Educational value<br>
 
 Target User: The primary users identified for this project are:
-1.) Engineering students learning robotics, embedded systems, controls, and programming.
-2.) STEM educators who need a hands-on robotics demonstration or laboratory platform.
-3.) Hobbyists and makers who want an inexpensive platform for experimentation.
-4.) Beginning robotics programmers who need an approachable system for learning.
-5.) Small-scale automation users who want to demonstrate simple repetitive automation.
+1.) Engineering students learning robotics, embedded systems, controls, and programming.<br>
+2.) STEM educators who need a hands-on robotics demonstration or laboratory platform.<br>
+3.) Hobbyists and makers who want an inexpensive platform for experimentation.<br>
+4.) Beginning robotics programmers who need an approachable system for learning.<br>
+5.) Small-scale automation users who want to demonstrate simple repetitive automation.<br>
 
 
 ## Voice of the Customer Benchmarking
@@ -45,16 +45,16 @@ Product/                                         Main reason for benchmarking
 Positive Voice of the Customer
 
 The reviews include comments such as:
-1.) “Strong Desktop AI Robot”
-2.) “Great For Object Recognition”
-3.) “Useful For Computer Vision”
-4.) “The robotic arm operates very stably”
-These comments indicate needs for stable motion, computer-vision integration, and software experimentation.
+1.) “Strong Desktop AI Robot”<br>
+2.) “Great For Object Recognition”<br>
+3.) “Useful For Computer Vision”<br>
+4.) “The robotic arm operates very stably”<br>
+These comments indicate needs for stable motion, computer-vision integration, and software experimentation.<br>
 
 Negative Voice of the Customer
 
 A customer also noted:
-1.) “Good Robot More Tutorials Help”
+1.) “Good Robot More Tutorials Help”<br>
 The review specifically requested more step-by-step AI guidance.
 
 User Needs Derived:
