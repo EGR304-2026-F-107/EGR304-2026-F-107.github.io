@@ -41,7 +41,7 @@ Product/                                         Main reason for benchmarking
 ### Benchmark 1 — Elephant Robotics myCobot 280
 
 **Keywords:** " robotic motion with software development and computer-vision experimentation"
-**Search Results Link:** [https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano] (https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano)<br>
+**Search Results Link:** <https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano> <br>
 <br>
 **Positive Voice of the Customer**<br>
 The reviews include comments such as:<br>
@@ -73,7 +73,7 @@ Need/                                                                           
 <br>
 * Price: $849<br>
 * Vendor: Elephant Robotics<br>
-* Link to Vendor: [https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano]<br>
+* Link to Vendor: <https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano><br>
 * Description: The kit includes over 50 high quality components and 10 Challenges that inspire kids to invent their own creations. The pieces are a combination of the everyday and the mysterious, perfect for generating creativity, boosting IQ and instilling STEM knowledge.<br>
 *Images:<br>
 <img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/9a89d1c6-ed36-46b8-b02e-0727d299448a" />
@@ -82,7 +82,7 @@ Need/                                                                           
 ### Benchmark 2 — Yahboom DOFBOT
 
 **Key words:** educational robotic arm, Raspberry Pi hardware, supporting ROS/Python-based development, vision applications.
-**Search Results Link:** [https://category.yahboom.net/products/dofbot-pi]
+**Search Results Link:** <https://category.yahboom.net/products/dofbot-pi>
 <br>
 **Positive Voice of the Customer**<br>
 One customer reported that technical support provided useful assistance and that the system was working normally.
@@ -139,7 +139,7 @@ Need/Type
 <br>
 * Price: $329<br>
 * Vendor: Yahboom<br>
-* Link to Vendor: https://category.yahboom.net/products/dofbot-pi <br>
+* Link to Vendor: <https://category.yahboom.net/products/dofbot-pi> <br>
 * Description: The DOFBOT is an educational robotic arm using Raspberry Pi hardware and supporting ROS/Python-based development and vision applications.<br>
 * Images:<br>
 <img width="1500" height="1500" alt="image" src="https://github.com/user-attachments/assets/b92563b5-d57b-4907-b85e-0a38604a3758" />
@@ -147,7 +147,7 @@ Need/Type
 
 ### Benchmark 3 — DOBOT Magician
 **Key words:** desktop educational robotic arm, interchangeable end tools
-**Search Results Link:** [https://www.dobot-robots.com/products/education/magician.html]
+**Search Results Link:** <https://www.dobot-robots.com/products/education/magician.html>
 <br>
 **Positive Voice of Customer**<br>
 1.) A RobotShop customer described the product as:/“very good and has a very good precision”
@@ -195,7 +195,7 @@ Need/Type
 <br>
 * Price: $3,780<br>
 * Vendor: DOBOT<br>
-* Link to Vendor: [https://www.dobot-robots.com/products/desktop-four-axis/mg400.html]<br>
+* Link to Vendor: <https://www.dobot-robots.com/products/desktop-four-axis/mg400.html><br>
 * Description: The DOBOT Magician is a desktop educational robotic arm with multiple programming methods, interchangeable end tools, and a published repeatability specification.<br>
 * Images:<br>
 <img width="365" height="547" alt="image" src="https://github.com/user-attachments/assets/d16f2727-d1ee-4a5d-bfe0-f94a0e84b9f8" />
@@ -204,7 +204,7 @@ Need/Type
 
 ### Benchmark 4 — Hiwonder xArm 1S
 **Key words:** low-cost programmable desktop robotic arm for education and pick-and-place applications
-**Search Results Link:** [https://www.hiwonder.com/products/xarm-1s?variant=32436121894999]
+**Search Results Link:** <https://www.hiwonder.com/products/xarm-1s?variant=32436121894999>
 <br>
 **Positive Voice of Customer**
 The reviews include comments such as:
@@ -264,9 +264,9 @@ Need/Type
 
 ### Benchmark 5. Adeept 5-DOF Robotic Arm Kit
 **Key words:** low-cost Arduino programmable robotic arm kit for education and pick-and-place
-**Search Results Link:** [https://www.adeept.com/adeept-5-dof-robotic-arm-kit-compatible-with-arduino-ide-programmable-diy-coding-stem-educational-5-axis-robot-arm-with-oled-display-processing-code_p0360.html]
+**Search Results Link:** <https://www.adeept.com/adeept-5-dof-robotic-arm-kit-compatible-with-arduino-ide-programmable-diy-coding-stem-educational-5-axis-robot-arm-with-oled-display-processing-code_p0360.html>
 <br>
-**Positive Voice of Customer**
+**Positive Voice of Customer** <br>
 The reviews include comments such as:
 
 1.) Users reported that the robotic arm is enjoyable to assemble and use.
@@ -277,7 +277,7 @@ The reviews include comments such as:
 
 These comments indicate needs for enjoyable assembly, understandable instructions, and educational value.
 <br>
-**Negative Voice of the Customer**
+**Negative Voice of the Customer** <br>
 Customers also noted:
 
 1.) Some users had difficulty locating or accessing assembly and programming documentation.
@@ -315,7 +315,7 @@ Need/Type
 <br>
 *Price: $69.99<br>
 * Vendor: Adeept<br>
-* Link to Vendor: [https://www.adeept.com/adeept-5-dof-robotic-arm-kit-compatible-with-arduino-ide-programmable-diy-coding-stem-educational-5-axis-robot-arm-with-oled-display-processing-code_p0360.html]<br>
+* Link to Vendor: <https://www.adeept.com/adeept-5-dof-robotic-arm-kit-compatible-with-arduino-ide-programmable-diy-coding-stem-educational-5-axis-robot-arm-with-oled-display-processing-code_p0360.html><br>
 * Description: The Adeept 5-DOF Robotic Arm Kit is a low-cost educational robotic arm designed for learning assembly, programming, and robotic control. It is compatible with the Arduino IDE and includes an Arduino-compatible control board, OLED display, servo motors, and multiple control methods including manual potentiometer control and computer-based control.<br>
 * Images:<br>
 <img width="240" height="240" alt="505dcb7f59 jpg 240x240" src="https://github.com/user-attachments/assets/f93f52c2-ce5d-4ede-a74e-7efb71c171de" />
