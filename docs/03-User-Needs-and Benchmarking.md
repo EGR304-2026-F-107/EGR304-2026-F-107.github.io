@@ -143,7 +143,7 @@ Need/Type
 
 9.) Vision functions should require minimal recalibration/Latent
 
-10.) Troubleshooting should be straightforward/Explicit
+10.) Troubleshooting should be straightforward/Explicit<br>
 * Price: $329
 
 * Vendor: Yahboom
@@ -201,7 +201,7 @@ Need/Type
 
 9.) Programming should have a low learning curve./Latent
 
-10.) Hardware problems should be resolved easily./Latent
+10.) Hardware problems should be resolved easily./Latent<br>
 * Price: $3,780
 
 * Vendor: DOBOT
@@ -267,7 +267,7 @@ Need/Type
 
 11.) The robotic arm should support common robotics software platforms./Explicit
 
-12.) The system should allow future software expansion./Latent
+12.) The system should allow future software expansion./Latent<br>
 
 * Price: $199.99
 
@@ -334,7 +334,7 @@ Need/Type
 
 10.) The system should operate consistently during repeated use./Latent
 
-11.) The robotic arm should support custom programming./Explicit
+11.) The robotic arm should support custom programming./Explicit<br>
 
 *Price: $69.99
 
