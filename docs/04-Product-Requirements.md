@@ -199,21 +199,20 @@ Manufacturing considerations include:
 *Minimal specialized manufacturing equipment.
 
 Assembly instructions should be clear enough that a user with basic technical skills can construct or service the system.
-6. **Manufacturing**
+6. **Safety**
 
-The product should use commonly available components where practical to reduce cost and simplify replacement.
+The robotic arm should be designed to operate safely in classroom, laboratory, and desktop environments where users may be in close to motor and moving components.
 
-Manufacturing considerations include:
+Safety considerations include:
 
-Low component cost.
-Availability of replacement components.
-Repeatable assembly.
-Accessible fasteners and connectors.
-Organized wiring.
-Modular components.
-Minimal specialized manufacturing equipment.
+*The system should provide an accessible emergency stop or software-controlled stop mechanism.
+*The robotic arm should avoid unexpected motion during startup and calibration.
+*Wiring and electrical connections should be secured and protected from moving joints.
+*Moving joints and the gripper should be arranged to reduce the risk of pinch points and accidental contact.
+*The robotic arm should remain physically stable during normal operation.
+*Electrical components should operate within their specified voltage and current limits.
 
-Assembly instructions should be clear enough that a user with basic technical skills can construct or service the system.
+The final design should ensure safe operation while maintaining the accessibility and educational value of the system.
 
 ## Requirement Criteria Specifications
 
