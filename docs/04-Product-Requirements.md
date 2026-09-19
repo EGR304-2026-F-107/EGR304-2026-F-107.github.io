@@ -126,15 +126,14 @@ The software will:
 The robotic arm should provide an approachable user experience for users with limited robotics experience.
 <br>
 The user interface should prioritize:<br>
-*Simple controls.<br>
-*Clear feedback.<br>
-*Understandable error messages.<br>
-*Straightforward calibration.<br>
-*Accessible documentation.<br>
-*Minimal unnecessary setup.<br>
-<br>
-The system should allow a beginner to progress from basic manual movement to programmed automation.<br>
-The user should not need extensive robotics knowledge to perform the basic pick-and-place demonstration.<br>
+3.1 Simple controls.<br>
+3.2 Clear feedback.<br>
+3.3 Understandable error messages.<br>
+3.4 Straightforward calibration.<br>
+3.5 Accessible documentation.<br>
+3.6 Minimal unnecessary setup.<br>
+3.7 The system should allow a beginner to progress from basic manual movement to programmed automation.<br>
+3.8 The user should not need extensive robotics knowledge to perform the basic pick-and-place demonstration.<br>
 ### 4. Customization <br>
 The system should be designed so that users can modify or expand the robotic arm.<br>
 <br>
@@ -147,24 +146,31 @@ Potential customization should include:<br>
 4.6 Additional objects or sorting tasks.<br>
 4.7 Software modifications.<br>
 4.8 Future robotic arm improvements.<br>
-<br>
 4.9 The modular design should allow components to be replaced or upgraded without requiring replacement of the complete system.
 <br>
 ### 5. Manufacturing <br>
 The product should use commonly available components where practical to reduce cost and simplify replacement.
 <br>
 Manufacturing considerations include:<br>
-Low component cost.<br>
-Availability of replacement components.<br>
-Repeatable assembly.<br>
-Accessible fasteners and connectors.<br>
-Organized wiring.<br>
-Modular components.<br>
-Minimal specialized manufacturing equipment.<br>
+5.1 Low component cost.<br>
+5.2 Availability of replacement components.<br>
+5.3 Repeatable assembly.<br>
+5.4 Accessible fasteners and connectors.<br>
+5.5 Organized wiring.<br>
+5.6 Modular components.<br>
+5.7 Minimal specialized manufacturing equipment.<br>
+5.8 Assembly instructions should be clear enough that a user with basic technical skills can construct or service the system.<br>
 <br>
-Assembly instructions should be clear enough that a user with basic technical skills can construct or service the system.<br>
 ### 6. Regulations <br>
-
+6.1 The product shall use a low-voltage power system suitable for a desktop educational environment and shall properly insulate exposed electrical connections.<br>
+6.2 The robotic arm shall incorporate mechanical or software-based joint limits to prevent movement beyond the safe operating range of each joint.<br>
+6.3 The product shall include an accessible emergency stop or power-disconnect mechanism capable of immediately stopping robotic motion.<br>
+6.4 The base shall remain stable without tipping or significant displacement when the robotic arm operates at its maximum specified payload and reach.<br>
+6.5 The end effector shall securely grasp and release objects within the specified payload range without damaging the objects during normal operation.<br>
+6.6 The product shall complete at least 100 consecutive pick-and-place cycles without mechanical failure or loss of basic functionality.<br>
+6.7 The robotic arm shall include protection against motor overload or prolonged stalled conditions to reduce the risk of overheating and component damage.<br>
+6.8 The product shall provide documentation specifying safe operating procedures, maximum payload, workspace limitations, assembly, and calibration requirements.<br>
+<br>
 ## Requirement Criteria Specifications
 
 | ID | Requirement | Verification Method | Target |
