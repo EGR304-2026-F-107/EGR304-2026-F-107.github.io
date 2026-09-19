@@ -148,19 +148,7 @@ Potential customization should include:<br>
 *Future robotic arm improvements.<br>
 <br>
 The modular design should allow components to be replaced or upgraded without requiring replacement of the complete system.
-### 6. **Manufacturing** <br>
-The product should use commonly available components where practical to reduce cost and simplify replacement.
 <br>
-Manufacturing considerations include:<br>
-*Low component cost.<br>
-*Availability of replacement components.<br>
-*Repeatable assembly.<br>
-*Accessible fasteners and connectors.<br>
-*Organized wiring.<br>
-*Modular components.<br>
-*Minimal specialized manufacturing equipment.<br>
-<br>
-Assembly instructions should be clear enough that a user with basic technical skills can construct or service the system.<br>
 ### 6. **Manufacturing**<br>
 The product should use commonly available components where practical to reduce cost and simplify replacement.
 <br>
