@@ -98,55 +98,54 @@ The system should:
 .Operate safely around users.
 .Provide visible or understandable feedback about the system's operating state.
 .Be sufficiently reliable to complete a classroom demonstration without repeated troubleshooting.
-**Verification**
+**Verification**<br>
 The educator setup procedure will be timed and documented. The system will also be tested through repeated demonstrations to determine whether the arm can complete the programmed task consistently.
-
+<br>
 ## Design Aspects
 
-1. **Hardware / Product Design**
-   The robotic arm should use a compact desktop form factor suitable for a laboratory, classroom, or workbench.
-
-The mechanical design should prioritize:
-
-*Stable operation.
-*Repeatable joint movement.
-*Reliable object handling.
-*Accessible components.
-*Modular construction.
-*Easy maintenance.
-*Low vibration.
-*Compact size.
-*Affordable components.
-The arm should include an end effector capable of securely gripping the intended demonstration objects.
-
+### 1. **Hardware / Product Design**<br>
+The robotic arm should use a compact desktop form factor suitable for a laboratory, classroom, or workbench.<br>
+<br>
+The mechanical design should prioritize:<br>
+*Stable operation.<br>
+*Repeatable joint movement.<br>
+*Reliable object handling.<br>
+*Accessible components.<br>
+*Modular construction.<br>
+*Easy maintenance.<br>
+*Low vibration.<br>
+*Compact size.<br>
+*Affordable components.<br>
+The arm should include an end effector capable of securely gripping the intended demonstration objects.<br>
+<br>
 The mechanical structure should be sufficiently rigid that repeated movement does not cause excessive movement or instability.
-**Hardware Requirements**
-*The base shall remain stable during normal operation.
-*The joints shall provide controlled movement.
-*The gripper shall securely hold the intended test objects.
-*Components should be replaceable individually when practical.
-*Wiring should be organized and protected from moving components.
-*The system should provide an accessible emergency stop or software-controlled stop mechanism.
-  
-2. **Software / Functionality**
-     The software should provide simple control of the robotic arm while allowing advanced users to modify the system.
-
-The system should support:
-
-*Manual movement.
-*Programmed movement.
-*Pick-and-place sequences.
-*Position control.
-*Gripper control.
-*Calibration.
-*Basic error handling.
-*Future sensor integration.
-*Future computer-vision integration.
-
+<br>
+**Hardware Requirements**<br>
+*The base shall remain stable during normal operation.<br>
+*The joints shall provide controlled movement.<br>
+*The gripper shall securely hold the intended test objects.<br>
+*Components should be replaceable individually when practical.<br>
+*Wiring should be organized and protected from moving components.<br>
+*The system should provide an accessible emergency stop or software-controlled stop mechanism.<br>
+  <br>
+### 2. **Software / Functionality**<br>
+The software should provide simple control of the robotic arm while allowing advanced users to modify the system.<br>
+<br>
+The system should support:<br>
+*Manual movement.<br>
+*Programmed movement.<br>
+*Pick-and-place sequences.<br>
+*Position control.<br>
+*Gripper control.<br>
+*Calibration.<br>
+*Basic error handling.<br>
+*Future sensor integration.<br>
+*Future computer-vision integration.<br>
+<br>
 The software should use a modular structure so that additional functions can be added without completely rewriting the control system.
-**Software Requirements**
+<br>
+**Software Requirements**<br>
 The software will:
-
 *Allow the user to command individual robotic movements.
 *Allow the user to execute a programmed sequence.
 *Allow the user to control the gripper.
@@ -155,66 +154,59 @@ The software will:
 *Provide understandable examples for beginning programmers.
 *Allow future sensors or accessories to be integrated.
 
-3. **Interactivity & User Experience**
-   The robotic arm should provide an approachable user experience for users with limited robotics experience.
-
-The user interface should prioritize:
-
-*Simple controls.
-*Clear feedback.
-*Understandable error messages.
-*Straightforward calibration.
-*Accessible documentation.
-*Minimal unnecessary setup.
-
-The system should allow a beginner to progress from basic manual movement to programmed automation.
-The user should not need extensive robotics knowledge to perform the basic pick-and-place demonstration.
-4. **Customization**
-The system should be designed so that users can modify or expand the robotic arm.
-
-Potential customization should include:
-
-*Different end effectors.
-*Additional sensors.
-*Computer vision.
-*Alternative control interfaces.
-*Different programmed movement sequences.
-*Additional objects or sorting tasks.
-*Software modifications.
-*Future robotic arm improvements.
-
+### 3. **Interactivity & User Experience**<br>
+The robotic arm should provide an approachable user experience for users with limited robotics experience.
+<br>
+The user interface should prioritize:<br>
+*Simple controls.<br>
+*Clear feedback.<br>
+*Understandable error messages.<br>
+*Straightforward calibration.<br>
+*Accessible documentation.<br>
+*Minimal unnecessary setup.<br>
+<br>
+The system should allow a beginner to progress from basic manual movement to programmed automation.<br>
+The user should not need extensive robotics knowledge to perform the basic pick-and-place demonstration.<br>
+### 5. **Customization** <br>
+The system should be designed so that users can modify or expand the robotic arm.<br>
+<br>
+Potential customization should include:<br>
+*Different end effectors.<br>
+*Additional sensors.<br>
+*Computer vision.<br>
+*Alternative control interfaces.<br>
+*Different programmed movement sequences.<br>
+*Additional objects or sorting tasks.<br>
+*Software modifications.<br>
+*Future robotic arm improvements.<br>
+<br>
 The modular design should allow components to be replaced or upgraded without requiring replacement of the complete system.
-5. **Manufacturing**
-
+### 6. **Manufacturing** <br>
 The product should use commonly available components where practical to reduce cost and simplify replacement.
-
-Manufacturing considerations include:
-
-*Low component cost.
-*Availability of replacement components.
-*Repeatable assembly.
-*Accessible fasteners and connectors.
-*Organized wiring.
-*Modular components.
-*Minimal specialized manufacturing equipment.
-
-Assembly instructions should be clear enough that a user with basic technical skills can construct or service the system.
-6. **Manufacturing**
-
+<br>
+Manufacturing considerations include:<br>
+*Low component cost.<br>
+*Availability of replacement components.<br>
+*Repeatable assembly.<br>
+*Accessible fasteners and connectors.<br>
+*Organized wiring.<br>
+*Modular components.<br>
+*Minimal specialized manufacturing equipment.<br>
+<br>
+Assembly instructions should be clear enough that a user with basic technical skills can construct or service the system.<br>
+### 6. **Manufacturing**<br>
 The product should use commonly available components where practical to reduce cost and simplify replacement.
-
-Manufacturing considerations include:
-
-Low component cost.
-Availability of replacement components.
-Repeatable assembly.
-Accessible fasteners and connectors.
-Organized wiring.
-Modular components.
-Minimal specialized manufacturing equipment.
-
-Assembly instructions should be clear enough that a user with basic technical skills can construct or service the system.
-
+<br>
+Manufacturing considerations include:<br>
+Low component cost.<br>
+Availability of replacement components.<br>
+Repeatable assembly.<br>
+Accessible fasteners and connectors.<br>
+Organized wiring.<br>
+Modular components.<br>
+Minimal specialized manufacturing equipment.<br>
+<br>
+Assembly instructions should be clear enough that a user with basic technical skills can construct or service the system.<br>
 ## Requirement Criteria Specifications
 
 | ID | Requirement | Verification Method | Target |
