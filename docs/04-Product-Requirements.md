@@ -30,7 +30,7 @@ Hobbyists should be able to use the robotic arm for experimentation, custom prog
 The system should provide a relatively low learning curve so that users with limited robotics experience can begin programming and operating the arm.<br>
 **Small-Scale Automation Users**<br>
 The system should demonstrate basic automation concepts such as repetitive movement, object sorting, and pick-and-place operations.<br>
-**Secondary Stakeholders**<br>
+### Secondary Stakeholders
 **Project Team**<br>
 The engineering team is responsible for designing, assembling, programming, testing, and documenting the product.<br>
 **Future Designers and Developers**<br>
