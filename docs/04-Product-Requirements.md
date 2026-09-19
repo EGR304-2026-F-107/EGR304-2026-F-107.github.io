@@ -3,107 +3,76 @@ title: Product Requirements
 ---
 
 ## Project Objective
-Our project aims to develop a low-cost, modular desktop robotic arm capable of performing precise and repeatable automated pick-and-place tasks. The system is intended to demonstrate how repetitive tasks can be automated while remaining accessible to engineering students, STEM educators, hobbyists, makers, and beginning robotics programmers.
-
-The product requirements were developed from the user needs identified during the Voice of the Customer benchmarking process. Existing products such as the Elephant Robotics myCobot 280, Yahboom DOFBOT, DOBOT Magician, Hiwonder xArm 1S, and Adeept 5-DOF Robotic Arm Kit were examined to identify desirable features and common problems.
-The primary objectives of the product are to:
-
-1.Provide precise and repeatable robotic movement.
-2.Reliably grasp, move, and release objects.
-2.Maintain a low overall system cost.
-3.Make assembly and calibration straightforward.
-4.Provide simple and understandable programming and control.
-5.Use modular hardware and software that can be expanded.
-6.Provide clear documentation and troubleshooting information.
-7.Provide an educational platform for learning robotics and embedded systems.
-8.Operate safely in a classroom, laboratory, or desktop environment.
-9.Provide a stable physical platform for repeated pick-and-place operations.
-
+Our project aims to develop a low-cost, modular desktop robotic arm capable of performing precise and repeatable automated pick-and-place tasks. The system is intended to demonstrate how repetitive tasks can be automated while remaining accessible to engineering students, STEM educators, hobbyists, makers, and beginning robotics programmers.<br>
+The product requirements were developed from the user needs identified during the Voice of the Customer benchmarking process. Existing products such as the Elephant Robotics myCobot 280, Yahboom DOFBOT, DOBOT Magician, Hiwonder xArm 1S, and Adeept 5-DOF Robotic Arm Kit were examined to identify desirable features and common problems.<br>
+The primary objectives of the product are to:<br>
+1.Provide precise and repeatable robotic movement.<br>
+2.Reliably grasp, move, and release objects.<br>
+2.Maintain a low overall system cost.<br>
+3.Make assembly and calibration straightforward.<br>
+4.Provide simple and understandable programming and control.<br>
+5.Use modular hardware and software that can be expanded.<br>
+6.Provide clear documentation and troubleshooting information.<br>
+7.Provide an educational platform for learning robotics and embedded systems.<br>
+8.Operate safely in a classroom, laboratory, or desktop environment.<br>
+9.Provide a stable physical platform for repeated pick-and-place operations.<br>
 The final design should balance performance, affordability, accessibility, and educational value rather than focusing exclusively on maximum industrial performance.
-
+<br>
 ## Stakeholders
-
- **Target group**
-**Engineering Students**
-
-Students are expected to be one of the primary users of the robotic arm. The system should allow students to learn about robotics, embedded systems, programming, sensors, motors, control systems, and automation through hands-on experimentation.
-
-**STEM Educators**
-
-Teachers and instructors may use the robotic arm as a classroom demonstration or laboratory platform. The system should therefore be easy to set up, demonstrate, and explain.
-
-**Hobbyists and Makers**
-
-Hobbyists should be able to use the robotic arm for experimentation, custom programming, and small automation projects without requiring expensive industrial equipment.
-Beginning Robotics Programmers
-
-The system should provide a relatively low learning curve so that users with limited robotics experience can begin programming and operating the arm.
-
-**Small-Scale Automation Users**
-
-The system should demonstrate basic automation concepts such as repetitive movement, object sorting, and pick-and-place operations.
-
-**Secondary Stakeholders**
-
-**Project Team**
-
-The engineering team is responsible for designing, assembling, programming, testing, and documenting the product.
-
-**Future Designers and Developers**
-
-Because the system is intended to be modular, future users should be able to modify or expand the hardware and software without redesigning the entire system.
-**Manufacturers and Suppliers**
-
-Manufacturing stakeholders need components that are affordable, available, compatible, and practical to assemble.
+### Target group
+**Engineering Students**<br>
+Students are expected to be one of the primary users of the robotic arm. The system should allow students to learn about robotics, embedded systems, programming, sensors, motors, control systems, and automation through hands-on experimentation.<br>
+**STEM Educators**<br>
+Teachers and instructors may use the robotic arm as a classroom demonstration or laboratory platform. The system should therefore be easy to set up, demonstrate, and explain.<br>
+**Hobbyists and Makers**<br>
+Hobbyists should be able to use the robotic arm for experimentation, custom programming, and small automation projects without requiring expensive industrial equipment.<br>
+**Beginning Robotics Programmers**<br>
+The system should provide a relatively low learning curve so that users with limited robotics experience can begin programming and operating the arm.<br>
+**Small-Scale Automation Users**<br>
+The system should demonstrate basic automation concepts such as repetitive movement, object sorting, and pick-and-place operations.<br>
+**Secondary Stakeholders**<br>
+**Project Team**<br>
+The engineering team is responsible for designing, assembling, programming, testing, and documenting the product.<br>
+**Future Designers and Developers**<br>
+Because the system is intended to be modular, future users should be able to modify or expand the hardware and software without redesigning the entire system.<br>
+**Manufacturers and Suppliers**<br>
+Manufacturing stakeholders need components that are affordable, available, compatible, and practical to assemble.<br>
 
 ## Use Cases
-
 ### Use Case #1: Engineering Student Performing Pick-and-Place
-
-An engineering student uses the robotic arm in a laboratory to learn about automated pick-and-place operations.
-
-The student places several small objects within the designated workspace and starts the robotic arm. The arm moves to a predefined position, activates the gripper, picks up an object, moves to another predefined position, releases the object, and returns to its starting position.
-
-The student then modifies the program to change the object's starting or ending position.
-**User Requirements**
-
-The system should:
-
-Complete the pick-and-place sequence consistently.
-Position the gripper accurately enough to grasp the intended object.
-Repeat the sequence multiple times without requiring manual recalibration.
-Allow the user to modify movement parameters.
-Provide understandable programming examples.
-Allow the student to observe the relationship between software commands and physical movement.
-Provide a safe method of stopping the arm if unexpected movement occurs.
-**Verification**
-
-This use case can be verified through a repeated pick-and-place test. The arm will be commanded to perform the same operation multiple times and the success rate, positioning error, and calibration stability will be recorded.
-
+An engineering student uses the robotic arm in a laboratory to learn about automated pick-and-place operations.<br>
+The student places several small objects within the designated workspace and starts the robotic arm. The arm moves to a predefined position, activates the gripper, picks up an object, moves to another predefined position, releases the object, and returns to its starting position.<br>
+The student then modifies the program to change the object's starting or ending position.<br>
+**User Requirements**<br>
+The system should:<br>
+Complete the pick-and-place sequence consistently.<br>
+Position the gripper accurately enough to grasp the intended object.<br>
+Repeat the sequence multiple times without requiring manual recalibration.<br>
+Allow the user to modify movement parameters.<br>
+Provide understandable programming examples.<br>
+Allow the student to observe the relationship between software commands and physical movement.<br>
+Provide a safe method of stopping the arm if unexpected movement occurs.<br>
+**Verification**<br>
+This use case can be verified through a repeated pick-and-place test. The arm will be commanded to perform the same operation multiple times and the success rate, positioning error, and calibration stability will be recorded.<br>
 ### Use Case #2: STEM Educator Demonstrating Robotic Automation
-A STEM educator uses the robotic arm during a classroom demonstration.
-
-The educator demonstrates how a repetitive manual task can be automated by programming the arm to move objects between two locations.
-
-Students observe the movement and then modify the program to change the movement sequence.
-
-**User Requirements**
-
-The system should:
-
-.Be simple enough to demonstrate without extensive setup.
-.Provide clear startup instructions.
-.Provide clear programming examples.
-.Allow students to modify the robotic sequence.
-.Operate safely around users.
-.Provide visible or understandable feedback about the system's operating state.
-.Be sufficiently reliable to complete a classroom demonstration without repeated troubleshooting.
+A STEM educator uses the robotic arm during a classroom demonstration.<br>
+The educator demonstrates how a repetitive manual task can be automated by programming the arm to move objects between two locations.<br>
+Students observe the movement and then modify the program to change the movement sequence.<br>
+<br>
+**User Requirements**<br>
+The system should:<br>
+.Be simple enough to demonstrate without extensive setup.<br>
+.Provide clear startup instructions.<br>
+.Provide clear programming examples.<br>
+.Allow students to modify the robotic sequence.<br>
+.Operate safely around users.<br>
+.Provide visible or understandable feedback about the system's operating state.<br>
+.Be sufficiently reliable to complete a classroom demonstration without repeated troubleshooting.<br>
 **Verification**<br>
 The educator setup procedure will be timed and documented. The system will also be tested through repeated demonstrations to determine whether the arm can complete the programmed task consistently.
 <br>
 ## Design Aspects
-
-### 1. **Hardware / Product Design**<br>
+### 1. Hardware / Product Design <br>
 The robotic arm should use a compact desktop form factor suitable for a laboratory, classroom, or workbench.<br>
 <br>
 The mechanical design should prioritize:<br>
@@ -117,10 +86,9 @@ The mechanical design should prioritize:<br>
 *Compact size.<br>
 *Affordable components.<br>
 The arm should include an end effector capable of securely gripping the intended demonstration objects.<br>
-<br>
 The mechanical structure should be sufficiently rigid that repeated movement does not cause excessive movement or instability.
 <br>
-**Hardware Requirements**<br>
+**Hardware Requirements** <br>
 *The base shall remain stable during normal operation.<br>
 *The joints shall provide controlled movement.<br>
 *The gripper shall securely hold the intended test objects.<br>
