@@ -75,18 +75,18 @@ The educator setup procedure will be timed and documented. The system will also 
 ### 1. Hardware / Product Design <br>
 The robotic arm should use a compact desktop form factor suitable for a laboratory, classroom, or workbench.<br>
 <br>
-1.1 The mechanical design should prioritize:<br>
-1.2 Stable operation.<br>
-1.3 Repeatable joint movement.<br>
-1.4 Reliable object handling.<br>
-1.5 Accessible components.<br>
-1.6 Modular construction.<br>
-1.7 Easy maintenance.<br>
-1.8 Low vibration.<br>
-1.9 Compact size.<br>
-1.10 Affordable components.<br>
-1.11 The arm should include an end effector capable of securely gripping the intended demonstration objects.<br>
-1.12 The mechanical structure should be sufficiently rigid that repeated movement does not cause excessive movement or instability.
+The mechanical design should prioritize:<br>
+1.1 Stable operation.<br>
+1.2 Repeatable joint movement.<br>
+1.3 Reliable object handling.<br>
+1.4 Accessible components.<br>
+1.5 Modular construction.<br>
+1.6 Easy maintenance.<br>
+1.7 Low vibration.<br>
+1.8 Compact size.<br>
+1.9 Affordable components.<br>
+1.10 The arm should include an end effector capable of securely gripping the intended demonstration objects.<br>
+1.11 The mechanical structure should be sufficiently rigid that repeated movement does not cause excessive movement or instability.
 <br>
 **Hardware Requirements** <br>
 *The base shall remain stable during normal operation.<br>
@@ -100,17 +100,16 @@ The robotic arm should use a compact desktop form factor suitable for a laborato
 The software should provide simple control of the robotic arm while allowing advanced users to modify the system.<br>
 <br>
 The system should support:<br>
-*Manual movement.<br>
-*Programmed movement.<br>
-*Pick-and-place sequences.<br>
-*Position control.<br>
-*Gripper control.<br>
-*Calibration.<br>
-*Basic error handling.<br>
-*Future sensor integration.<br>
-*Future computer-vision integration.<br>
-<br>
-The software should use a modular structure so that additional functions can be added without completely rewriting the control system.
+2.1 Manual movement.<br>
+2.2 Programmed movement.<br>
+2.3 Pick-and-place sequences.<br>
+2.4 Position control.<br>
+2.5 Gripper control.<br>
+2.6 Calibration.<br>
+2.7 Basic error handling.<br>
+2.8 Future sensor integration.<br>
+2.9 Future computer-vision integration.<br>
+2.10 The software should use a modular structure so that additional functions can be added without completely rewriting the control system.
 <br>
 **Software Requirements**<br>
 The software will:
