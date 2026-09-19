@@ -71,6 +71,7 @@ The system should:<br>
 **Verification**<br>
 The educator setup procedure will be timed and documented. The system will also be tested through repeated demonstrations to determine whether the arm can complete the programmed task consistently.
 <br>
+
 ## Design Aspects
 ### 1. Hardware / Product Design <br>
 The robotic arm should use a compact desktop form factor suitable for a laboratory, classroom, or workbench.<br>
@@ -121,7 +122,7 @@ The software will:
 *Provide understandable examples for beginning programmers.
 *Allow future sensors or accessories to be integrated.
 
-### 3. **Interactivity & User Experience**<br>
+### 3. Interactivity & User Experience <br>
 The robotic arm should provide an approachable user experience for users with limited robotics experience.
 <br>
 The user interface should prioritize:<br>
@@ -134,22 +135,22 @@ The user interface should prioritize:<br>
 <br>
 The system should allow a beginner to progress from basic manual movement to programmed automation.<br>
 The user should not need extensive robotics knowledge to perform the basic pick-and-place demonstration.<br>
-### 5. **Customization** <br>
+### 4. Customization <br>
 The system should be designed so that users can modify or expand the robotic arm.<br>
 <br>
 Potential customization should include:<br>
-*Different end effectors.<br>
-*Additional sensors.<br>
-*Computer vision.<br>
-*Alternative control interfaces.<br>
-*Different programmed movement sequences.<br>
-*Additional objects or sorting tasks.<br>
-*Software modifications.<br>
-*Future robotic arm improvements.<br>
+4.1 Different end effectors.<br>
+4.2 Additional sensors.<br>
+4.3 Computer vision.<br>
+4.4 Alternative control interfaces.<br>
+4.5 Different programmed movement sequences.<br>
+4.6 Additional objects or sorting tasks.<br>
+4.7 Software modifications.<br>
+4.8 Future robotic arm improvements.<br>
 <br>
-The modular design should allow components to be replaced or upgraded without requiring replacement of the complete system.
+4.9 The modular design should allow components to be replaced or upgraded without requiring replacement of the complete system.
 <br>
-### 6. **Manufacturing**<br>
+### 5. Manufacturing <br>
 The product should use commonly available components where practical to reduce cost and simplify replacement.
 <br>
 Manufacturing considerations include:<br>
@@ -162,6 +163,8 @@ Modular components.<br>
 Minimal specialized manufacturing equipment.<br>
 <br>
 Assembly instructions should be clear enough that a user with basic technical skills can construct or service the system.<br>
+### 6. Regulations <br>
+
 ## Requirement Criteria Specifications
 
 | ID | Requirement | Verification Method | Target |
@@ -202,21 +205,21 @@ Assembly instructions should be clear enough that a user with basic technical sk
 
 ## Open Questions
 
-1.) What is the maximum object weight that the robotic arm needs to pick up?
-2.) What object dimensions should the gripper accommodate?
-3.) What positioning accuracy is required for successful pick-and-place operation?
-4.) How many degrees of freedom are required for the intended demonstrations?
-5.) Which microcontroller or processor will be used for the final design?
-6.) Which motors and motor drivers provide the appropriate combination of cost, torque, and positioning accuracy?
-7.) What sensors should be included in the initial design?
-8.) Should computer vision be included in the initial prototype or reserved for future expansion?
-9.) What programming language or development environment should be used?
-10.) What control interface will provide the best balance between simplicity and flexibility?
-11.) What is the maximum acceptable total project cost?
-12.) What safety mechanism should be used as the emergency stop?
-13.) How much calibration should be required after powering on the system?
-14.) What testing procedure will be used to define and measure repeatability?
-15.) What manufacturing or fabrication method will be used for the arm structure?
-16.) Which components should be designed to be replaceable?
-17.) What documentation is necessary for a beginning robotics student to successfully assemble and program the system?
-18.) What future sensors, end effectors, or software features should the modular architecture support?
+1.) What is the maximum object weight that the robotic arm needs to pick up?<br>
+2.) What object dimensions should the gripper accommodate?<br>
+3.) What positioning accuracy is required for successful pick-and-place operation?<br>
+4.) How many degrees of freedom are required for the intended demonstrations?<br>
+5.) Which microcontroller or processor will be used for the final design?<br>
+6.) Which motors and motor drivers provide the appropriate combination of cost, torque, and positioning accuracy?<br>
+7.) What sensors should be included in the initial design?<br>
+8.) Should computer vision be included in the initial prototype or reserved for future expansion?<br>
+9.) What programming language or development environment should be used?<br>
+10.) What control interface will provide the best balance between simplicity and flexibility?<br>
+11.) What is the maximum acceptable total project cost?<br>
+12.) What safety mechanism should be used as the emergency stop?<br>
+13.) How much calibration should be required after powering on the system?<br>
+14.) What testing procedure will be used to define and measure repeatability?<br>
+15.) What manufacturing or fabrication method will be used for the arm structure?<br>
+16.) Which components should be designed to be replaceable?<br>
+17.) What documentation is necessary for a beginning robotics student to successfully assemble and program the system?<br>
+18.) What future sensors, end effectors, or software features should the modular architecture support?<br>
