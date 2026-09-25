@@ -533,6 +533,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#generating-ideas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating Ideas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-three" class="md-nav__link">
     <span class="md-ellipsis">
       Step Three
@@ -706,6 +715,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#generating-ideas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating Ideas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-three" class="md-nav__link">
     <span class="md-ellipsis">
       Step Three
@@ -758,10 +776,12 @@
   <h1>Design Ideation</h1>
 
 <h2 id="introoverview">Intro/overview</h2>
-<p>Lorem markdownum gradus, qui largis, nec pater pleno: fatum. Adspexit cursus
-cur, aut in adhuc crimina <strong>habebat</strong>: pro.</p>
+<p>The goal of this project is to develop a low-cost desktop robotic arm capable of performing precise and repeatable automated pick-and-place tasks. The system is intended to provide an accessible platform for engineering students, STEM educators, hobbyists, makers, and beginning robotics programmers to learn and experiment with robotics, embedded systems, programming, and automation.</p>
+<p>The purpose of this design ideation process is to explore a wide range of possible features and design solutions that can satisfy the user needs and product requirements identified in the previous stages of the project. These ideas will be organized, evaluated, and combined into three distinct robotic arm design concepts.</p>
 <h2 id="generating-ideas">Generating Ideas</h2>
-<p>For each user need and product requirement, brainstorm 5 different product features that could be used to satisfy that requirement.</p>
+<h2 id="generating-ideas_1">Generating Ideas</h2>
+<p>To begin the ideation process, the team reviewed the user needs and product requirements developed during the previous stages of the project. The initial brainstorm focuses on generating multiple possible features that could satisfy the functional, mechanical, software, safety, usability, and modularity requirements of the desktop robotic arm.</p>
+<p>At this stage, ideas were not eliminated based on cost, complexity, or feasibility. The purpose of the initial brainstorm was to generate a wide range of possible solutions that could later be sorted, ranked, and combined into different product concepts.</p>
 <table>
 <thead>
 <tr>
@@ -772,19 +792,544 @@ cur, aut in adhuc crimina <strong>habebat</strong>: pro.</p>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">product provides clear notifications</td>
-<td style="text-align: center;">buzzer</td>
-<td>the device provides different sounding tones and patterns for each function</td>
+<td style="text-align: right;">PR-01: Programmed pick-and-place sequence</td>
+<td style="text-align: center;">Pre-programmed motion sequence</td>
+<td>Store a predefined series of joint movements for automatic pick-and-place operation.</td>
 </tr>
 <tr>
-<td style="text-align: right;">product provides clear notifications</td>
-<td style="text-align: center;">speaker</td>
-<td>the device can emit full waveforms</td>
+<td style="text-align: right;">PR-01: Programmed pick-and-place sequence</td>
+<td style="text-align: center;">Waypoint-based movement</td>
+<td>Allow the arm to move through a series of programmed positions.</td>
 </tr>
 <tr>
-<td style="text-align: right;">..</td>
-<td style="text-align: center;">..</td>
-<td>..</td>
+<td style="text-align: right;">PR-01: Programmed pick-and-place sequence</td>
+<td style="text-align: center;">Record-and-playback mode</td>
+<td>Allow users to manually position the arm and save the positions for later playback.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-01: Programmed pick-and-place sequence</td>
+<td style="text-align: center;">State-machine control</td>
+<td>Divide the pick-and-place task into states such as approach, grasp, move, release, and return.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-01: Programmed pick-and-place sequence</td>
+<td style="text-align: center;">Adjustable movement delay</td>
+<td>Allow timing between different stages of the sequence to be changed.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-01: Programmed pick-and-place sequence</td>
+<td style="text-align: center;">Repeating cycle mode</td>
+<td>Automatically repeat the programmed sequence for demonstrations or testing.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-02: Repeatable programmed positioning</td>
+<td style="text-align: center;">Servo motors</td>
+<td>Provide controlled angular positioning at each robotic joint.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-02: Repeatable programmed positioning</td>
+<td style="text-align: center;">Stepper motors</td>
+<td>Provide repeatable incremental movement of the robotic joints.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-02: Repeatable programmed positioning</td>
+<td style="text-align: center;">Rotary encoders</td>
+<td>Measure actual joint position and provide position feedback.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-02: Repeatable programmed positioning</td>
+<td style="text-align: center;">Closed-loop position control</td>
+<td>Compare commanded and measured joint positions and correct positioning error.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-02: Repeatable programmed positioning</td>
+<td style="text-align: center;">Mechanical hard stops</td>
+<td>Provide consistent physical limits for selected joint movements.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-02: Repeatable programmed positioning</td>
+<td style="text-align: center;">Motion profiles</td>
+<td>Use controlled acceleration and deceleration to improve repeatability and reduce vibration.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-03: Secure object handling</td>
+<td style="text-align: center;">Two-finger parallel gripper</td>
+<td>Use two opposing fingers to grasp common demonstration objects.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-03: Secure object handling</td>
+<td style="text-align: center;">Three-finger gripper</td>
+<td>Provide additional contact points for objects with irregular shapes.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-03: Secure object handling</td>
+<td style="text-align: center;">Suction-cup end effector</td>
+<td>Pick up lightweight objects with smooth surfaces using vacuum suction.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-03: Secure object handling</td>
+<td style="text-align: center;">Soft gripper pads</td>
+<td>Add compliant material to the gripper fingers to increase friction and reduce object damage.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-03: Secure object handling</td>
+<td style="text-align: center;">Adjustable gripper width</td>
+<td>Allow the gripper opening to accommodate objects of different sizes.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-03: Secure object handling</td>
+<td style="text-align: center;">Force-sensitive gripper</td>
+<td>Measure gripping force to determine whether an object is held securely.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-04: Stable repeated operation</td>
+<td style="text-align: center;">Rigid arm structure</td>
+<td>Use a mechanically rigid frame to reduce flex during repeated movement.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-04: Stable repeated operation</td>
+<td style="text-align: center;">Low-backlash joints</td>
+<td>Reduce mechanical play between moving components.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-04: Stable repeated operation</td>
+<td style="text-align: center;">Smooth acceleration control</td>
+<td>Limit sudden motor acceleration that could cause vibration or instability.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-04: Stable repeated operation</td>
+<td style="text-align: center;">Joint position monitoring</td>
+<td>Check joint positions during repeated operation to detect unexpected errors.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-04: Stable repeated operation</td>
+<td style="text-align: center;">Automated cycle counter</td>
+<td>Record the number of completed pick-and-place cycles during testing.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-04: Stable repeated operation</td>
+<td style="text-align: center;">Automatic fault stop</td>
+<td>Stop repeated operation when a motion or sensor error is detected.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-05: Calibration procedure</td>
+<td style="text-align: center;">Automatic homing sequence</td>
+<td>Move each joint to a known reference position during startup.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-05: Calibration procedure</td>
+<td style="text-align: center;">Limit-switch calibration</td>
+<td>Use physical switches to establish reference joint positions.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-05: Calibration procedure</td>
+<td style="text-align: center;">Encoder zeroing</td>
+<td>Use encoder reference values to establish joint zero positions.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-05: Calibration procedure</td>
+<td style="text-align: center;">Guided software calibration</td>
+<td>Guide the user through calibration using step-by-step instructions.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-05: Calibration procedure</td>
+<td style="text-align: center;">Calibration button</td>
+<td>Provide a dedicated control to begin the calibration process.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-05: Calibration procedure</td>
+<td style="text-align: center;">Stored calibration values</td>
+<td>Save calibration parameters so they can be reused after restarting the system.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-06: Consistent calibration</td>
+<td style="text-align: center;">Mechanical reference stops</td>
+<td>Provide fixed mechanical reference points to help joints return to the same starting position.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-06: Consistent calibration</td>
+<td style="text-align: center;">Nonvolatile calibration storage</td>
+<td>Store calibration parameters in memory so they remain available after power is removed.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-06: Consistent calibration</td>
+<td style="text-align: center;">Startup calibration check</td>
+<td>Check stored joint reference values when the robotic arm is powered on.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-06: Consistent calibration</td>
+<td style="text-align: center;">Encoder-based verification</td>
+<td>Compare measured encoder positions with stored reference positions to verify calibration.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-06: Consistent calibration</td>
+<td style="text-align: center;">Calibration status indicator</td>
+<td>Use an LED or software indicator to show whether the robotic arm is properly calibrated.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-06: Consistent calibration</td>
+<td style="text-align: center;">Automatic recalibration routine</td>
+<td>Allow the system to repeat the homing or calibration sequence when an error is detected.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-07: Programmable movement control</td>
+<td style="text-align: center;">Joint-angle commands</td>
+<td>Allow users to command specific angular positions for individual joints.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-07: Programmable movement control</td>
+<td style="text-align: center;">Cartesian position commands</td>
+<td>Allow users to specify desired end-effector positions using X, Y, and Z coordinates.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-07: Programmable movement control</td>
+<td style="text-align: center;">PC control interface</td>
+<td>Allow movement commands to be entered and executed from a computer.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-07: Programmable movement control</td>
+<td style="text-align: center;">Serial command interface</td>
+<td>Allow movement commands to be transmitted through a serial communication connection.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-07: Programmable movement control</td>
+<td style="text-align: center;">Adjustable movement speed</td>
+<td>Allow users to change the speed of programmed robotic movements.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-07: Programmable movement control</td>
+<td style="text-align: center;">User-defined motion sequences</td>
+<td>Allow users to create and save custom sequences of robotic arm movements.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-08: Gripper control</td>
+<td style="text-align: center;">Servo-driven gripper</td>
+<td>Use a servo motor to control gripper opening and closing.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-08: Gripper control</td>
+<td style="text-align: center;">Open and close commands</td>
+<td>Provide simple software commands for opening and closing the gripper.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-08: Gripper control</td>
+<td style="text-align: center;">Variable gripper position</td>
+<td>Allow the user to specify different gripper opening widths.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-08: Gripper control</td>
+<td style="text-align: center;">Adjustable gripping force</td>
+<td>Allow gripping force to be modified for different objects.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-08: Gripper control</td>
+<td style="text-align: center;">Gripper position feedback</td>
+<td>Use a sensor or encoder to determine the current gripper position.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-08: Gripper control</td>
+<td style="text-align: center;">Automatic grasp command</td>
+<td>Allow a programmed sequence to activate the gripper automatically when the arm reaches the object.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-09: Clear setup instructions</td>
+<td style="text-align: center;">Quick-start guide</td>
+<td>Provide a short step-by-step guide for first-time startup and operation.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-09: Clear setup instructions</td>
+<td style="text-align: center;">Wiring diagram</td>
+<td>Provide a labeled diagram showing how motors, sensors, power, and the controller are connected.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-09: Clear setup instructions</td>
+<td style="text-align: center;">Assembly illustrations</td>
+<td>Use diagrams or images to show the correct mechanical assembly procedure.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-09: Clear setup instructions</td>
+<td style="text-align: center;">Software installation guide</td>
+<td>Provide instructions for installing the required programming and control software.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-09: Clear setup instructions</td>
+<td style="text-align: center;">Startup checklist</td>
+<td>Provide a checklist that users can follow before operating the robotic arm.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-09: Clear setup instructions</td>
+<td style="text-align: center;">QR-code documentation link</td>
+<td>Provide a QR code that directs users to digital setup instructions and documentation.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-10: Modular hardware expansion</td>
+<td style="text-align: center;">Interchangeable end effector</td>
+<td>Allow different grippers or tools to be installed without redesigning the complete robotic arm.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-10: Modular hardware expansion</td>
+<td style="text-align: center;">Standard mounting holes</td>
+<td>Use standardized mounting locations so accessories can be added to the robotic arm.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-10: Modular hardware expansion</td>
+<td style="text-align: center;">Plug-and-play connectors</td>
+<td>Use removable electrical connectors to simplify replacement or addition of components.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-10: Modular hardware expansion</td>
+<td style="text-align: center;">Expandable controller ports</td>
+<td>Reserve available input/output ports for future sensors and accessories.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-10: Modular hardware expansion</td>
+<td style="text-align: center;">Replaceable joint modules</td>
+<td>Design individual joint assemblies so they can be removed or upgraded independently.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-10: Modular hardware expansion</td>
+<td style="text-align: center;">Modular controller architecture</td>
+<td>Separate motor, sensor, and communication functions so individual modules can be upgraded later.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-11: Future sensor integration</td>
+<td style="text-align: center;">Available analog input ports</td>
+<td>Reserve analog input channels for sensors such as force, distance, or light sensors.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-11: Future sensor integration</td>
+<td style="text-align: center;">Available digital input ports</td>
+<td>Reserve digital input pins for switches, encoders, and other digital sensors.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-11: Future sensor integration</td>
+<td style="text-align: center;">I2C communication interface</td>
+<td>Provide an I2C connection for adding compatible digital sensors.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-11: Future sensor integration</td>
+<td style="text-align: center;">SPI communication interface</td>
+<td>Provide an SPI connection for higher-speed sensor communication.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-11: Future sensor integration</td>
+<td style="text-align: center;">Modular sensor connectors</td>
+<td>Use standardized connectors so sensors can be added or replaced easily.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-11: Future sensor integration</td>
+<td style="text-align: center;">Expandable software sensor library</td>
+<td>Organize software so new sensor drivers can be added without rewriting the entire control system.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-12: Stop robotic motion</td>
+<td style="text-align: center;">Emergency stop button</td>
+<td>Provide a physical emergency stop button that immediately stops robotic motion.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-12: Stop robotic motion</td>
+<td style="text-align: center;">Software stop command</td>
+<td>Provide a control interface command that stops the current movement sequence.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-12: Stop robotic motion</td>
+<td style="text-align: center;">Motor enable switch</td>
+<td>Allow motor power or motor-driver output to be disabled independently.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-12: Stop robotic motion</td>
+<td style="text-align: center;">Fault-triggered automatic stop</td>
+<td>Stop the robotic arm automatically when an abnormal operating condition is detected.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-12: Stop robotic motion</td>
+<td style="text-align: center;">Joint-limit stop</td>
+<td>Stop motion when a joint reaches its allowed movement limit.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-12: Stop robotic motion</td>
+<td style="text-align: center;">Communication-loss stop</td>
+<td>Stop robotic motion if communication with the main controller or user interface is lost.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-13: Physical stability</td>
+<td style="text-align: center;">Wide base</td>
+<td>Increase the base footprint to reduce tipping during arm movement.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-13: Physical stability</td>
+<td style="text-align: center;">Weighted base</td>
+<td>Add mass to the base to improve stability during extended arm positions.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-13: Physical stability</td>
+<td style="text-align: center;">Rubber feet</td>
+<td>Add high-friction feet to reduce sliding on a desktop surface.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-13: Physical stability</td>
+<td style="text-align: center;">Clamp mounting system</td>
+<td>Allow the robotic arm to be secured directly to a table or workbench.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-13: Physical stability</td>
+<td style="text-align: center;">Low center-of-gravity design</td>
+<td>Position heavier components lower in the structure to improve stability.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-13: Physical stability</td>
+<td style="text-align: center;">Reinforced base structure</td>
+<td>Use a rigid base frame to reduce flex and movement during operation.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-14: Electrical operating limits</td>
+<td style="text-align: center;">Regulated power supply</td>
+<td>Provide stable voltage levels that remain within component operating specifications.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-14: Electrical operating limits</td>
+<td style="text-align: center;">Overcurrent protection</td>
+<td>Use a fuse or electronic protection circuit to limit excessive current.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-14: Electrical operating limits</td>
+<td style="text-align: center;">Voltage monitoring</td>
+<td>Measure supply voltage to detect conditions outside the allowed operating range.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-14: Electrical operating limits</td>
+<td style="text-align: center;">Current monitoring</td>
+<td>Measure motor or system current to identify overload conditions.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-14: Electrical operating limits</td>
+<td style="text-align: center;">Separate motor and logic power rails</td>
+<td>Separate motor power from controller power to reduce electrical disturbances and protect electronics.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-14: Electrical operating limits</td>
+<td style="text-align: center;">Motor-driver protection features</td>
+<td>Use motor drivers with built-in thermal, overcurrent, or undervoltage protection.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-15: Accessible to beginning robotics users</td>
+<td style="text-align: center;">Simple graphical user interface</td>
+<td>Provide basic movement controls through an easy-to-understand graphical interface.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-15: Accessible to beginning robotics users</td>
+<td style="text-align: center;">Beginner programming examples</td>
+<td>Provide simple example programs for common robotic arm operations.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-15: Accessible to beginning robotics users</td>
+<td style="text-align: center;">Preset demonstration mode</td>
+<td>Allow beginners to run a prepared pick-and-place demonstration without writing code.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-15: Accessible to beginning robotics users</td>
+<td style="text-align: center;">Labeled controls and connectors</td>
+<td>Clearly identify buttons, ports, motors, and other important system connections.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-15: Accessible to beginning robotics users</td>
+<td style="text-align: center;">Step-by-step tutorials</td>
+<td>Provide guided instructions that introduce users to basic robotic arm functions.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-15: Accessible to beginning robotics users</td>
+<td style="text-align: center;">Error messages with suggested actions</td>
+<td>Display understandable error information together with basic troubleshooting guidance.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-16: Educational value through programmable operation</td>
+<td style="text-align: center;">Editable example programs</td>
+<td>Provide sample programs that users can modify to observe changes in robotic arm behavior.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-16: Educational value through programmable operation</td>
+<td style="text-align: center;">Joint-by-joint programming mode</td>
+<td>Allow users to command individual joints separately to understand robotic motion.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-16: Educational value through programmable operation</td>
+<td style="text-align: center;">Adjustable motion parameters</td>
+<td>Allow users to change speed, joint angle, timing, and sequence parameters for experimentation.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-16: Educational value through programmable operation</td>
+<td style="text-align: center;">Sensor experiment support</td>
+<td>Allow users to add sensors and incorporate sensor data into programmed robotic actions.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-16: Educational value through programmable operation</td>
+<td style="text-align: center;">Motion visualization</td>
+<td>Display commanded joint positions or end-effector movement to help users understand the relationship between software and physical motion.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-16: Educational value through programmable operation</td>
+<td style="text-align: center;">Progressive programming exercises</td>
+<td>Provide activities that progress from basic manual movement to complete automated pick-and-place sequences.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-17: Remain within project budget</td>
+<td style="text-align: center;">Low-cost servo motors</td>
+<td>Use affordable motors that provide sufficient torque and positioning performance for the intended demonstrations.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-17: Remain within project budget</td>
+<td style="text-align: center;">Common off-the-shelf components</td>
+<td>Select widely available components to reduce cost and simplify replacement.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-17: Remain within project budget</td>
+<td style="text-align: center;">3D-printed structural parts</td>
+<td>Manufacture selected arm components using low-cost additive manufacturing.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-17: Remain within project budget</td>
+<td style="text-align: center;">Single-controller architecture</td>
+<td>Use one main microcontroller when practical to reduce electronics cost.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-17: Remain within project budget</td>
+<td style="text-align: center;">Standard fasteners</td>
+<td>Use common screws, nuts, and mounting hardware instead of specialized hardware.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-17: Remain within project budget</td>
+<td style="text-align: center;">Reusable modular components</td>
+<td>Design components so motors, sensors, and electronics can be reused during future upgrades instead of replacing the complete system.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-18: Clear troubleshooting information</td>
+<td style="text-align: center;">Troubleshooting guide</td>
+<td>Provide a list of common problems, possible causes, and recommended solutions.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-18: Clear troubleshooting information</td>
+<td style="text-align: center;">Error-code reference</td>
+<td>Assign identifiable error codes or messages to common system faults.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-18: Clear troubleshooting information</td>
+<td style="text-align: center;">Diagnostic mode</td>
+<td>Provide a software mode that tests motors, sensors, gripper operation, and communication individually.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-18: Clear troubleshooting information</td>
+<td style="text-align: center;">Wiring troubleshooting diagram</td>
+<td>Provide a labeled connection diagram that users can reference when checking electrical problems.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-18: Clear troubleshooting information</td>
+<td style="text-align: center;">Calibration troubleshooting procedure</td>
+<td>Provide specific steps for diagnosing homing and calibration problems.</td>
+</tr>
+<tr>
+<td style="text-align: right;">PR-18: Clear troubleshooting information</td>
+<td style="text-align: center;">FAQ documentation</td>
+<td>Provide answers to common setup, programming, calibration, and operating questions.</td>
 </tr>
 </tbody>
 </table>
