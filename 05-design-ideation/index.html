@@ -2019,10 +2019,340 @@
 <td>Provides useful information but increases cost and complexity.</td>
 </tr>
 <tr>
-<td>User</td>
-<td></td>
-<td style="text-align: center;"></td>
-<td></td>
+<td>Safety</td>
+<td>Emergency stop button</td>
+<td style="text-align: center;">High</td>
+<td>Provides an immediate physical method for stopping robotic motion during an unsafe condition.</td>
+</tr>
+<tr>
+<td>Safety</td>
+<td>Software stop command</td>
+<td style="text-align: center;">High</td>
+<td>Allows the user to stop the current movement sequence directly through the control interface.</td>
+</tr>
+<tr>
+<td>Safety</td>
+<td>Motor enable switch</td>
+<td style="text-align: center;">Medium</td>
+<td>Provides an additional way to disable motor output during setup or troubleshooting.</td>
+</tr>
+<tr>
+<td>Safety</td>
+<td>Fault-triggered automatic stop</td>
+<td style="text-align: center;">High</td>
+<td>Prevents continued operation when the system detects an abnormal operating condition.</td>
+</tr>
+<tr>
+<td>Safety</td>
+<td>Joint-limit stop</td>
+<td style="text-align: center;">High</td>
+<td>Prevents joints from moving beyond their allowed operating range.</td>
+</tr>
+<tr>
+<td>Safety</td>
+<td>Communication-loss stop</td>
+<td style="text-align: center;">Medium</td>
+<td>Prevents uncontrolled motion if communication with the controller or user interface is lost.</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Mechanical reference stops</td>
+<td style="text-align: center;">Medium</td>
+<td>Provides fixed reference points that can improve repeatability during calibration.</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Nonvolatile calibration storage</td>
+<td style="text-align: center;">Medium</td>
+<td>Allows calibration values to remain available after the system is powered off.</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Startup calibration check</td>
+<td style="text-align: center;">High</td>
+<td>Verifies that the arm begins operation from a valid calibrated state.</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Encoder-based verification</td>
+<td style="text-align: center;">Medium</td>
+<td>Improves calibration accuracy by comparing measured positions with stored reference values.</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Calibration status indicator</td>
+<td style="text-align: center;">Medium</td>
+<td>Gives the user clear feedback about whether the arm is ready for operation.</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Automatic recalibration routine</td>
+<td style="text-align: center;">Medium</td>
+<td>Allows the system to repeat the calibration procedure when a calibration problem is detected.</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Automatic homing sequence</td>
+<td style="text-align: center;">High</td>
+<td>Establishes a repeatable reference position during startup.</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Limit-switch calibration</td>
+<td style="text-align: center;">High</td>
+<td>Provides a simple physical method for locating repeatable joint reference positions.</td>
+</tr>
+<tr>
+<td>Sensors &amp; Expansion</td>
+<td>Available analog input ports</td>
+<td style="text-align: center;">Medium</td>
+<td>Allows future analog sensors to be added without redesigning the controller.</td>
+</tr>
+<tr>
+<td>Sensors &amp; Expansion</td>
+<td>Available digital input ports</td>
+<td style="text-align: center;">Medium</td>
+<td>Supports future switches, encoders, and digital sensors.</td>
+</tr>
+<tr>
+<td>Sensors &amp; Expansion</td>
+<td>I2C communication interface</td>
+<td style="text-align: center;">Medium</td>
+<td>Provides a common interface for adding compatible digital sensors.</td>
+</tr>
+<tr>
+<td>Sensors &amp; Expansion</td>
+<td>SPI communication interface</td>
+<td style="text-align: center;">Low</td>
+<td>Supports higher-speed sensors but may not be necessary for the initial prototype.</td>
+</tr>
+<tr>
+<td>Sensors &amp; Expansion</td>
+<td>Modular sensor connectors</td>
+<td style="text-align: center;">Medium</td>
+<td>Makes sensors easier to add, replace, and test.</td>
+</tr>
+<tr>
+<td>Sensors &amp; Expansion</td>
+<td>Expandable software sensor library</td>
+<td style="text-align: center;">Medium</td>
+<td>Allows new sensor drivers to be added without rewriting the complete control program.</td>
+</tr>
+<tr>
+<td>Sensors &amp; Expansion</td>
+<td>Interchangeable end effector</td>
+<td style="text-align: center;">Medium</td>
+<td>Supports different tools and future robotic-arm applications.</td>
+</tr>
+<tr>
+<td>Sensors &amp; Expansion</td>
+<td>Standard mounting holes</td>
+<td style="text-align: center;">Medium</td>
+<td>Provides consistent mechanical mounting locations for future accessories.</td>
+</tr>
+<tr>
+<td>Sensors &amp; Expansion</td>
+<td>Plug-and-play connectors</td>
+<td style="text-align: center;">Medium</td>
+<td>Simplifies replacement and expansion of electrical components.</td>
+</tr>
+<tr>
+<td>Sensors &amp; Expansion</td>
+<td>Expandable controller ports</td>
+<td style="text-align: center;">High</td>
+<td>Preserves electrical interfaces for future sensors and accessories.</td>
+</tr>
+<tr>
+<td>Sensors &amp; Expansion</td>
+<td>Replaceable joint modules</td>
+<td style="text-align: center;">Medium</td>
+<td>Makes future maintenance or upgrades easier without replacing the complete arm.</td>
+</tr>
+<tr>
+<td>Sensors &amp; Expansion</td>
+<td>Modular controller architecture</td>
+<td style="text-align: center;">Medium</td>
+<td>Allows motor, sensor, and communication functions to be upgraded independently.</td>
+</tr>
+<tr>
+<td>Power &amp; Electrical</td>
+<td>Regulated power supply</td>
+<td style="text-align: center;">High</td>
+<td>Keeps system voltage within the required operating limits of the electronics and motors.</td>
+</tr>
+<tr>
+<td>Power &amp; Electrical</td>
+<td>Overcurrent protection</td>
+<td style="text-align: center;">High</td>
+<td>Protects components from excessive current during faults or stalled motor conditions.</td>
+</tr>
+<tr>
+<td>Power &amp; Electrical</td>
+<td>Voltage monitoring</td>
+<td style="text-align: center;">Medium</td>
+<td>Helps identify abnormal power conditions before they affect system operation.</td>
+</tr>
+<tr>
+<td>Power &amp; Electrical</td>
+<td>Current monitoring</td>
+<td style="text-align: center;">Medium</td>
+<td>Can detect excessive motor or system current during operation.</td>
+</tr>
+<tr>
+<td>Power &amp; Electrical</td>
+<td>Separate motor and logic power rails</td>
+<td style="text-align: center;">Medium</td>
+<td>Reduces electrical interference between motors and the control electronics.</td>
+</tr>
+<tr>
+<td>Power &amp; Electrical</td>
+<td>Motor-driver protection features</td>
+<td style="text-align: center;">High</td>
+<td>Protects motors and electronics from overcurrent, overheating, or undervoltage conditions.</td>
+</tr>
+<tr>
+<td>Mechanical Stability</td>
+<td>Wide base</td>
+<td style="text-align: center;">High</td>
+<td>Increases resistance to tipping while the arm moves through its workspace.</td>
+</tr>
+<tr>
+<td>Mechanical Stability</td>
+<td>Weighted base</td>
+<td style="text-align: center;">High</td>
+<td>Improves stability when the arm is extended away from the center of the base.</td>
+</tr>
+<tr>
+<td>Mechanical Stability</td>
+<td>Rubber feet</td>
+<td style="text-align: center;">Medium</td>
+<td>Reduces sliding on a desktop surface during operation.</td>
+</tr>
+<tr>
+<td>Mechanical Stability</td>
+<td>Clamp mounting system</td>
+<td style="text-align: center;">Medium</td>
+<td>Allows the arm to be secured directly to a workbench when additional stability is required.</td>
+</tr>
+<tr>
+<td>Mechanical Stability</td>
+<td>Low center-of-gravity design</td>
+<td style="text-align: center;">High</td>
+<td>Reduces the likelihood of tipping during extended or rapid movement.</td>
+</tr>
+<tr>
+<td>Mechanical Stability</td>
+<td>Reinforced base structure</td>
+<td style="text-align: center;">High</td>
+<td>Reduces base flex and movement during repeated operation.</td>
+</tr>
+<tr>
+<td>Cost &amp; Manufacturing</td>
+<td>Low-cost servo motors</td>
+<td style="text-align: center;">High</td>
+<td>Helps keep the system within budget while still supporting controlled joint movement.</td>
+</tr>
+<tr>
+<td>Cost &amp; Manufacturing</td>
+<td>Common off-the-shelf components</td>
+<td style="text-align: center;">High</td>
+<td>Reduces cost and makes replacement parts easier to obtain.</td>
+</tr>
+<tr>
+<td>Cost &amp; Manufacturing</td>
+<td>3D-printed structural parts</td>
+<td style="text-align: center;">High</td>
+<td>Provides a low-cost manufacturing method for custom robotic-arm components.</td>
+</tr>
+<tr>
+<td>Cost &amp; Manufacturing</td>
+<td>Single-controller architecture</td>
+<td style="text-align: center;">Medium</td>
+<td>Can reduce electronics cost by using one main controller where practical.</td>
+</tr>
+<tr>
+<td>Cost &amp; Manufacturing</td>
+<td>Standard fasteners</td>
+<td style="text-align: center;">Medium</td>
+<td>Reduces cost and simplifies assembly, maintenance, and replacement.</td>
+</tr>
+<tr>
+<td>Cost &amp; Manufacturing</td>
+<td>Reusable modular components</td>
+<td style="text-align: center;">Medium</td>
+<td>Allows motors, sensors, and electronics to be reused during future upgrades.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Quick-start guide</td>
+<td style="text-align: center;">High</td>
+<td>Helps first-time users set up and operate the robotic arm correctly.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Wiring diagram</td>
+<td style="text-align: center;">High</td>
+<td>Helps users assemble the electrical system and diagnose connection problems.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Assembly illustrations</td>
+<td style="text-align: center;">High</td>
+<td>Makes the mechanical assembly procedure easier to understand.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Software installation guide</td>
+<td style="text-align: center;">High</td>
+<td>Helps users correctly install the required programming and control tools.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Startup checklist</td>
+<td style="text-align: center;">Medium</td>
+<td>Helps users confirm that the system is ready before beginning operation.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>QR-code documentation link</td>
+<td style="text-align: center;">Low</td>
+<td>Provides convenient access to digital documentation but is not required for core operation.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Troubleshooting guide</td>
+<td style="text-align: center;">High</td>
+<td>Provides common problems, causes, and recommended solutions for users.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Error-code reference</td>
+<td style="text-align: center;">Medium</td>
+<td>Helps users identify and understand specific system faults.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Diagnostic mode</td>
+<td style="text-align: center;">Medium</td>
+<td>Allows motors, sensors, gripper operation, and communication to be tested individually.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Wiring troubleshooting diagram</td>
+<td style="text-align: center;">High</td>
+<td>Helps users locate and correct common electrical connection problems.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Calibration troubleshooting procedure</td>
+<td style="text-align: center;">High</td>
+<td>Provides guidance for resolving homing and calibration problems.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>FAQ documentation</td>
+<td style="text-align: center;">Medium</td>
+<td>Provides quick answers to common setup, programming, calibration, and operating questions.</td>
 </tr>
 </tbody>
 </table>
