@@ -11,9 +11,6 @@ The purpose of this design ideation process is to explore a wide range of possib
 
 ## Generating Ideas
 
-
-## Generating Ideas
-
 To begin the ideation process, the team reviewed the user needs and product requirements developed during the previous stages of the project. The initial brainstorm focuses on generating multiple possible features that could satisfy the functional, mechanical, software, safety, usability, and modularity requirements of the desktop robotic arm.
 
 At this stage, ideas were not eliminated based on cost, complexity, or feasibility. The purpose of the initial brainstorm was to generate a wide range of possible solutions that could later be sorted, ranked, and combined into different product concepts.
