@@ -130,13 +130,270 @@ At this stage, ideas were not eliminated based on cost, complexity, or feasibili
 
 
 
-## Step Three
+## ## Step 3: Organizing and Ranking Generated Ideas
 
-Add your context and tables
+After generating possible features for the robotic arm, the ideas were reviewed and organized into groups based on the function they perform. Similar ideas were placed together so that the team could compare different solutions to the same design problem.
 
-## Step Four
+The ideas were evaluated primarily according to the highest-priority user needs identified during the User Needs and Benchmarking stage. These included accuracy, repeatability, reliable pick-and-place operation, affordability, ease of use, programmability, stability, and safety.
 
-Add your different product concepts stuff here
+A three-level ranking system was used:
+
+- **High Priority** — Directly supports the primary function or a critical user need.
+- **Medium Priority** — Improves usability, flexibility, or performance but is not required for the basic system.
+- **Low Priority** — Useful for future development but adds complexity or is not necessary for the initial prototype.
+
+### Organized and Ranked Features
+
+| Category | Feature | Priority | Reason |
+|---|---|:---:|---|
+| Motion & Precision | Servo motors | High | Provides controllable joint movement while remaining appropriate for a low-cost desktop arm. |
+| Motion & Precision | Multiple-axis movement | High | Necessary for reaching different pick-and-place locations. |
+| Motion & Precision | Rotating base | High | Expands the usable workspace of the arm. |
+| Motion & Precision | Shoulder joint | High | Provides essential vertical arm movement. |
+| Motion & Precision | Elbow joint | High | Increases reach and positioning capability. |
+| Motion & Precision | Adjustable movement speed | High | Allows the arm to balance speed with positioning accuracy. |
+| Motion & Precision | Smooth acceleration/deceleration | Medium | Reduces abrupt movements and improves object handling. |
+| Motion & Precision | Position feedback | High | Helps improve positioning accuracy and repeatability. |
+| Motion & Precision | Joint encoders | Medium | Provides direct joint-position measurement but increases cost and complexity. |
+| Motion & Precision | Homing switches | High | Gives the arm a repeatable reference position. |
+| Motion & Precision | Automatic homing | High | Improves setup and repeatability between uses. |
+| Motion & Precision | Software movement limits | High | Prevents commands that could move joints beyond safe positions. |
+| Motion & Precision | Position presets | Medium | Makes commonly used positions easier to repeat. |
+| Motion & Precision | Coordinate-based movement | Medium | Provides more advanced control of the arm's workspace. |
+| Motion & Precision | Slow precision mode | Medium | Helps users perform accurate positioning when necessary. |
+| Gripper | Two-finger gripper | High | Provides a simple and inexpensive way to grasp objects. |
+| Gripper | Parallel gripper | High | Helps securely grip common objects during pick-and-place operations. |
+| Gripper | Rubber grip pads | High | Increases friction and reduces accidental object drops. |
+| Gripper | Adjustable gripping force | Medium | Allows different objects to be handled more safely. |
+| Gripper | Object detection | Medium | Can determine whether an object is positioned in the gripper. |
+| Gripper | Grip confirmation | Medium | Gives feedback that an object was successfully picked up. |
+| Gripper | Interchangeable gripper | Medium | Supports modularity and different applications. |
+| Gripper | Replaceable grip pads | Low | Improves maintenance but is not essential to the first prototype. |
+| End Effector | Tool mounting plate | Medium | Makes future end-effector expansion easier. |
+| End Effector | Quick-change mechanism | Medium | Allows tools or grippers to be changed more easily. |
+| End Effector | Suction attachment | Low | Expands object handling but adds additional hardware. |
+| End Effector | Magnetic attachment | Low | Useful only for certain objects and applications. |
+| End Effector | Pen holder | Low | Useful for demonstrations but not necessary for pick-and-place operation. |
+| Control | Microcontroller control | High | Provides the main control system for motors, sensors, and user inputs. |
+| Control | Individual motor control | High | Necessary for positioning each robotic-arm joint. |
+| Control | Coordinated joint movement | High | Allows multiple joints to work together during pick-and-place tasks. |
+| Control | Manual control mode | High | Makes testing, setup, and calibration easier. |
+| Control | Automatic control mode | High | Required for automated repetitive tasks. |
+| Control | Computer control | High | Supports programming and educational experimentation. |
+| Control | USB connection | High | Provides a simple and inexpensive computer interface. |
+| Control | Joystick control | Medium | Provides intuitive manual control but is not required for automation. |
+| Control | Pushbutton controls | Medium | Provides simple physical control of common functions. |
+| Control | Potentiometer control | Low | Could provide manual joint control but adds additional hardware. |
+| Programming | Stored movement sequences | High | Allows automated pick-and-place routines to be saved and repeated. |
+| Programming | Record-and-playback mode | High | Makes repetitive automation easier for beginner users. |
+| Programming | Looping movements | High | Allows repetitive tasks to run without continuous user input. |
+| Programming | Beginner programming interface | High | Supports the project's educational and accessibility goals. |
+| Programming | Serial command interface | Medium | Provides a useful interface for programming and debugging. |
+| Programming | Adjustable delay commands | Medium | Allows timing between actions to be controlled. |
+| Programming | Calibration routine | High | Supports easy and repeatable setup. |
+| Programming | Diagnostic mode | Medium | Helps troubleshoot motors, sensors, and other hardware. |
+| Programming | Reset command | Medium | Provides a simple way to return the controller to a known state. |
+| User Interface | Power indicator LED | High | Clearly communicates whether the system is powered. |
+| User Interface | Status LED | High | Provides immediate feedback about the arm's operating state. |
+| User Interface | Error indicator | Medium | Helps users recognize problems quickly. |
+| User Interface | Home button | High | Gives users a simple way to return the arm to its reference position. |
+| User Interface | Start button | High | Provides a simple method for beginning an automated task. |
+| User Interface | Stop button | High | Allows operation to be stopped quickly. |
+| User Interface | Reset button | Medium | Simplifies recovery and troubleshooting. |
+| User Interface | LCD display | Low | Provides useful information but increases cost and complexity. |
+| User
+
+## ## Step 4: Product Concepts
+
+After organizing and ranking the generated ideas, the highest-priority features were combined into three distinct robotic-arm concepts. Each concept addresses the project's primary goal of creating a low-cost desktop robotic arm capable of precise and repeatable pick-and-place operations. However, each concept emphasizes a different approach to meeting the user needs.
+
+The three concepts are:
+
+1. **Concept 1 — Simple Educational Robotic Arm**
+2. **Concept 2 — Modular and Expandable Robotic Arm**
+3. **Concept 3 — Precision Automated Robotic Arm**
+
+---
+
+## Concept 1: Simple Educational Robotic Arm
+
+The first concept focuses on **simplicity, affordability, and ease of use**. This design is intended primarily for students and beginning robotics users. It minimizes unnecessary components while still providing the functions required to demonstrate automated pick-and-place operation.
+
+The arm would use servo motors to control a rotating base, shoulder, elbow, and gripper. A two-finger gripper with rubber grip pads would provide a simple method for picking up lightweight objects.
+
+The system would be controlled by a microcontroller and connected to a computer through USB. Users could manually control the joints during setup and then create stored movement sequences for automatic operation.
+
+### Main Features
+
+| Area | Selected Features |
+|---|---|
+| Motors | Servo motors |
+| Movement | Rotating base, shoulder, and elbow joints |
+| Gripper | Two-finger gripper |
+| Grip Surface | Rubber grip pads |
+| Controller | Microcontroller |
+| Connection | USB |
+| Control | Manual and automatic modes |
+| Programming | Stored movement sequences |
+| Calibration | Basic homing/calibration routine |
+| Interface | Start, Stop, and Home controls |
+| Feedback | Power and status LEDs |
+| Construction | 3D-printed arm components |
+| Base | Compact weighted base |
+| Safety | Software movement limits and emergency stop |
+| Cost Strategy | Common off-the-shelf components |
+
+### Advantages
+
+- Lowest expected cost of the three concepts
+- Simple to assemble and understand
+- Beginner-friendly
+- Easy to program and troubleshoot
+- Good platform for demonstrating basic robotics
+- Fewer components reduce system complexity
+
+### Tradeoffs
+
+- Limited sensing capabilities
+- Less precise than a feedback-based system
+- Limited future expansion
+- Primarily intended for lightweight objects and basic tasks
+
+### Concept 1 Visual
+
+**[<img width="724" height="724" alt="concept-1-simple-educational-robotic-arm" src="https://github.com/user-attachments/assets/f2bc1a16-a1ed-4234-b737-495c2964441c" />]**
+
+The concept image should identify the rotating base, servo-driven shoulder and elbow, two-finger gripper, microcontroller, emergency-stop control, and USB connection.
+
+---
+
+## Concept 2: Modular and Expandable Robotic Arm
+
+The second concept focuses on **modularity, customization, and future expansion**. This design would allow students and hobbyists to modify the robotic arm for different experiments without replacing the entire system.
+
+The arm would use modular mechanical sections and standardized electrical connectors. A quick-change end-effector mounting system would allow the standard gripper to be replaced with other tools.
+
+Expansion connections would also be included for sensors and future accessories. A camera mounting location could allow computer-vision experiments to be added later.
+
+### Main Features
+
+| Area | Selected Features |
+|---|---|
+| Motors | Replaceable servo motors |
+| Movement | Multi-axis joint movement |
+| Gripper | Interchangeable parallel gripper |
+| End Effector | Quick-change tool mount |
+| Controller | Microcontroller |
+| Connection | USB and expansion I/O |
+| Sensors | Sensor expansion ports |
+| Vision | Camera mounting location |
+| Programming | Expandable software and custom movement sequences |
+| Control | Manual and automatic modes |
+| Wiring | Standard connectors and organized cable routing |
+| Construction | Modular 3D-printed arm sections |
+| Maintenance | Replaceable motors, joints, and gripper |
+| Safety | Emergency stop and software movement limits |
+| Expansion | Additional sensors and end effectors |
+
+### Advantages
+
+- Highly customizable
+- Easier to upgrade and repair
+- Supports multiple end effectors
+- Supports future sensors and computer vision
+- Strong educational value
+- Can grow with the user's experience
+
+### Tradeoffs
+
+- More components than Concept 1
+- More complicated assembly
+- Potentially higher cost
+- Additional connectors and mounting systems increase mechanical complexity
+
+### Concept 2 Visual
+
+**[<img width="724" height="724" alt="concept-2-modular-expandable-robotic-arm" src="https://github.com/user-attachments/assets/c1cfb3f8-9992-435e-a9dd-911e8477c2e5" />]**
+
+The concept image should identify the modular arm sections, interchangeable gripper, quick-change tool mount, sensor expansion ports, camera mount, standard connectors, and microcontroller.
+
+---
+
+## Concept 3: Precision Automated Robotic Arm
+
+The third concept focuses on **accuracy, repeatability, and automated operation**. This design places greater emphasis on reliable repetitive pick-and-place performance.
+
+Position feedback would be incorporated into the joints to help determine the actual position of the arm. Homing switches would establish a repeatable reference position when the system starts.
+
+The software would support coordinated joint movement, adjustable speed, stored positions, and repeating automated movement sequences. Object detection or grip confirmation could also be incorporated to verify that an object was successfully picked up before continuing the sequence.
+
+### Main Features
+
+| Area | Selected Features |
+|---|---|
+| Motors | Position-controlled motors |
+| Position Measurement | Joint position feedback |
+| Calibration | Homing switches and automatic homing |
+| Movement | Coordinated multi-joint movement |
+| Motion Control | Adjustable speed and smooth acceleration |
+| Gripper | Parallel two-finger gripper |
+| Grip Feedback | Object detection or grip confirmation |
+| Programming | Stored positions and movement sequences |
+| Automation | Automatic looping of pick-and-place tasks |
+| Controller | Microcontroller |
+| Interface | Computer control through USB |
+| Safety | Emergency stop, software limits, and current protection |
+| Base | Stable weighted or securely mounted base |
+| Diagnostics | Error detection and diagnostic mode |
+| Feedback | Operating-status and error indicators |
+
+### Advantages
+
+- Greatest emphasis on repeatability
+- Improved positioning accuracy
+- Better suited for repetitive automated operation
+- Feedback can help detect errors
+- More controlled and predictable movement
+- Closely matches the primary pick-and-place objective
+
+### Tradeoffs
+
+- More sensors and control hardware are required
+- More complicated software
+- More calibration may be necessary
+- Expected to cost more than Concept 1
+- More difficult for a beginner to assemble and troubleshoot
+
+### Concept 3 Visual
+
+**[<img width="724" height="724" alt="concept-3-precision-automated-robotic-arm" src="https://github.com/user-attachments/assets/05f3b8ac-7e35-46b8-b538-7630bc2c97a5" />]**
+
+The concept image should identify the position-feedback joints, homing switches, parallel gripper, object sensor, microcontroller, emergency stop, USB connection, and stable base.
+
+---
+
+## Concept Comparison
+
+The three concepts approach the same project goal from different directions.
+
+| Design Characteristic | Concept 1: Educational | Concept 2: Modular | Concept 3: Precision |
+|---|:---:|:---:|:---:|
+| Low Cost | Strong Emphasis | Moderate Emphasis | Moderate Emphasis |
+| Beginner Friendly | Strong Emphasis | Moderate Emphasis | Moderate Emphasis |
+| Precise Movement | Basic | Moderate | Strong Emphasis |
+| Repeatability | Moderate | Moderate | Strong Emphasis |
+| Pick-and-Place | Yes | Yes | Yes |
+| Modularity | Basic | Strong Emphasis | Moderate |
+| Expandability | Limited | Strong Emphasis | Moderate |
+| Sensor Support | Limited | High | High |
+| Computer Vision Expansion | Limited | High | Possible |
+| Interchangeable Tools | Limited | Strong Emphasis | Possible |
+| Automatic Operation | Yes | Yes | Strong Emphasis |
+| Educational Value | High | High | High |
+| Complexity | Low | Medium | High |
+| Expected Relative Cost | Low | Medium | Medium-High |
+
+These three concepts provide distinct approaches for the robotic arm while maintaining the project's central requirements. The concepts can now be compared against the engineering requirements and user needs to determine which design direction should be developed further.
 
 ## Step Six (video link)
 Embedded a YouTube video that covers the 
