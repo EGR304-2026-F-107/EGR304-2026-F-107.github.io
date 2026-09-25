@@ -201,7 +201,62 @@ A three-level ranking system was used:
 | User Interface | Stop button | High | Allows operation to be stopped quickly. |
 | User Interface | Reset button | Medium | Simplifies recovery and troubleshooting. |
 | User Interface | LCD display | Low | Provides useful information but increases cost and complexity. |
-| User
+| Safety | Emergency stop button | High | Provides an immediate physical method for stopping robotic motion during an unsafe condition. |
+| Safety | Software stop command | High | Allows the user to stop the current movement sequence directly through the control interface. |
+| Safety | Motor enable switch | Medium | Provides an additional way to disable motor output during setup or troubleshooting. |
+| Safety | Fault-triggered automatic stop | High | Prevents continued operation when the system detects an abnormal operating condition. |
+| Safety | Joint-limit stop | High | Prevents joints from moving beyond their allowed operating range. |
+| Safety | Communication-loss stop | Medium | Prevents uncontrolled motion if communication with the controller or user interface is lost. |
+| Calibration | Mechanical reference stops | Medium | Provides fixed reference points that can improve repeatability during calibration. |
+| Calibration | Nonvolatile calibration storage | Medium | Allows calibration values to remain available after the system is powered off. |
+| Calibration | Startup calibration check | High | Verifies that the arm begins operation from a valid calibrated state. |
+| Calibration | Encoder-based verification | Medium | Improves calibration accuracy by comparing measured positions with stored reference values. |
+| Calibration | Calibration status indicator | Medium | Gives the user clear feedback about whether the arm is ready for operation. |
+| Calibration | Automatic recalibration routine | Medium | Allows the system to repeat the calibration procedure when a calibration problem is detected. |
+| Calibration | Automatic homing sequence | High | Establishes a repeatable reference position during startup. |
+| Calibration | Limit-switch calibration | High | Provides a simple physical method for locating repeatable joint reference positions. |
+| Sensors & Expansion | Available analog input ports | Medium | Allows future analog sensors to be added without redesigning the controller. |
+| Sensors & Expansion | Available digital input ports | Medium | Supports future switches, encoders, and digital sensors. |
+| Sensors & Expansion | I2C communication interface | Medium | Provides a common interface for adding compatible digital sensors. |
+| Sensors & Expansion | SPI communication interface | Low | Supports higher-speed sensors but may not be necessary for the initial prototype. |
+| Sensors & Expansion | Modular sensor connectors | Medium | Makes sensors easier to add, replace, and test. |
+| Sensors & Expansion | Expandable software sensor library | Medium | Allows new sensor drivers to be added without rewriting the complete control program. |
+| Sensors & Expansion | Interchangeable end effector | Medium | Supports different tools and future robotic-arm applications. |
+| Sensors & Expansion | Standard mounting holes | Medium | Provides consistent mechanical mounting locations for future accessories. |
+| Sensors & Expansion | Plug-and-play connectors | Medium | Simplifies replacement and expansion of electrical components. |
+| Sensors & Expansion | Expandable controller ports | High | Preserves electrical interfaces for future sensors and accessories. |
+| Sensors & Expansion | Replaceable joint modules | Medium | Makes future maintenance or upgrades easier without replacing the complete arm. |
+| Sensors & Expansion | Modular controller architecture | Medium | Allows motor, sensor, and communication functions to be upgraded independently. |
+| Power & Electrical | Regulated power supply | High | Keeps system voltage within the required operating limits of the electronics and motors. |
+| Power & Electrical | Overcurrent protection | High | Protects components from excessive current during faults or stalled motor conditions. |
+| Power & Electrical | Voltage monitoring | Medium | Helps identify abnormal power conditions before they affect system operation. |
+| Power & Electrical | Current monitoring | Medium | Can detect excessive motor or system current during operation. |
+| Power & Electrical | Separate motor and logic power rails | Medium | Reduces electrical interference between motors and the control electronics. |
+| Power & Electrical | Motor-driver protection features | High | Protects motors and electronics from overcurrent, overheating, or undervoltage conditions. |
+| Mechanical Stability | Wide base | High | Increases resistance to tipping while the arm moves through its workspace. |
+| Mechanical Stability | Weighted base | High | Improves stability when the arm is extended away from the center of the base. |
+| Mechanical Stability | Rubber feet | Medium | Reduces sliding on a desktop surface during operation. |
+| Mechanical Stability | Clamp mounting system | Medium | Allows the arm to be secured directly to a workbench when additional stability is required. |
+| Mechanical Stability | Low center-of-gravity design | High | Reduces the likelihood of tipping during extended or rapid movement. |
+| Mechanical Stability | Reinforced base structure | High | Reduces base flex and movement during repeated operation. |
+| Cost & Manufacturing | Low-cost servo motors | High | Helps keep the system within budget while still supporting controlled joint movement. |
+| Cost & Manufacturing | Common off-the-shelf components | High | Reduces cost and makes replacement parts easier to obtain. |
+| Cost & Manufacturing | 3D-printed structural parts | High | Provides a low-cost manufacturing method for custom robotic-arm components. |
+| Cost & Manufacturing | Single-controller architecture | Medium | Can reduce electronics cost by using one main controller where practical. |
+| Cost & Manufacturing | Standard fasteners | Medium | Reduces cost and simplifies assembly, maintenance, and replacement. |
+| Cost & Manufacturing | Reusable modular components | Medium | Allows motors, sensors, and electronics to be reused during future upgrades. |
+| Documentation | Quick-start guide | High | Helps first-time users set up and operate the robotic arm correctly. |
+| Documentation | Wiring diagram | High | Helps users assemble the electrical system and diagnose connection problems. |
+| Documentation | Assembly illustrations | High | Makes the mechanical assembly procedure easier to understand. |
+| Documentation | Software installation guide | High | Helps users correctly install the required programming and control tools. |
+| Documentation | Startup checklist | Medium | Helps users confirm that the system is ready before beginning operation. |
+| Documentation | QR-code documentation link | Low | Provides convenient access to digital documentation but is not required for core operation. |
+| Documentation | Troubleshooting guide | High | Provides common problems, causes, and recommended solutions for users. |
+| Documentation | Error-code reference | Medium | Helps users identify and understand specific system faults. |
+| Documentation | Diagnostic mode | Medium | Allows motors, sensors, gripper operation, and communication to be tested individually. |
+| Documentation | Wiring troubleshooting diagram | High | Helps users locate and correct common electrical connection problems. |
+| Documentation | Calibration troubleshooting procedure | High | Provides guidance for resolving homing and calibration problems. |
+| Documentation | FAQ documentation | Medium | Provides quick answers to common setup, programming, calibration, and operating questions. |
 
 ## ## Step 4: Product Concepts
 
