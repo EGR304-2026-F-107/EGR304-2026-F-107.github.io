@@ -450,5 +450,8 @@ The three concepts approach the same project goal from different directions.
 
 These three concepts provide distinct approaches for the robotic arm while maintaining the project's central requirements. The concepts can now be compared against the engineering requirements and user needs to determine which design direction should be developed further.
 
+<img width="667" height="797" alt="image" src="https://github.com/user-attachments/assets/b085edd2-18be-4764-ba0e-65039828e152" />
+
+
 ## Step Six (video link)
 Embedded a YouTube video that covers the 
