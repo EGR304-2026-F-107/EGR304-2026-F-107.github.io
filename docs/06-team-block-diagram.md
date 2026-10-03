@@ -10,23 +10,13 @@ _Italic Text_
 
 ## Research Question
 
-* Bullet Point 1
-* Bullet Point 2
-* Bullet Point 3
+* With only have 8-pin connectors. How to divide functionality across the team in a way that minimizes interconnections between teammates?
+* Does the system layout ensure each teammate meets minimum project requirements?
+* What are the risks to the current system if lose a teammate? How to de-risk the system design by grouping and/or distributing similar functions between teammates?
 
 ## Images
-
-![image caption](https://idealab.asu.edu/assets/images/research/jumper1.png)  
-**Figure 2:** Here is a picture of an image linked on the internet
-
-
-![dead bug circuit](../image/imageGoal.JPG){style="width:350px;"}  
-**Figure 2:** Here is a picture from the image folder on my local site, with css formatting to make it smaller
-
-<!-- 
-![showcase](../image/innovation_showcase_Sp-2025.jpg)  
-**Figure 3:** Innovation Showcase Spring '25, where the products were a STEM-themed display that demonstrates a single scientific/engineering concept with the intended user of K-12 students interested in learning about science, technology, engineering, or math. -->
-
+<img width="3082" height="879" alt="EGR304_Team107_Blockdiagram drawio" src="https://github.com/user-attachments/assets/c51c77c4-6b99-4f84-99cd-0f502bdfddd8" />
+**Figure 1:** Team Block Diagram <br>
 
 ## Results
 
@@ -38,7 +28,7 @@ _Italic Text_
 
 ## External Links
 
-[example link to idealab](https://idealab.asu.edu)
+[Link to block diagram](https://github.com/EGR304-2026-F-107/EGR304-2026-F-107.github.io/blob/main/EGR304_Team107_Blockdiagram.drawio)
 
 
 ## Results
