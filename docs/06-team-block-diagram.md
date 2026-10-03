@@ -30,7 +30,7 @@ title: Team Block Diagram
 
 ## External Links
 
-[Link to block diagram](https://github.com/EGR304-2026-F-107/EGR304-2026-F-107.github.io/blob/main/EGR304_Team107_Blockdiagram.drawio)
+[Link to the block diagram](https://github.com/EGR304-2026-F-107/EGR304-2026-F-107.github.io/blob/main/EGR304_Team107_Blockdiagram.drawio)
 
 
 ## Results
