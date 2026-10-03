@@ -848,8 +848,8 @@
   <h1>Team Block Diagram</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>**This block diagram shows how our team's three boards work together in a pick-and-place robotic arm system. Each board uses a Microchip PIC18F57Q43 Curiosity Nano and handles one function: Arm Motion Control by motor, H-bridge, position feedback, Gripper with servo, object and force sensors, and User Controls &amp; Safety by E-stop, buttons, speed knob, LEDs, buzzer.</p>
-<p>The boards are connected in a daisy chain with 8-pin ribbon cables. Pins 1–5 carry digital signals (SAFE_OK, RUN_REQ, GRIP_CMD, OBJ_HELD, ARM_IN_POS), pins 6–7 carry analog signals (SPEED_SET, GRIP_FORCE), and pin 8 is GND. Every sensor and actuator connects only to its own board's microcontroller, so only high-level status and command signals cross between boards. Arrows show signal direction, and yellow blocks mark manufacturer and part numbers still to be decided.**</p>
+<p><strong>This block diagram shows how our team's three boards work together in a pick-and-place robotic arm system. Each board uses a Microchip PIC18F57Q43 Curiosity Nano and handles one function: Arm Motion Control by motor, H-bridge, position feedback, Gripper with servo, object and force sensors, and User Controls &amp; Safety by E-stop, buttons, speed knob, LEDs, buzzer.</strong></p>
+<p><strong>The boards are connected in a daisy chain with 8-pin ribbon cables. Pins 1–5 carry digital signals (SAFE_OK, RUN_REQ, GRIP_CMD, OBJ_HELD, ARM_IN_POS), pins 6–7 carry analog signals (SPEED_SET, GRIP_FORCE), and pin 8 is GND. Every sensor and actuator connects only to its own board's microcontroller, so only high-level status and command signals cross between boards. Arrows show signal direction, and yellow blocks mark manufacturer and part numbers still to be decided.</strong></p>
 <h2 id="research-question">Research Question</h2>
 <ul>
 <li>With only have 8-pin connectors. How to divide functionality across the team in a way that minimizes interconnections between teammates?</li>
