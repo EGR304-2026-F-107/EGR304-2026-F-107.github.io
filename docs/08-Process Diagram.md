@@ -1,5 +1,5 @@
 ---
-title: Block Diagram, Process Diagram, and Message Structure
+title: Process Diagram
 ---
 
 ## Introduction
