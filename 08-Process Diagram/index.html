@@ -610,9 +610,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#block-diagram" class="md-nav__link">
+  <a href="#process-diagram" class="md-nav__link">
     <span class="md-ellipsis">
-      Block Diagram
+      Process Diagram
     </span>
   </a>
   
@@ -743,9 +743,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#block-diagram" class="md-nav__link">
+  <a href="#process-diagram" class="md-nav__link">
     <span class="md-ellipsis">
-      Block Diagram
+      Process Diagram
     </span>
   </a>
   
@@ -795,15 +795,9 @@
   <h1>Process Diagram</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p><strong>This block diagram shows how our team's three boards work together in a pick-and-place robotic arm system. Each board uses a Microchip PIC18F57Q43 Curiosity Nano and handles one function: Arm Motion Control by motor, H-bridge, position feedback, Gripper with servo, object and force sensors, and User Controls &amp; Safety by E-stop, buttons, speed knob, LEDs, buzzer.</strong></p>
-<p><strong>The boards are connected in a daisy chain with 8-pin ribbon cables. Pins 1–5 carry digital signals (SAFE_OK, RUN_REQ, GRIP_CMD, OBJ_HELD, ARM_IN_POS), pins 6–7 carry analog signals (SPEED_SET, GRIP_FORCE), and pin 8 is GND. Every sensor and actuator connects only to its own board's microcontroller, so only high-level status and command signals cross between boards. Arrows show signal direction, and yellow blocks mark manufacturer and part numbers still to be decided.</strong></p>
+<hr>
 <h2 id="research-question">Research Question</h2>
-<ul>
-<li>With only have 8-pin connectors. How to divide functionality across the team in a way that minimizes interconnections between teammates?</li>
-<li>Does the system layout ensure each teammate meets minimum project requirements?</li>
-<li>What are the risks to the current system if lose a teammate? How to de-risk the system design by grouping and/or distributing similar functions between teammates?</li>
-</ul>
-<h2 id="block-diagram">Block Diagram</h2>
+<h2 id="process-diagram">Process Diagram</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/c51c77c4-6b99-4f84-99cd-0f502bdfddd8" data-desc-position="bottom"><img width="3082" height="879" alt="EGR304_Team107_Blockdiagram drawio" src="https://github.com/user-attachments/assets/c51c77c4-6b99-4f84-99cd-0f502bdfddd8"></a>
 <strong>Figure 1:</strong> Team Block Diagram <br></p>
 <h2 id="external-link">External Link</h2>
