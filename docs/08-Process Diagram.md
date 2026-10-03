@@ -3,17 +3,13 @@ title: Process Diagram
 ---
 
 ## Introduction
-**This block diagram shows how our team's three boards work together in a pick-and-place robotic arm system. Each board uses a Microchip PIC18F57Q43 Curiosity Nano and handles one function: Arm Motion Control by motor, H-bridge, position feedback, Gripper with servo, object and force sensors, and User Controls & Safety by E-stop, buttons, speed knob, LEDs, buzzer.**
-
-**The boards are connected in a daisy chain with 8-pin ribbon cables. Pins 1–5 carry digital signals (SAFE_OK, RUN_REQ, GRIP_CMD, OBJ_HELD, ARM_IN_POS), pins 6–7 carry analog signals (SPEED_SET, GRIP_FORCE), and pin 8 is GND. Every sensor and actuator connects only to its own board's microcontroller, so only high-level status and command signals cross between boards. Arrows show signal direction, and yellow blocks mark manufacturer and part numbers still to be decided.**
+** **
 
 ## Research Question
 
-* With only have 8-pin connectors. How to divide functionality across the team in a way that minimizes interconnections between teammates?
-* Does the system layout ensure each teammate meets minimum project requirements?
-* What are the risks to the current system if lose a teammate? How to de-risk the system design by grouping and/or distributing similar functions between teammates?
 
-## Block Diagram
+
+## Process Diagram
 <img width="3082" height="879" alt="EGR304_Team107_Blockdiagram drawio" src="https://github.com/user-attachments/assets/c51c77c4-6b99-4f84-99cd-0f502bdfddd8" />
 **Figure 1:** Team Block Diagram <br>
 ## External Link
