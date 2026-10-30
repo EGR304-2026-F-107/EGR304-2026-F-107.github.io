@@ -15,14 +15,30 @@ Fall 2026<br>
 
 </center>
 
+
 ## Team Introduction
 
-We are Team 107 in EGR 304. Our team will work collaboratively throughout the Fall 2026 semester to develop, document, and evaluate an embedded systems design project. This website serves as our team's central project report and contains our design decisions, technical work, and project deliverables.
+We are Team 107 in EGR 304 Embedded Systems Design.
+
+Our Fall 2026 project is a Simple Educational Robotic Arm
+designed to demonstrate embedded systems, motor control,
+sensor integration, and communication between
+microcontrollers.
+
+Our robotic arm consists of three subsystems developed
+by individual team members. These subsystems work
+together to control arm movement, positioning, and
+object handling.
+
+This website documents our design decisions, product
+requirements, component selection, system architecture,
+software proposal, and engineering progress.
+
 
 ## Team Members Datasheet links
 
 | **Team Member**        |**Ind Datasheet Links** |
 | ---------------------- | -----------------------|
-| Canyon Miller                | https://github.com/Canyonmill60 |
+| Canyon Miller                | [Individual Datasheet](https://canyonmill60.github.io/EGR304DataSheetTemplate/) |
 | Yixang Ren 		       | https://crackoxide.github.io/CrackOxide_EGR304_Fall26.github.io/ |
 | Dunyue Yang 		       | https://idtrfmnhcw.github.io/idtrfmnhcw_EGR304_F26.github.io/ |
