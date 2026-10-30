@@ -786,9 +786,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#subsystem-3-gripper-object-handling" class="md-nav__link">
+  <a href="#subsystem-3-user-controls-safety" class="md-nav__link">
     <span class="md-ellipsis">
-      Subsystem 3: Gripper &amp; Object Handling
+      Subsystem 3: User Controls &amp; Safety
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-design-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Design Rationale
     </span>
   </a>
   
@@ -1168,9 +1177,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#subsystem-3-gripper-object-handling" class="md-nav__link">
+  <a href="#subsystem-3-user-controls-safety" class="md-nav__link">
     <span class="md-ellipsis">
-      Subsystem 3: Gripper &amp; Object Handling
+      Subsystem 3: User Controls &amp; Safety
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-design-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Design Rationale
     </span>
   </a>
   
@@ -1407,19 +1425,56 @@ arm movement, gripper operation, and system status.</p>
 <li>Coordinate movement with the other subsystems.</li>
 <li>Report completion or fault conditions.</li>
 </ol>
-<h3 id="subsystem-3-gripper-object-handling">Subsystem 3: Gripper &amp; Object Handling</h3>
-<p>The gripper software will:</p>
+<h3 id="subsystem-3-user-controls-safety">Subsystem 3: User Controls &amp; Safety</h3>
+<p>The User Controls &amp; Safety subsystem is responsible for
+monitoring user inputs, managing operating requests,
+and providing system status feedback.</p>
+<p>The PIC18F57Q43 Curiosity Nano will perform the
+following software functions:</p>
 <ol>
-<li>Receive open and close commands.</li>
-<li>Generate servo control pulses for the
-   Kitronik Klaw Mk2 robotic gripper.</li>
-<li>Read the FSR 402 force sensor using the ADC.</li>
-<li>Monitor gripping force against a calibrated
-   threshold.</li>
-<li>Prevent additional closure when the force
-   threshold is reached.</li>
-<li>Report gripper status to the other subsystems.</li>
+<li>
+<p>Monitor the normally closed emergency-stop switch
+   through the RB0 digital input.</p>
+</li>
+<li>
+<p>Read the Start/Pause button through RB1 to determine
+   the user's requested operating state.</p>
+</li>
+<li>
+<p>Read the 10 kΩ speed-control potentiometer through
+   the RA0 ADC input.</p>
+</li>
+<li>
+<p>Process the ADC value to generate an adjustable
+   SPEED_SET command for the arm-control subsystem.</p>
+</li>
+<li>
+<p>Control the green and red LEDs through RB2 and RB3
+   to indicate operating and fault conditions.</p>
+</li>
+<li>
+<p>Control the ULN2003A buzzer driver through RC4
+   to provide audible warnings.</p>
+</li>
+<li>
+<p>Exchange safety, operating, and status signals
+   with the other robotic subsystems.</p>
+</li>
 </ol>
+<h3 id="software-design-rationale">Software Design Rationale</h3>
+<p>The user-control functions are managed by a separate
+microcontroller to simplify software development
+and reduce the complexity of the motor-control system.</p>
+<p>The software will prioritize emergency-stop requests
+over normal operating commands.</p>
+<p>After an emergency-stop condition is cleared,
+the system will require a deliberate restart command
+before allowing normal operation to resume.</p>
+<p>This architecture supports PR-07 (Programmable Movement
+Control), PR-12 (Stop Robotic Motion), and
+PR-15 (Beginner Accessibility).</p>
+<p>The final software behavior and communication signals
+will be verified during system integration.</p>
 <h3 id="communication-interface">Communication Interface</h3>
 <p>The proposed communication system uses UART
 connections between the microcontrollers.</p>
