@@ -199,15 +199,24 @@ The arm-control software will:
 4. Monitor applicable inputs and operating conditions.
 5. Report operating status to the other subsystems.
 
-### Subsystem 2: Arm Positioning
+### Subsystem 2: Gripper & Object Handling
 
-The positioning software will:
+The gripper software will:
 
-1. Receive positioning commands.
-2. Control the assigned positioning actuators.
-3. Monitor relevant feedback signals, if available.
-4. Coordinate movement with the other subsystems.
-5. Report completion or fault conditions.
+1. Receive open and close commands.
+
+2. Generate servo control pulses for the
+   Kitronik Klaw Mk2 robotic gripper.
+
+3. Read the FSR 402 force sensor using the ADC.
+
+4. Monitor gripping force against a calibrated
+   threshold.
+
+5. Prevent additional closure when the force
+   threshold is reached.
+
+6. Report gripper status to the other subsystems.
 
 ### Subsystem 3: User Controls & Safety
 
