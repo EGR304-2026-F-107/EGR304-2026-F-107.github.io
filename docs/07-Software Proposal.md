@@ -209,20 +209,55 @@ The positioning software will:
 4. Coordinate movement with the other subsystems.
 5. Report completion or fault conditions.
 
-### Subsystem 3: Gripper & Object Handling
+### Subsystem 3: User Controls & Safety
 
-The gripper software will:
+The User Controls & Safety subsystem is responsible for
+monitoring user inputs, managing operating requests,
+and providing system status feedback.
 
-1. Receive open and close commands.
-2. Generate servo control pulses for the
-   Kitronik Klaw Mk2 robotic gripper.
-3. Read the FSR 402 force sensor using the ADC.
-4. Monitor gripping force against a calibrated
-   threshold.
-5. Prevent additional closure when the force
-   threshold is reached.
-6. Report gripper status to the other subsystems.
+The PIC18F57Q43 Curiosity Nano will perform the
+following software functions:
 
+1. Monitor the normally closed emergency-stop switch
+   through the RB0 digital input.
+
+2. Read the Start/Pause button through RB1 to determine
+   the user's requested operating state.
+
+3. Read the 10 kΩ speed-control potentiometer through
+   the RA0 ADC input.
+
+4. Process the ADC value to generate an adjustable
+   SPEED_SET command for the arm-control subsystem.
+
+5. Control the green and red LEDs through RB2 and RB3
+   to indicate operating and fault conditions.
+
+6. Control the ULN2003A buzzer driver through RC4
+   to provide audible warnings.
+
+7. Exchange safety, operating, and status signals
+   with the other robotic subsystems.
+
+### Software Design Rationale
+
+The user-control functions are managed by a separate
+microcontroller to simplify software development
+and reduce the complexity of the motor-control system.
+
+The software will prioritize emergency-stop requests
+over normal operating commands.
+
+After an emergency-stop condition is cleared,
+the system will require a deliberate restart command
+before allowing normal operation to resume.
+
+This architecture supports PR-07 (Programmable Movement
+Control), PR-12 (Stop Robotic Motion), and
+PR-15 (Beginner Accessibility).
+
+The final software behavior and communication signals
+will be verified during system integration.
 ### Communication Interface
 
 The proposed communication system uses UART
