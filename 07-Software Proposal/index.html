@@ -777,9 +777,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#subsystem-2-arm-positioning" class="md-nav__link">
+  <a href="#subsystem-2-gripper-object-handling" class="md-nav__link">
     <span class="md-ellipsis">
-      Subsystem 2: Arm Positioning
+      Subsystem 2: Gripper &amp; Object Handling
     </span>
   </a>
   
@@ -1168,9 +1168,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#subsystem-2-arm-positioning" class="md-nav__link">
+  <a href="#subsystem-2-gripper-object-handling" class="md-nav__link">
     <span class="md-ellipsis">
-      Subsystem 2: Arm Positioning
+      Subsystem 2: Gripper &amp; Object Handling
     </span>
   </a>
   
@@ -1416,14 +1416,30 @@ arm movement, gripper operation, and system status.</p>
 <li>Monitor applicable inputs and operating conditions.</li>
 <li>Report operating status to the other subsystems.</li>
 </ol>
-<h3 id="subsystem-2-arm-positioning">Subsystem 2: Arm Positioning</h3>
-<p>The positioning software will:</p>
+<h3 id="subsystem-2-gripper-object-handling">Subsystem 2: Gripper &amp; Object Handling</h3>
+<p>The gripper software will:</p>
 <ol>
-<li>Receive positioning commands.</li>
-<li>Control the assigned positioning actuators.</li>
-<li>Monitor relevant feedback signals, if available.</li>
-<li>Coordinate movement with the other subsystems.</li>
-<li>Report completion or fault conditions.</li>
+<li>
+<p>Receive open and close commands.</p>
+</li>
+<li>
+<p>Generate servo control pulses for the
+   Kitronik Klaw Mk2 robotic gripper.</p>
+</li>
+<li>
+<p>Read the FSR 402 force sensor using the ADC.</p>
+</li>
+<li>
+<p>Monitor gripping force against a calibrated
+   threshold.</p>
+</li>
+<li>
+<p>Prevent additional closure when the force
+   threshold is reached.</p>
+</li>
+<li>
+<p>Report gripper status to the other subsystems.</p>
+</li>
 </ol>
 <h3 id="subsystem-3-user-controls-safety">Subsystem 3: User Controls &amp; Safety</h3>
 <p>The User Controls &amp; Safety subsystem is responsible for
