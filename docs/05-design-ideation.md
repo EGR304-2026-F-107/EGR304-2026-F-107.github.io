@@ -2,14 +2,14 @@
 title: Design Ideation
 ---
 
-## Intro/overview
+## Step 1: Introduction and Overview
 
 The goal of this project is to develop a low-cost desktop robotic arm capable of performing precise and repeatable automated pick-and-place tasks. The system is intended to provide an accessible platform for engineering students, STEM educators, hobbyists, makers, and beginning robotics programmers to learn and experiment with robotics, embedded systems, programming, and automation.
 
 The purpose of this design ideation process is to explore a wide range of possible features and design solutions that can satisfy the user needs and product requirements identified in the previous stages of the project. These ideas will be organized, evaluated, and combined into three distinct robotic arm design concepts.
 
 
-## Generating Ideas
+## Step 2: Generating Ideas
 
 To begin the ideation process, the team reviewed the user needs and product requirements developed during the previous stages of the project. The initial brainstorm focuses on generating multiple possible features that could satisfy the functional, mechanical, software, safety, usability, and modularity requirements of the desktop robotic arm.
 
@@ -270,7 +270,7 @@ The three concepts are:
 
 ---
 
-## Concept 1: Simple Educational Robotic Arm
+### Concept 1: Simple Educational Robotic Arm
 
 The first concept focuses on **simplicity, affordability, and ease of use**. This design is intended primarily for students and beginning robotics users. It minimizes unnecessary components while still providing the functions required to demonstrate automated pick-and-place operation.
 
@@ -278,7 +278,7 @@ The arm would use servo motors to control a rotating base, shoulder, elbow, and 
 
 The system would be controlled by a microcontroller and connected to a computer through USB. Users could manually control the joints during setup and then create stored movement sequences for automatic operation.
 
-### Main Features
+#### Main Features
 
 | Area | Selected Features |
 |---|---|
@@ -298,7 +298,7 @@ The system would be controlled by a microcontroller and connected to a computer 
 | Safety | Software movement limits and emergency stop |
 | Cost Strategy | Common off-the-shelf components |
 
-### Advantages
+#### Advantages
 
 - Lowest expected cost of the three concepts
 - Simple to assemble and understand
@@ -307,14 +307,14 @@ The system would be controlled by a microcontroller and connected to a computer 
 - Good platform for demonstrating basic robotics
 - Fewer components reduce system complexity
 
-### Tradeoffs
+#### Tradeoffs
 
 - Limited sensing capabilities
 - Less precise than a feedback-based system
 - Limited future expansion
 - Primarily intended for lightweight objects and basic tasks
 
-### Concept 1 Visual
+#### Concept 1 Visual
 
 <img width="724" height="724" alt="concept-1-simple-educational-robotic-arm" src="../image/attachments/f2bc1a16-a1ed-4234-b737-495c2964441c.png" />
 
@@ -322,7 +322,7 @@ The concept image identifies the rotating base, servo-driven shoulder and elbow,
 
 ---
 
-## Concept 2: Modular and Expandable Robotic Arm
+### Concept 2: Modular and Expandable Robotic Arm
 
 The second concept focuses on **modularity, customization, and future expansion**. This design would allow students and hobbyists to modify the robotic arm for different experiments without replacing the entire system.
 
@@ -330,7 +330,7 @@ The arm would use modular mechanical sections and standardized electrical connec
 
 Expansion connections would also be included for sensors and future accessories. A camera mounting location could allow computer-vision experiments to be added later.
 
-### Main Features
+#### Main Features
 
 | Area | Selected Features |
 |---|---|
@@ -350,7 +350,7 @@ Expansion connections would also be included for sensors and future accessories.
 | Safety | Emergency stop and software movement limits |
 | Expansion | Additional sensors and end effectors |
 
-### Advantages
+#### Advantages
 
 - Highly customizable
 - Easier to upgrade and repair
@@ -359,14 +359,14 @@ Expansion connections would also be included for sensors and future accessories.
 - Strong educational value
 - Can grow with the user's experience
 
-### Tradeoffs
+#### Tradeoffs
 
 - More components than Concept 1
 - More complicated assembly
 - Potentially higher cost
 - Additional connectors and mounting systems increase mechanical complexity
 
-### Concept 2 Visual
+#### Concept 2 Visual
 
 <img width="724" height="724" alt="concept-2-modular-expandable-robotic-arm" src="../image/attachments/c1cfb3f8-9992-435e-a9dd-911e8477c2e5.png" />
 
@@ -374,7 +374,7 @@ The concept image identifies the modular arm sections, interchangeable gripper, 
 
 ---
 
-## Concept 3: Precision Automated Robotic Arm
+### Concept 3: Precision Automated Robotic Arm
 
 The third concept focuses on **accuracy, repeatability, and automated operation**. This design places greater emphasis on reliable repetitive pick-and-place performance.
 
@@ -382,7 +382,7 @@ Position feedback would be incorporated into the joints to help determine the ac
 
 The software would support coordinated joint movement, adjustable speed, stored positions, and repeating automated movement sequences. Object detection or grip confirmation could also be incorporated to verify that an object was successfully picked up before continuing the sequence.
 
-### Main Features
+#### Main Features
 
 | Area | Selected Features |
 |---|---|
@@ -402,7 +402,7 @@ The software would support coordinated joint movement, adjustable speed, stored 
 | Diagnostics | Error detection and diagnostic mode |
 | Feedback | Operating-status and error indicators |
 
-### Advantages
+#### Advantages
 
 - Greatest emphasis on repeatability
 - Improved positioning accuracy
@@ -411,7 +411,7 @@ The software would support coordinated joint movement, adjustable speed, stored 
 - More controlled and predictable movement
 - Closely matches the primary pick-and-place objective
 
-### Tradeoffs
+#### Tradeoffs
 
 - More sensors and control hardware are required
 - More complicated software
@@ -419,7 +419,7 @@ The software would support coordinated joint movement, adjustable speed, stored 
 - Expected to cost more than Concept 1
 - More difficult for a beginner to assemble and troubleshoot
 
-### Concept 3 Visual
+#### Concept 3 Visual
 
 <img width="724" height="724" alt="concept-3-precision-automated-robotic-arm" src="../image/attachments/05f3b8ac-7e35-46b8-b538-7630bc2c97a5.png" />
 
@@ -427,7 +427,7 @@ The concept image identifies the position-feedback joints, homing switches, para
 
 ---
 
-## Concept Comparison
+### Concept Comparison
 
 The three concepts approach the same project goal from different directions.
 

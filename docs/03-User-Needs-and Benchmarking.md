@@ -26,18 +26,15 @@ The primary users identified for this project are:<br>
 ## Voice of the Customer Benchmarking
 Existing robotic-arm products were reviewed to identify both desirable and undesirable characteristics. Five products were selected because they represent different approaches to desktop robotics, education, programming, and low-cost experimentation.<br>
 <br>
-Benchmark Products：<br>
-Product/                                         Main reason for benchmarking
+**Benchmark products:**
 
-1.) Elephant Robotics myCobot 280/               Compact programmable 6-DOF desktop arm
-
-2.) Yahboom DOFBOT/                              Educational arm with Raspberry Pi, ROS, Python, and vision
-
-3.) DOBOT Magician/                              Desktop educational arm with multiple tools and programming options
-
-4.)Hiwonder xArm 1S/                             Low-cost beginner-friendly arm with multiple control methods
-
-5.)Adeept 5-DOF Robotic Arm Kit/                 Low-cost Arduino-based educational arm for DIY assembly and programming
+| # | Product | Main reason for benchmarking |
+|---|---|---|
+| 1 | Elephant Robotics myCobot 280 | Compact programmable 6-DOF desktop arm |
+| 2 | Yahboom DOFBOT | Educational arm with Raspberry Pi, ROS, Python and vision |
+| 3 | DOBOT Magician | Desktop educational arm with multiple tools and programming options |
+| 4 | Hiwonder xArm 1S | Low-cost beginner-friendly arm with multiple control methods |
+| 5 | Adeept 5-DOF Robotic Arm Kit | Low-cost Arduino-based educational arm for DIY assembly and programming |
 
 ### Benchmark 1 — Elephant Robotics myCobot 280
 
@@ -263,7 +260,7 @@ Need/Type
 * Images:<br>
 <img width="600" alt="Denoised_beauty_fd1c2f21-c347-4e0f-ad86-938a455c8afd" src="../image/attachments/32ff6043-c913-4381-896f-10b509a33a6d.webp" />
 
-### Benchmark 5. Adeept 5-DOF Robotic Arm Kit
+### Benchmark 5 — Adeept 5-DOF Robotic Arm Kit
 **Key words:** low-cost Arduino programmable robotic arm kit for education and pick-and-place<br>
 **Search Results Link:** <https://www.adeept.com/search/?Keyword=low-cost+Arduino+programmable+robotic+arm+kit+for+education+and+pick-and-place>
 <br>
@@ -340,7 +337,7 @@ The current needs cover topics including:
 - Educational value
 - Software and hardware expandability
 <br>
-*Images of initinal user needs:<br>
+**Initial user needs (first placement):**<br>
 <img width="904" height="855" alt="image" src="../image/attachments/837a8e02-ad76-43e4-8f50-92fe86f01528.png" /> <br>
 <img width="921" height="877" alt="image" src="../image/attachments/222b6631-ea6b-48ea-ba36-fe0fe8e41409.png" /> <br>
 <img width="934" height="907" alt="image" src="../image/attachments/c3821525-52a4-4105-bf06-48e3e7d99e70.png" /> <br>
@@ -383,14 +380,66 @@ After the first placement, similar user needs were grouped into the following ca
 #### 11. Cost & Accessibility<br>
 **Meta Need:** The system should remain affordable and accessible to the intended student, hobbyist, and educational users.<br>
 <br>
-*Images of gouping: <br>
+**Grouping of the needs into categories:**<br>
 <img width="466" height="442" alt="image" src="../image/attachments/09fbbfe2-2e17-4993-a473-8c2bb4c7912e.png" /> <br>
 <img width="1800" height="330" alt="image" src="../image/attachments/c7729894-132f-4dba-8333-c0a3b76a1a6c.png" />
 <br>
 ### Ranked
+
+Each of the 105 need statements was ranked from 1 (most important) to 105, and each rank range was given a weight from 7 down to 1:
+
+| Overall rank | Weight | Priority |
+|---|---|---|
+| 1–15 | 7 | Highest |
+| 16–30 | 6 | Very high |
+| 31–45 | 5 | High |
+| 46–60 | 4 | Moderate |
+| 61–75 | 3 | Lower |
+| 76–90 | 2 | Low |
+| 91–105 | 1 | Lowest |
+
+The categories were then ranked by the importance of the needs they contain:
+
+| Category rank | Category | Number of need statements |
+|---|---|---|
+| 1 | Safety | 7 |
+| 2 | Accuracy & Repeatability | 12 |
+| 3 | Gripper & Object Handling | 9 |
+| 4 | Programming & Control | 19 |
+| 5 | Power, Stability & Physical Design | 13 |
+| 6 | Calibration, Maintenance & Repair | 12 |
+| 7 | Cost & Accessibility | 2 |
+| 8 | Sensors, Vision & Expansion | 10 |
+| 9 | Documentation & Troubleshooting | 8 |
+| 10 | Education & User Experience | 7 |
+| 11 | Assembly, Wiring & Components | 6 |
+
+Safety, accuracy and repeatability, and gripping ranked highest because a classroom arm must stop reliably and complete the pick-and-place task before any other feature matters. Expansion, documentation and assembly needs ranked lower: they matter to users but do not stop the arm from doing its basic job.
+
+The ranking sheet (all statements with their type, rank and weight):
+
 <img width="3300" height="2550" alt="image" src="../image/attachments/d0e80672-0c6e-490c-859a-f9a2cb810391.png" />
 <img width="3300" height="2550" alt="image" src="../image/attachments/5b595a22-9cd9-410d-9964-5cd814734f0e.png" />
 <img width="1577" height="224" alt="image" src="../image/attachments/a0517886-4792-407e-893e-33b20f986d47.png" />
+
+## How the User Needs Shaped the Current Design
+
+The ranked needs were carried into the [Product Requirements](04-Product-Requirements.md) (PR-01 to PR-18) and into the three-board design shown on the [Team Block Diagram](06-team-block-diagram.md):
+
+| Need category (rank) | Where it appears in the current design |
+|---|---|
+| Safety (1) | User Controls & Safety board: normally closed E-stop drives SAFE_OK on the ribbon; every board stops when SAFE_OK is 0 or the cable is unplugged |
+| Accuracy & Repeatability (2) | Arm Motion Control board: regulated 6 V motor rail and PWM speed control, so the same command gives the same motion every cycle |
+| Gripper & Object Handling (3) | Gripper & Object Handling board: servo claw with an FSR 402 force sensor; the arm waits for OBJ_HELD before carrying the object |
+| Programming & Control (4) | One simple state machine per board on the PIC18F57Q43, with speed set from a knob ([Software Proposal](07-Software%20Proposal.md)) |
+| Power, Stability & Physical Design (5) | Low-voltage 9 V adapters with fuses and reverse-polarity protection; separate motor and logic rails |
+| Calibration, Maintenance & Repair (6) | Socketed parts, Curiosity Nanos on headers and screw terminals, so parts can be replaced without desoldering |
+| Cost & Accessibility (7) | Common through-hole parts; three subsystem BOMs total about $255 |
+| Sensors, Vision & Expansion (8) | Spare-pin expansion headers on each board for later sensors; vision is left for future work |
+| Documentation & Troubleshooting (9) | Test points, status and debug LEDs, and the team and individual websites |
+| Education & User Experience (10) | Simple start, pause, stop and speed controls with clear LED and buzzer feedback |
+| Assembly, Wiring & Components (11) | Keyed 8-pin ribbon cable with one signal per wire ([Message Structure](09-Message%20Structure.md)) |
+
 ## Appendix
-The ranking sheet link is attached below:
-<https://docs.google.com/spreadsheets/d/1gIUH5PPAoCbUolYi0Ti-0GztC6iwb-X7/edit?usp=sharing&ouid=117278669081927517388&rtpof=true&sd=true>
+
+The full ranking spreadsheet is available as an [*Excel download*](Appendix/Team107_User_Needs_Ranking.xlsx). It has two sheets: all need statements with their category, meta need, type, rank and weight, and the category ranking with the weight scale.

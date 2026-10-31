@@ -5,17 +5,19 @@ title: Product Requirements
 ## Project Objective
 Our project aims to develop a low-cost, modular desktop robotic arm capable of performing precise and repeatable automated pick-and-place tasks. The system is intended to demonstrate how repetitive tasks can be automated while remaining accessible to engineering students, STEM educators, hobbyists, makers, and beginning robotics programmers.<br>
 The product requirements were developed from the user needs identified during the Voice of the Customer benchmarking process. Existing products such as the Elephant Robotics myCobot 280, Yahboom DOFBOT, DOBOT Magician, Hiwonder xArm 1S, and Adeept 5-DOF Robotic Arm Kit were examined to identify desirable features and common problems.<br>
-The primary objectives of the product are to:<br>
-1.Provide precise and repeatable robotic movement.<br>
-2.Reliably grasp, move, and release objects.<br>
-2.Maintain a low overall system cost.<br>
-3.Make assembly and calibration straightforward.<br>
-4.Provide simple and understandable programming and control.<br>
-5.Use modular hardware and software that can be expanded.<br>
-6.Provide clear documentation and troubleshooting information.<br>
-7.Provide an educational platform for learning robotics and embedded systems.<br>
-8.Operate safely in a classroom, laboratory, or desktop environment.<br>
-9.Provide a stable physical platform for repeated pick-and-place operations.<br>
+The primary objectives of the product are to:
+
+1. Provide precise and repeatable robotic movement.
+2. Reliably grasp, move, and release objects.
+3. Maintain a low overall system cost.
+4. Make assembly and calibration straightforward.
+5. Provide simple and understandable programming and control.
+6. Use modular hardware and software that can be expanded.
+7. Provide clear documentation and troubleshooting information.
+8. Provide an educational platform for learning robotics and embedded systems.
+9. Operate safely in a classroom, laboratory, or desktop environment.
+10. Provide a stable physical platform for repeated pick-and-place operations.
+
 The final design should balance performance, affordability, accessibility, and educational value rather than focusing exclusively on maximum industrial performance.
 <br>
 ## Stakeholders
@@ -191,9 +193,10 @@ Manufacturing considerations include:<br>
 | PR-14 | The system shall use components within their specified electrical operating limits. | Analysis/Test | Measured voltage and current shall remain within component specifications. |
 | PR-15 | The system shall be accessible to beginning robotics users. | User Test | A beginner can complete the basic startup and demonstration procedure using the provided documentation. |
 | PR-16 | The system shall provide educational value through programmable operation. | Demonstration | User can modify a programmed sequence and successfully execute the modified sequence. |
-| PR-17 | The system shall remain within the team's defined project budget. | Analysis | Total project cost shall remain below the team's established budget limit. |
+| PR-17 | The system shall remain within the team's defined project budget. | Analysis | Total parts cost for the three subsystems shall not exceed the combined BOM estimate of **$254.67** (Arm Motion Control $128.35 + Gripper & Object Handling $44.30 + User Controls & Safety $82.02), before shipping and tax. |
 | PR-18 | The system shall provide clear troubleshooting information. | Inspection/User Test | Documentation shall include solutions for the most common setup, calibration, and programming problems. |
-# Requirement Traceability
+
+## Requirement Traceability
 
 | User Need Category | Related Product Requirements |
 |---|---|
