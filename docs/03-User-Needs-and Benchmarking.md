@@ -77,7 +77,7 @@ Need/                                                                           
 * Link to Vendor: <https://shop.elephantrobotics.com/products/mycobot-280-jetson-nano><br>
 * Description: The kit includes over 50 high quality components and 10 Challenges that inspire kids to invent their own creations. The pieces are a combination of the everyday and the mysterious, perfect for generating creativity, boosting IQ and instilling STEM knowledge.<br>
 *Images:<br>
-<img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/9a89d1c6-ed36-46b8-b02e-0727d299448a" />
+<img width="1000" height="1000" alt="image" src="../image/attachments/9a89d1c6-ed36-46b8-b02e-0727d299448a.png" />
 
 
 ### Benchmark 2 — Yahboom DOFBOT
@@ -143,7 +143,7 @@ Need/Type
 * Link to Vendor: <https://category.yahboom.net/products/dofbot-pi> <br>
 * Description: The DOFBOT is an educational robotic arm using Raspberry Pi hardware and supporting ROS/Python-based development and vision applications.<br>
 * Images:<br>
-<img width="1500" height="1500" alt="image" src="https://github.com/user-attachments/assets/b92563b5-d57b-4907-b85e-0a38604a3758" />
+<img width="1500" height="1500" alt="image" src="../image/attachments/b92563b5-d57b-4907-b85e-0a38604a3758.png" />
 
 
 ### Benchmark 3 — DOBOT Magician
@@ -199,7 +199,7 @@ Need/Type
 * Link to Vendor: <https://www.dobot-robots.com/products/desktop-four-axis/mg400.html><br>
 * Description: The DOBOT Magician is a desktop educational robotic arm with multiple programming methods, interchangeable end tools, and a published repeatability specification.<br>
 * Images:<br>
-<img width="365" height="547" alt="image" src="https://github.com/user-attachments/assets/d16f2727-d1ee-4a5d-bfe0-f94a0e84b9f8" />
+<img width="365" height="547" alt="image" src="../image/attachments/d16f2727-d1ee-4a5d-bfe0-f94a0e84b9f8.png" />
 
 
 
@@ -261,7 +261,7 @@ Need/Type
 * Link to Vendor: <https://www.hiwonder.com/products/xarm-1s?variant=32436121894999> <br>
 * Description: The Hiwonder xArm 1S is a compact desktop robotic arm designed for robotic gripping, sorting, automation demonstrations, and robotics education. It uses intelligent bus servos with position and voltage feedback and supports multiple control methods including PC software, smartphone applications, wireless controller, and mouse control.<br>
 * Images:<br>
-<img width="600" alt="Denoised_beauty_fd1c2f21-c347-4e0f-ad86-938a455c8afd" src="https://github.com/user-attachments/assets/32ff6043-c913-4381-896f-10b509a33a6d" />
+<img width="600" alt="Denoised_beauty_fd1c2f21-c347-4e0f-ad86-938a455c8afd" src="../image/attachments/32ff6043-c913-4381-896f-10b509a33a6d.webp" />
 
 ### Benchmark 5. Adeept 5-DOF Robotic Arm Kit
 **Key words:** low-cost Arduino programmable robotic arm kit for education and pick-and-place<br>
@@ -319,7 +319,7 @@ Need/Type
 * Link to Vendor: <https://www.adeept.com/adeept-5-dof-robotic-arm-kit-compatible-with-arduino-ide-programmable-diy-coding-stem-educational-5-axis-robot-arm-with-oled-display-processing-code_p0360.html><br>
 * Description: The Adeept 5-DOF Robotic Arm Kit is a low-cost educational robotic arm designed for learning assembly, programming, and robotic control. It is compatible with the Arduino IDE and includes an Arduino-compatible control board, OLED display, servo motors, and multiple control methods including manual potentiometer control and computer-based control.<br>
 * Images:<br>
-<img width="240" height="240" alt="505dcb7f59 jpg 240x240" src="https://github.com/user-attachments/assets/f93f52c2-ce5d-4ede-a74e-7efb71c171de" />
+<img width="240" height="240" alt="505dcb7f59 jpg 240x240" src="../image/attachments/f93f52c2-ce5d-4ede-a74e-7efb71c171de.jpg" />
 <br>
 ## Organized Need Statements
 
@@ -341,10 +341,10 @@ The current needs cover topics including:
 - Software and hardware expandability
 <br>
 *Images of initinal user needs:<br>
-<img width="904" height="855" alt="image" src="https://github.com/user-attachments/assets/837a8e02-ad76-43e4-8f50-92fe86f01528" /> <br>
-<img width="921" height="877" alt="image" src="https://github.com/user-attachments/assets/222b6631-ea6b-48ea-ba36-fe0fe8e41409" /> <br>
-<img width="934" height="907" alt="image" src="https://github.com/user-attachments/assets/c3821525-52a4-4105-bf06-48e3e7d99e70" /> <br>
-<img width="961" height="391" alt="image" src="https://github.com/user-attachments/assets/f3c68488-eb1b-434d-96ac-0d15ac1d88cc" /> <br>
+<img width="904" height="855" alt="image" src="../image/attachments/837a8e02-ad76-43e4-8f50-92fe86f01528.png" /> <br>
+<img width="921" height="877" alt="image" src="../image/attachments/222b6631-ea6b-48ea-ba36-fe0fe8e41409.png" /> <br>
+<img width="934" height="907" alt="image" src="../image/attachments/c3821525-52a4-4105-bf06-48e3e7d99e70.png" /> <br>
+<img width="961" height="391" alt="image" src="../image/attachments/f3c68488-eb1b-434d-96ac-0d15ac1d88cc.png" /> <br>
 
 ### Grouped with categories
 
@@ -384,13 +384,13 @@ After the first placement, similar user needs were grouped into the following ca
 **Meta Need:** The system should remain affordable and accessible to the intended student, hobbyist, and educational users.<br>
 <br>
 *Images of gouping: <br>
-<img width="466" height="442" alt="image" src="https://github.com/user-attachments/assets/09fbbfe2-2e17-4993-a473-8c2bb4c7912e" /> <br>
-<img width="1800" height="330" alt="image" src="https://github.com/user-attachments/assets/c7729894-132f-4dba-8333-c0a3b76a1a6c" />
+<img width="466" height="442" alt="image" src="../image/attachments/09fbbfe2-2e17-4993-a473-8c2bb4c7912e.png" /> <br>
+<img width="1800" height="330" alt="image" src="../image/attachments/c7729894-132f-4dba-8333-c0a3b76a1a6c.png" />
 <br>
 ### Ranked
-<img width="3300" height="2550" alt="image" src="https://github.com/user-attachments/assets/d0e80672-0c6e-490c-859a-f9a2cb810391" />
-<img width="3300" height="2550" alt="image" src="https://github.com/user-attachments/assets/5b595a22-9cd9-410d-9964-5cd814734f0e" />
-<img width="1577" height="224" alt="image" src="https://github.com/user-attachments/assets/a0517886-4792-407e-893e-33b20f986d47" />
+<img width="3300" height="2550" alt="image" src="../image/attachments/d0e80672-0c6e-490c-859a-f9a2cb810391.png" />
+<img width="3300" height="2550" alt="image" src="../image/attachments/5b595a22-9cd9-410d-9964-5cd814734f0e.png" />
+<img width="1577" height="224" alt="image" src="../image/attachments/a0517886-4792-407e-893e-33b20f986d47.png" />
 ## Appendix
 The ranking sheet link is attached below:
 <https://docs.google.com/spreadsheets/d/1gIUH5PPAoCbUolYi0Ti-0GztC6iwb-X7/edit?usp=sharing&ouid=117278669081927517388&rtpof=true&sd=true>

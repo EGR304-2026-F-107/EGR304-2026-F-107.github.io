@@ -316,7 +316,7 @@ The system would be controlled by a microcontroller and connected to a computer 
 
 ### Concept 1 Visual
 
-<img width="724" height="724" alt="concept-1-simple-educational-robotic-arm" src="https://github.com/user-attachments/assets/f2bc1a16-a1ed-4234-b737-495c2964441c" />
+<img width="724" height="724" alt="concept-1-simple-educational-robotic-arm" src="../image/attachments/f2bc1a16-a1ed-4234-b737-495c2964441c.png" />
 
 The concept image identifies the rotating base, servo-driven shoulder and elbow, two-finger gripper, microcontroller, emergency-stop control, and USB connection.
 
@@ -368,7 +368,7 @@ Expansion connections would also be included for sensors and future accessories.
 
 ### Concept 2 Visual
 
-<img width="724" height="724" alt="concept-2-modular-expandable-robotic-arm" src="https://github.com/user-attachments/assets/c1cfb3f8-9992-435e-a9dd-911e8477c2e5" />
+<img width="724" height="724" alt="concept-2-modular-expandable-robotic-arm" src="../image/attachments/c1cfb3f8-9992-435e-a9dd-911e8477c2e5.png" />
 
 The concept image identifies the modular arm sections, interchangeable gripper, quick-change tool mount, sensor expansion ports, camera mount, standard connectors, and microcontroller.
 
@@ -421,7 +421,7 @@ The software would support coordinated joint movement, adjustable speed, stored 
 
 ### Concept 3 Visual
 
-<img width="724" height="724" alt="concept-3-precision-automated-robotic-arm" src="https://github.com/user-attachments/assets/05f3b8ac-7e35-46b8-b538-7630bc2c97a5" />
+<img width="724" height="724" alt="concept-3-precision-automated-robotic-arm" src="../image/attachments/05f3b8ac-7e35-46b8-b538-7630bc2c97a5.png" />
 
 The concept image identifies the position-feedback joints, homing switches, parallel gripper, object sensor, microcontroller, emergency stop, USB connection, and stable base.
 
@@ -450,7 +450,7 @@ The three concepts approach the same project goal from different directions.
 
 These three concepts provide distinct approaches for the robotic arm while maintaining the project's central requirements. The concepts can now be compared against the engineering requirements and user needs to determine which design direction should be developed further.
 
-<img width="667" height="797" alt="image" src="https://github.com/user-attachments/assets/b085edd2-18be-4764-ba0e-65039828e152" />
+<img width="667" height="797" alt="image" src="../image/attachments/b085edd2-18be-4764-ba0e-65039828e152.png" />
 
 
 ## Step 5: Concept Selection and Decision-Making
