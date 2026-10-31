@@ -19,7 +19,7 @@ Fall 2026<br>
 
 ## Team Introduction
 
-We are Team 107 in EGR 304 Embedded Systems Design. This website documents how the robotic arm was designed: the user needs and product requirements, the design ideation and concept selection, the team block diagram, the software proposal and the signal structure between the three boards. Each team member's individual datasheet covers the detailed design of their own board (component selection, schematic, bill of materials and power budget).
+We are Team 107. This website documents how the robotic arm was designed: the user needs and product requirements, the design ideation and concept selection, the team block diagram, the software proposal and the signal structure between the three boards. Each team member's individual datasheet covers the detailed design of their own board which including component selection, schematic, bill of materials and power budget.
 
 ## Team Members and Individual Datasheets
 
