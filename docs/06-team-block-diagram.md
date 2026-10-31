@@ -3,9 +3,11 @@ title: Team Block Diagram
 ---
 
 ## Introduction
-**This block diagram shows how our team's three boards work together in a pick-and-place robotic arm system. Each board uses a Microchip PIC18F57Q43 Curiosity Nano and handles one function: Arm Motion Control by motor, H-bridge, position feedback, Gripper with servo, object and force sensors, and User Controls & Safety by E-stop, buttons, speed knob, LEDs, buzzer.**
+**This block diagram shows how our team's three boards work together in a pick-and-place robotic arm system. Each board uses a Microchip PIC18F57Q43 Curiosity Nano and handles one function: Arm Motion Control drives a 6 V gearmotor through a FAN8100N H-bridge; Gripper & Object Handling drives the Kitronik Klaw Mk2 servo and reads an FSR 402 force sensor; User Controls & Safety reads the E-stop, start/pause button and speed knob and drives the status LEDs and buzzer.**
 
-**The boards are connected in a daisy chain with 8-pin ribbon cables. Pins 1–5 carry digital signals (SAFE_OK, RUN_REQ, GRIP_CMD, OBJ_HELD, ARM_IN_POS), pins 6–7 carry analog signals (SPEED_SET, GRIP_FORCE), and pin 8 is GND. Every sensor and actuator connects only to its own board's microcontroller, so only high-level status and command signals cross between boards. Arrows show signal direction, and yellow blocks mark manufacturer and part numbers still to be decided.**
+**The boards are connected in a daisy chain with 8-pin ribbon cables. Pins 1–5 carry digital signals (SAFE_OK, RUN_REQ, GRIP_CMD, OBJ_HELD, ARM_IN_POS), pins 6–7 carry analog signals (SPEED_SET, GRIP_FORCE), and pin 8 is GND. Every sensor and actuator connects only to its own board's microcontroller, so only high-level status and command signals cross between boards. Arrows show signal direction.**
+
+**Power is drawn the same way on every board: supply wiring is shown only from each source (9 V wall adapter or the PC's USB port) to its regulators, and the rail each block runs from is written in bold inside the block instead of drawing a supply line to it. Every Curiosity Nano runs at its factory 3.3 V from USB, so all ribbon signals are 0 / 3.3 V, and all grounds are common through ribbon pin 8.**
 
 ## Research Question
 
@@ -14,8 +16,8 @@ title: Team Block Diagram
 * What are the risks to the current system if lose a teammate? How to de-risk the system design by grouping and/or distributing similar functions between teammates?
 
 ## Images
-<img width="3082" height="879" alt="EGR304_Team107_Blockdiagram drawio" src="https://github.com/user-attachments/assets/c51c77c4-6b99-4f84-99cd-0f502bdfddd8" />
-**Figure 1:** Team Block Diagram <br>
+![Team 107 block diagram](image/Team107_Team_Block_Diagram.png)
+**Figure 1:** Team block diagram (click the image to enlarge).
 
 ## Results
 1. We divided the system by physical ownership. Every sensor and actuator is wired only to the microcontroller on its own board, so no raw sensor or motor signal ever crosses a ribbon cable. Only high-level status and command signals are shared between boards. This keeps the whole team within 7 usable pins.<br>
@@ -77,9 +79,9 @@ The block diagram will be updated as necessary
 based on integration testing and instructor feedback.
 
 
-## External Links
+## Resources
 
-[Link to the block diagram](https://github.com/EGR304-2026-F-107/EGR304-2026-F-107.github.io/blob/main/EGR304_Team107_Blockdiagram.drawio)
+The block diagram source files (editable draw.io file and exported PNG) are available as a [*Zip download*](image/Team107_Team_Block_Diagram_source.zip). The draw.io file can also be opened directly: [*Team107_Team_Block_Diagram.drawio*](image/Team107_Team_Block_Diagram.drawio).
 
 
 
