@@ -486,6 +486,3 @@ The final design deviates from the ideation in three places:
 * **Boards talk over eight parallel signals, not a serial protocol.** Early ideas included PC and serial command interfaces. The team chose an 8-pin ribbon with one wire per signal because it can be checked with a multimeter or LED, needs no protocol code to bring up, and keeps the safety signal independent of firmware. See [Message Structure](09-Message%20Structure.md).
 
 The updated design is shown in the [Team Block Diagram](06-team-block-diagram.md).
-
-## Step Six (video link)
-Embedded a YouTube video that covers the 
