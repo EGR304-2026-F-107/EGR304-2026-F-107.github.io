@@ -41,4 +41,4 @@ software proposal, and engineering progress.
 | ---------------------- | -----------------------|
 | Canyon Miller                | [Individual Datasheet](https://canyonmill60.github.io/EGR304DataSheetTemplate/) |
 | Yixang Ren 		       | https://crackoxide.github.io/CrackOxide_EGR304_Fall26.github.io/ |
-| Dunyue Yang 		       | https://idtrfmnhcw.github.io/idtrfmnhcw_EGR304_F26.github.io/ |
+| Dunyue Yang 		       |[Individual Datasheet](https://idtrfmnhcw.github.io/idtrfmnhcw_EGR304_F26.github.io/) |
