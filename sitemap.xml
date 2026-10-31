@@ -1,72 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/</loc>
+         <loc>https://egr304-2026-f-107.github.io/</loc>
          <lastmod>2026-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/02-Team-Organization/</loc>
+         <loc>https://egr304-2026-f-107.github.io/02-Team-Organization/</loc>
          <lastmod>2026-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/03-User-Needs-and%20Benchmarking/</loc>
+         <loc>https://egr304-2026-f-107.github.io/03-User-Needs-and%20Benchmarking/</loc>
          <lastmod>2026-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/04-Product-Requirements/</loc>
+         <loc>https://egr304-2026-f-107.github.io/04-Product-Requirements/</loc>
          <lastmod>2026-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/05-design-ideation/</loc>
+         <loc>https://egr304-2026-f-107.github.io/05-design-ideation/</loc>
          <lastmod>2026-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/06-team-block-diagram/</loc>
+         <loc>https://egr304-2026-f-107.github.io/06-team-block-diagram/</loc>
          <lastmod>2026-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/07-Software%20Proposal/</loc>
+         <loc>https://egr304-2026-f-107.github.io/07-Software%20Proposal/</loc>
          <lastmod>2026-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/08-Process%20Diagram/</loc>
+         <loc>https://egr304-2026-f-107.github.io/08-Process%20Diagram/</loc>
          <lastmod>2026-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/09-Message%20Structure/</loc>
+         <loc>https://egr304-2026-f-107.github.io/09-Message%20Structure/</loc>
          <lastmod>2026-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/Appendix/</loc>
+         <loc>https://egr304-2026-f-107.github.io/Appendix/</loc>
          <lastmod>2026-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/Appendix/App-Team-Org/</loc>
-         <lastmod>2026-10-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/Appendix/another-subfile/</loc>
-         <lastmod>2026-10-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/Appendix/basic-markdown-examples/</loc>
-         <lastmod>2026-10-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://embedded-systems-design.github.io/EGR304TeamTemplate/Appendix/charts/</loc>
+         <loc>https://egr304-2026-f-107.github.io/Appendix/App-Team-Org/</loc>
          <lastmod>2026-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>

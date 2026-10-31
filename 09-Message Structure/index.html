@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/EGR304TeamTemplate/09-Message%20Structure/">
+        <link rel="canonical" href="https://egr304-2026-f-107.github.io/09-Message%20Structure/">
       
       
         <link rel="prev" href="../08-Process%20Diagram/">
@@ -26,7 +26,7 @@
 
     
       
-        <title>Message Structure - EGR304 Team Report Template</title>
+        <title>Message Structure - Team 107 - Simple Educational Robotic Arm</title>
       
     
     
@@ -106,7 +106,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="EGR304 Team Report Template" class="md-header__button md-logo" aria-label="EGR304 Team Report Template" data-md-component="logo">
+    <a href=".." title="Team 107 - Simple Educational Robotic Arm" class="md-header__button md-logo" aria-label="Team 107 - Simple Educational Robotic Arm" data-md-component="logo">
       
   <img src="../static/logo304.svg" alt="logo">
 
@@ -119,7 +119,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            EGR304 Team Report Template
+            Team 107 - Simple Educational Robotic Arm
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -176,7 +176,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/embedded-systems-design/EGR304TeamTemplate" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/EGR304-2026-F-107/EGR304-2026-F-107.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
@@ -398,16 +398,16 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="EGR304 Team Report Template" class="md-nav__button md-logo" aria-label="EGR304 Team Report Template" data-md-component="logo">
+    <a href=".." title="Team 107 - Simple Educational Robotic Arm" class="md-nav__button md-logo" aria-label="Team 107 - Simple Educational Robotic Arm" data-md-component="logo">
       
   <img src="../static/logo304.svg" alt="logo">
 
     </a>
-    EGR304 Team Report Template
+    Team 107 - Simple Educational Robotic Arm
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/embedded-systems-design/EGR304TeamTemplate" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/EGR304-2026-F-107/EGR304-2026-F-107.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
@@ -638,18 +638,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#images" class="md-nav__link">
+  <a href="#signal-definitions" class="md-nav__link">
     <span class="md-ellipsis">
-      Images
+      Signal Definitions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#external-links" class="md-nav__link">
+  <a href="#message-sequence" class="md-nav__link">
     <span class="md-ellipsis">
-      External Links
+      Message Sequence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handshake-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handshake Rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-one-cycle-on-the-wires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: one cycle on the wires
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
     </span>
   </a>
   
@@ -674,12 +701,6 @@
       
         
           
-        
-      
-        
-      
-        
-      
         
       
         
@@ -753,18 +774,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#images" class="md-nav__link">
+  <a href="#signal-definitions" class="md-nav__link">
     <span class="md-ellipsis">
-      Images
+      Signal Definitions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#external-links" class="md-nav__link">
+  <a href="#message-sequence" class="md-nav__link">
     <span class="md-ellipsis">
-      External Links
+      Message Sequence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handshake-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handshake Rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-one-cycle-on-the-wires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: one cycle on the wires
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
     </span>
   </a>
   
@@ -785,7 +833,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/EGR304TeamTemplate/edit/main/docs/09-Message Structure.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/EGR304-2026-F-107/EGR304-2026-F-107.github.io/edit/main/docs/09-Message Structure.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
     </a>
@@ -796,11 +844,214 @@
   <h1>Message Structure</h1>
 
 <h2 id="introduction">Introduction</h2>
-<h2 id="images">Images</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/c51c77c4-6b99-4f84-99cd-0f502bdfddd8" data-desc-position="bottom"><img width="3082" height="879" alt="EGR304_Team107_Blockdiagram drawio" src="https://github.com/user-attachments/assets/c51c77c4-6b99-4f84-99cd-0f502bdfddd8"></a>
-<strong>Figure 1:</strong> Message Structure <br></p>
-<h2 id="external-links">External Links</h2>
-<p><a href="https://github.com/EGR304-2026-F-107/EGR304-2026-F-107.github.io/blob/main/EGR304_Team107_Blockdiagram.drawio">Link to the Message Structure</a></p>
+<p>Team 107's boards do not exchange serial messages. Each "message" is the level of one wire on the <strong>8-pin ribbon cable</strong> that links the User Controls &amp; Safety, Gripper &amp; Object Handling and Arm Motion Control boards in a daisy chain. This page defines every signal and the order in which they change during a cycle. The <a href="../08-Process%20Diagram/">Process Diagram</a> shows the same cycle from each board's point of view.</p>
+<h2 id="signal-definitions">Signal Definitions</h2>
+<p>All logic signals use 0 / 3.3 V levels, because all three Curiosity Nanos run at 3.3 V. Each signal has exactly <strong>one driver</strong>. The Gripper board passes all eight pins straight through (1:1), so every board sees every signal.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Type</th>
+<th>Driver</th>
+<th>Receiver(s)</th>
+<th>1 / high means</th>
+<th>0 / low means</th>
+<th>Unplugged reads</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>SAFE_OK</td>
+<td>Digital</td>
+<td>User (RD0)</td>
+<td>Arm, Gripper</td>
+<td>Safe to run</td>
+<td>Stop now</td>
+<td>0 (stop)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>RUN_REQ</td>
+<td>Digital</td>
+<td>User (RD1)</td>
+<td>Arm</td>
+<td>Start / continue cycle</td>
+<td>Pause after current move</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>GRIP_CMD</td>
+<td>Digital</td>
+<td>Arm (RD2)</td>
+<td>Gripper</td>
+<td>Close gripper</td>
+<td>Open gripper</td>
+<td>0 (open)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>OBJ_HELD</td>
+<td>Digital</td>
+<td>Gripper (RD3)</td>
+<td>Arm, User</td>
+<td>Object held (force ≥ threshold)</td>
+<td>Not holding</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ARM_IN_POS</td>
+<td>Digital</td>
+<td>Arm (RD4)</td>
+<td>Gripper, User</td>
+<td>Arm is at its target</td>
+<td>Arm is moving</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>SPEED_SET</td>
+<td>Analog 0–3.3 V</td>
+<td>User DAC (RA2)</td>
+<td>Arm ADC (RA1)</td>
+<td>Higher voltage = faster</td>
+<td>0 V = slowest</td>
+<td>0 V</td>
+</tr>
+<tr>
+<td>7</td>
+<td>GRIP_FORCE</td>
+<td>Analog 0–3.3 V</td>
+<td>Gripper DAC (RA2)</td>
+<td>User ADC (RA1)</td>
+<td>Higher voltage = more force</td>
+<td>0 V = no force</td>
+<td>0 V</td>
+</tr>
+<tr>
+<td>8</td>
+<td>GND</td>
+<td>Ground</td>
+<td>—</td>
+<td>all</td>
+<td>Common reference</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Electrical rules</strong></p>
+<ul>
+<li>Every digital input has a 10 kΩ pull-down, so a missing cable or an unpowered board reads 0.</li>
+<li>Every digital output has a 330 Ω series resistor, which limits current if two boards ever drive the same wire by mistake.</li>
+<li>Analog inputs have a 1 kΩ / 0.1 µF RC filter before the ADC.</li>
+<li>The connectors are keyed 2 × 4 shrouded headers, so the cable cannot be plugged in backwards.</li>
+</ul>
+<h2 id="message-sequence">Message Sequence</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/Team107_Message_Sequence.png" data-desc-position="bottom"><img alt="Team 107 message sequence" src="../image/Team107_Message_Sequence.png"></a>
+<strong>Figure 1:</strong> Signal sequence for one pick-and-place cycle and the stop path (click to enlarge).</p>
+<h2 id="handshake-rules">Handshake Rules</h2>
+<ol>
+<li><strong>Nothing moves without SAFE_OK = 1.</strong> Both the Arm and Gripper boards check SAFE_OK at the top of every loop. A 0 stops all motion immediately, whatever state the board is in.</li>
+<li><strong>The Arm board leads the cycle.</strong> It starts only when SAFE_OK = 1 and RUN_REQ = 1, and it is the only board that drives GRIP_CMD and ARM_IN_POS.</li>
+<li><strong>The Gripper board acts only when the arm is in position.</strong> It closes on GRIP_CMD = 1 only while ARM_IN_POS = 1, and opens on GRIP_CMD = 0.</li>
+<li><strong>The Arm board waits for OBJ_HELD before carrying an object.</strong> If OBJ_HELD does not rise within the grip timeout, the arm clears GRIP_CMD and retries once, then shows a fault.</li>
+<li><strong>Restart is deliberate.</strong> After any stop, the User board drops RUN_REQ. The user must release the E-stop and press Start again.</li>
+<li><strong>Analog values are advisory.</strong> SPEED_SET only scales the arm's PWM duty, and GRIP_FORCE is only displayed. A bad analog value cannot start motion on its own.</li>
+</ol>
+<h2 id="example-one-cycle-on-the-wires">Example: one cycle on the wires</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>SAFE_OK</th>
+<th>RUN_REQ</th>
+<th>ARM_IN_POS</th>
+<th>GRIP_CMD</th>
+<th>OBJ_HELD</th>
+<th>What is happening</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Idle</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>Waiting for Start</td>
+</tr>
+<tr>
+<td>Start</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>Arm moving to pick</td>
+</tr>
+<tr>
+<td>At pick</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>Gripper closing</td>
+</tr>
+<tr>
+<td>Gripped</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>Object held</td>
+</tr>
+<tr>
+<td>Carrying</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>Arm moving to place</td>
+</tr>
+<tr>
+<td>At place</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>Gripper opening</td>
+</tr>
+<tr>
+<td>Released</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>Cycle counted; repeat</td>
+</tr>
+<tr>
+<td>E-stop</td>
+<td>0</td>
+<td>0</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>All motion stopped</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resources">Resources</h2>
+<p>The sequence diagram source (Mermaid <code>.mmd</code> file and exported PNG) is available as a <a href="../image/Team107_Message_Structure_source.zip"><em>Zip download</em></a>. The <code>.mmd</code> file can be edited at <a href="https://mermaid.live">mermaid.live</a>.</p>
 
 
 
@@ -856,13 +1107,13 @@
         
         
           
-          <a href="../Appendix/" class="md-footer__link md-footer__link--next" aria-label="Next: Appendix - Main Page">
+          <a href="../Appendix/" class="md-footer__link md-footer__link--next" aria-label="Next: Appendix">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Appendix - Main Page
+                Appendix
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -879,21 +1130,9 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright © 2025 team-name-here
+      Copyright © 2026 Team 107 (Yixiang Ren, Canyon Miller, Dunyue Yang)
     </div>
   
-  
-</div>
-      
-        <div class="md-social">
-  
-    
-    
-    
-    
-    <a href="/2025_fall" target="_blank" rel="noopener" title="2023 Site" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h160v80c0 17.7 14.3 32 32 32h80v288c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3l-90.6-90.5C262.7 6.7 246.5 0 229.5 0H64zm97 289c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L79 303c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31 31-31zm96-34c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9l-48-48z"></path></svg>
-    </a>
   
 </div>
       

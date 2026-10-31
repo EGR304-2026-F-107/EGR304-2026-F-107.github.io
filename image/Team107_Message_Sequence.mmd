@@ -1,0 +1,24 @@
+sequenceDiagram
+    participant U as User Controls & Safety
+    participant A as Arm Motion Control
+    participant G as Gripper & Object Handling
+    Note over U,G: All signals 0 / 3.3 V on the 8-pin ribbon. Pull-downs make every unplugged input read 0 (stop).
+    U->>A: SAFE_OK = 1 (pin 1)
+    U->>G: SAFE_OK = 1 (pin 1)
+    U->>A: SPEED_SET = 0 to 3.3 V (pin 6, DAC)
+    U->>A: RUN_REQ = 1 (pin 2, Start pressed)
+    Note over A: move joint to PICK at SPEED_SET speed
+    A->>G: ARM_IN_POS = 1 (pin 5)
+    A->>G: GRIP_CMD = 1 (pin 3, close)
+    Note over G: close servo until FSR 402 force > threshold
+    G->>A: OBJ_HELD = 1 (pin 4)
+    G->>U: GRIP_FORCE = force voltage (pin 7, DAC)
+    A->>G: ARM_IN_POS = 0 (moving)
+    Note over A: move joint to PLACE
+    A->>G: ARM_IN_POS = 1
+    A->>G: GRIP_CMD = 0 (open)
+    G->>A: OBJ_HELD = 0
+    Note over U,G: cycle repeats while RUN_REQ = 1
+    U-->>A: SAFE_OK = 0 (E-stop) at any time
+    U-->>G: SAFE_OK = 0
+    Note over A,G: Arm PWM to 0 %, Gripper holds, User shows red LED + buzzer
