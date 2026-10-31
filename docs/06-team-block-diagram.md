@@ -28,24 +28,58 @@ title: Team Block Diagram
 
 ## Conclusions and Future Work
 
+## Design Decision-Making Process
+
+The team divided the robotic arm into three independent
+subsystems: Arm Motion Control, Gripper & Object Handling,
+and User Controls & Safety.
+
+This architecture was selected to simplify hardware
+development, reduce communication complexity, and
+allow each subsystem to be tested independently.
+
+The User Controls & Safety subsystem uses a PIC18F57Q43
+Curiosity Nano to monitor the emergency stop, Start/Pause
+button, and speed control potentiometer.
+
+LED indicators and a ULN2003A buzzer driver provide
+visual and audible feedback.
+
+The 8-pin team connector allows the subsystem to
+exchange control and status signals with the other boards.
+
+### Relationship to Product Requirements
+
+| Subsystem | Related Requirements |
+|---|---|
+| Arm Motion Control | PR-01, PR-02, PR-04 |
+| Gripper & Object Handling | PR-03, PR-08 |
+| User Controls & Safety | PR-07, PR-12, PR-14, PR-15 |
+
+The modular design allows each subsystem to support
+specific product requirements while contributing
+to the overall pick-and-place operation.
+
+The emergency-stop circuit provides stop-request
+monitoring. The final motion-stopping behavior
+must be verified during system integration.
+
+## Conclusions and Future Work
+
+The current block diagram establishes the hardware
+architecture and communication interfaces for Team 107.
+
+Future work includes verifying connector pin assignments,
+testing communication between the three microcontrollers,
+and validating the safety and control functions.
+
+The block diagram will be updated as necessary
+based on integration testing and instructor feedback.
+
+
 ## External Links
 
 [Link to the block diagram](https://github.com/EGR304-2026-F-107/EGR304-2026-F-107.github.io/blob/main/EGR304_Team107_Blockdiagram.drawio)
 
-
-## Results
-
-1. Numbered Point 1
-1. Numbered Point 2
-1. Numbered Point 3
-
-## Conclusions and Future Work
-
-## External Links
-
-[example link to idealab](https://idealab.asu.edu)
-
-
-## References
 
 
