@@ -1,6 +1,6 @@
-site_name: EGR304 Team Report Template
-site_url: https://embedded-systems-design.github.io/EGR304TeamTemplate
-repo_url: https://github.com/embedded-systems-design/EGR304TeamTemplate
+site_name: Team 107 - Simple Educational Robotic Arm
+site_url: https://egr304-2026-f-107.github.io/
+repo_url: https://github.com/EGR304-2026-F-107/EGR304-2026-F-107.github.io
 edit_uri: edit/main/docs/
 theme:
   name: material
@@ -59,11 +59,7 @@ extra_javascript:
 not_in_nav: |
   static
   
-copyright: "Copyright &copy; 2025 team-name-here"
+copyright: "Copyright &copy; 2026 Team 107 (Yixiang Ren, Canyon Miller, Dunyue Yang)"
 
 extra:
   generator: false
-  social:
-    - icon: fontawesome/regular/file-code
-      link: /2025_fall
-      name: 2023 Site    

@@ -229,3 +229,17 @@ Manufacturing considerations include:<br>
 16.) Which components should be designed to be replaceable?<br>
 17.) What documentation is necessary for a beginning robotics student to successfully assemble and program the system?<br>
 18.) What future sensors, end effectors, or software features should the modular architecture support?<br>
+
+### Questions Answered by the Design So Far
+
+| Question | Answer from the current design |
+|---|---|
+| 4.) Degrees of freedom | First prototype: one motorized arm joint plus the gripper; more joints are future work |
+| 5.) Microcontroller | PIC18F57Q43 Curiosity Nano on all three boards (3.3 V logic) |
+| 6.) Motors and drivers | Arm: Pololu #2370 6 V micro metal gearmotor with an onsemi FAN8100N H-bridge. Gripper: Kitronik Klaw Mk2 servo claw |
+| 7.) Initial sensors | FSR 402 grip-force sensor on the Gripper board; joint position sensing is left to the Arm board's expansion header |
+| 8.) Computer vision | Reserved for future expansion |
+| 9.) Language and environment | C with MPLAB X, XC8 and MCC Melody |
+| 10.) Control interface | User board with E-stop, Start/Pause button, speed knob, status LEDs and buzzer; boards linked by an 8-pin parallel ribbon cable (see [Message Structure](09-Message%20Structure.md)) |
+| 12.) Emergency stop | Normally closed E-stop on the User board drives SAFE_OK; any board that sees SAFE_OK = 0 or a missing cable stops |
+| 16.) Replaceable components | Curiosity Nanos on female headers, socketed driver ICs, screw-terminal motor connections and a removable ribbon cable |

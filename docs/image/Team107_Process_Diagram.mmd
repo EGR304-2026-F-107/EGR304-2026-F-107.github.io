@@ -1,0 +1,19 @@
+flowchart TD
+    A([Power on: each board initializes MCC peripherals<br/>all outputs low, motor PWM 0 %]) --> B{SAFE_OK = 1?}
+    B -- No --> S[STOP state<br/>Arm: PWM 0 %<br/>Gripper: hold position<br/>User: red LED + buzzer]
+    S --> B
+    B -- Yes --> C{RUN_REQ = 1?<br/>Start/Pause pressed on User board}
+    C -- No --> I[IDLE<br/>User: green LED blinking] --> B
+    C -- Yes --> D[Arm reads SPEED_SET ADC<br/>drives joint toward PICK position<br/>forward PWM on RC4]
+    D --> E[Arm stops at PICK<br/>ARM_IN_POS = 1, GRIP_CMD = 1]
+    E --> F[Gripper closes servo<br/>reads FSR 402 force]
+    F --> G{Force above threshold<br/>within time limit?}
+    G -- No --> H[Gripper opens<br/>Arm GRIP_CMD = 0<br/>debug LED: retry / fault] --> B
+    G -- Yes --> J[Gripper: OBJ_HELD = 1<br/>GRIP_FORCE = force voltage]
+    J --> K[Arm: ARM_IN_POS = 0<br/>drives joint to PLACE position<br/>reverse PWM on RC5]
+    K --> L[Arm stops at PLACE<br/>ARM_IN_POS = 1, GRIP_CMD = 0]
+    L --> M[Gripper opens<br/>OBJ_HELD = 0]
+    M --> N[Cycle complete<br/>User: cycle counter + 1]
+    N --> B
+    classDef stop fill:#f8d7da,stroke:#b02a37;
+    class S stop;

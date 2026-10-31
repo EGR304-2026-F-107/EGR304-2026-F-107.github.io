@@ -3,24 +3,49 @@ title: Process Diagram
 ---
 
 ## Introduction
-** **
+
+The process diagram shows how one pick-and-place cycle runs across Team 107's three boards: **User Controls & Safety** (Dunyue Yang), **Arm Motion Control** (Yixiang Ren) and **Gripper & Object Handling** (Canyon Miller). Each board has its own column. Arrows between columns are changes on the 8-pin ribbon cable; the exact signals are defined on the [Message Structure](09-Message%20Structure.md) page, and the firmware behind each box is described in the [Software Proposal](07-Software%20Proposal.md).
 
 ## Research Question
 
+*How do three independent microcontrollers, linked only by eight parallel wires, take turns to complete a pick-and-place cycle safely, and what happens when something goes wrong?*
 
+The diagram answers this by showing, for every step, which board acts, which signal it changes, and which board is waiting for that change. It also shows the stop path that every board checks on every loop.
 
 ## Process Diagram
-<img width="3082" height="879" alt="EGR304_Team107_Blockdiagram drawio" src="https://github.com/user-attachments/assets/c51c77c4-6b99-4f84-99cd-0f502bdfddd8" />
-**Figure 1:** Process Diagram <br>
-## External Link
 
-[Link to the block diagram](https://github.com/EGR304-2026-F-107/EGR304-2026-F-107.github.io/blob/main/EGR304_Team107_Blockdiagram.drawio)
+![Team 107 process diagram](image/Team107_Process_Diagram.png)
+**Figure 1:** Process diagram for one pick-and-place cycle (click to enlarge).
+
+## How to Read the Diagram
+
+1. **Power-up.** Each board initializes with every output low and its motor or servo stopped. The Arm and Gripper boards wait.
+2. **Start.** When the E-stop is released, the User board sets SAFE_OK = 1. When the user presses Start, it sets RUN_REQ = 1 and outputs the speed knob value on SPEED_SET.
+3. **Move to pick.** The Arm board drives the joint forward with PWM on RC4 at the requested speed. When the move is done it sets ARM_IN_POS = 1 and GRIP_CMD = 1.
+4. **Grip.** The Gripper board closes the claw until the FSR 402 reaches the force threshold, then sets OBJ_HELD = 1. It also outputs the measured force on GRIP_FORCE, and the User board displays it.
+5. **Move to place.** The Arm board clears ARM_IN_POS and drives the joint in reverse with PWM on RC5. At the place position it sets ARM_IN_POS = 1 and GRIP_CMD = 0.
+6. **Release.** The gripper opens and clears OBJ_HELD. The User board counts the cycle. If RUN_REQ is still 1, the cycle repeats.
+7. **Stop path (any time).** If SAFE_OK becomes 0 because the E-stop is pressed, a fault occurs, or the cable is unplugged, the Arm board sets both PWM outputs to 0 %, the Gripper board holds, and the User board turns on the red LED and buzzer. The user must release the E-stop and press Start again to continue.
 
 ## Results
-1. We divided the system by physical ownership. Every sensor and actuator is wired only to the microcontroller on its own board, so no raw sensor or motor signal ever crosses a ribbon cable. Only high-level status and command signals are shared between boards. This keeps the whole team within 7 usable pins.<br>
-2. Yes. Each board has its own microcontroller, at least one ribbon connector, and at least one sensor or actuator: the Arm board has a motor and a position sensor, the Gripper board has a servo plus object and force sensors, and the User board has an E-stop, buttons, a speed knob, LEDs and a buzzer. The three roles are unique. Together they use different peripherals.<br>
-3. Losing the User board means SAFE_OK is never driven, so the system stays safely stopped and cannot run. Losing the Gripper board breaks the chain between the other two boards, because it sits in the middle. Losing the Arm board removes all motion. We reduce these risks in four ways:<br>
-  (1).Every connector has a test header, so jumpers can simulate a missing teammate's signals and the other boards can still be tested.<br>
-  (2). We use a cable that can run directly from the Arm board to the User board, so the chain survives without the Gripper board.<br>
-  (3). All three boards use the same MCU, the same pin map and a shared handshake module, so any teammate can write a stub for another board's interface.<br>
-  (4). The Arm board gets a local stop input that is ANDed with SAFE_OK in hardware, so safety does not depend on a single board.<br>
+
+1. **We divided the system by physical ownership.** Every sensor and actuator is wired only to the microcontroller on its own board, so no raw sensor or motor signal crosses the ribbon cable. Only status, command and two 0–3.3 V analog values are shared, and they fit in 7 signal pins plus ground.
+2. **Each board meets the subsystem requirements.** Each board has its own microcontroller, a ribbon connector, and at least one sensor or actuator:
+    * the Arm board has the DC gearmotor and FAN8100N H-bridge;
+    * the Gripper board has the servo claw and the FSR 402 force sensor;
+    * the User board has the E-stop, Start/Pause button, speed knob, LEDs and buzzer.
+3. **What happens if one board is missing, and how we reduce the risk.**
+    * Losing the User board: SAFE_OK is never driven, the pull-downs read 0, and the system stays safely stopped.
+    * Losing the Arm board: no motion happens.
+    * Losing the Gripper board: GRIP_CMD has no answer, so the Arm board times out and stops.
+
+    We reduce these risks in four ways:
+
+    1. Every input has a pull-down, so a missing board or cable reads as "stop".
+    2. Each signal has one driver, so any board can be tested alone by pulling its inputs high or low with jumpers.
+    3. All three boards use the same PIC18F57Q43 Curiosity Nano and the same ribbon pin order, so any teammate can write a stub for another board.
+    4. The Gripper board passes every ribbon pin straight through (1:1), so the User board's SAFE_OK reaches the Arm board on the same wire.
+
+## Resources
+
+The diagram source (Mermaid `.mmd` file and exported PNG) is available as a [*Zip download*](image/Team107_Process_Diagram_source.zip). The `.mmd` file can be edited at [mermaid.live](https://mermaid.live).

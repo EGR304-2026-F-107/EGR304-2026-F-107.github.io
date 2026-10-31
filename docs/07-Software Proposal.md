@@ -8,328 +8,165 @@ title: Software Proposal
 
 ### Overview
 
-The purpose of the software is to control the movement,
-positioning, and gripping operations of the Simple
-Educational Robotic Arm.
+The software controls the movement, positioning and gripping of the Simple Educational Robotic Arm. Each of the three boards (Arm Motion Control, Gripper & Object Handling, User Controls & Safety) runs its own firmware on a PIC18F57Q43 Curiosity Nano. The firmware is written in C with MPLAB X, XC8 and MCC Melody.
 
-The robotic arm is divided into three subsystems,
-with each subsystem responsible for a specific
-part of the overall operation.
-
-The system uses PIC18F57Q43 Curiosity Nano
-microcontrollers to process inputs, control
-outputs, and communicate between subsystems.
+The three programs never send messages to each other. Each one reads and drives the **eight parallel signals of the team ribbon cable**, where every signal has one wire and one driver. A pick-and-place cycle is a handshake on those wires. The flowchart of one cycle is on the [Process Diagram](08-Process%20Diagram.md) page, and the signal definitions and timing are on the [Message Structure](09-Message%20Structure.md) page.
 
 ### Software Objectives
 
 The proposed software will:
 
-1. Initialize the microcontroller peripherals
-   required for each subsystem.
+1. Initialize each board's peripherals with every output low and the motor and servo stopped, so the system powers up safe.
+2. Let the user start, pause and stop the sequence and set the arm speed from the User board.
+3. Drive the arm joint between a pick position and a place position, with speed set by PWM.
+4. Close the gripper until the FSR 402 shows enough force, then report that the object is held.
+5. Sequence the arm and gripper through the ARM_IN_POS → GRIP_CMD → OBJ_HELD handshake.
+6. Stop all motion whenever SAFE_OK goes low (E-stop pressed, fault, or cable unplugged) and show the state with LEDs and the buzzer.
 
-2. Receive commands to control robotic arm
-   movement and gripper operation.
+### Firmware Structure (all three boards)
 
-3. Generate the required control signals for
-   the robotic arm actuators.
+Every board uses the same simple structure, so any teammate can read or stub another board's code:
 
-4. Read the gripper's force-sensitive resistor
-   through the analog-to-digital converter (ADC).
-
-5. Use force sensor measurements to help
-   prevent excessive gripping pressure.
-
-6. Exchange commands and status information
-   between subsystems through the planned
-   communication interfaces.
-
-7. Support safe operation by responding to
-   stop commands and detected faults.
-
-### Gripper Subsystem Operation
-
-The Gripper & Object Handling subsystem uses
-a Kitronik Klaw Mk2 robotic gripper and an
-FSR 402 force sensor.
-
-The PIC18F57Q43 will generate servo control
-pulses to open and close the gripper.
-
-The FSR 402 produces a variable electrical
-signal that is conditioned by an MCP6004
-operational amplifier and read through
-the microcontroller's ADC.
-
-The software will use these measurements to
-monitor gripping force and adjust or stop
-gripper movement when necessary.
-
-### Implementation Status
-
-This document describes the proposed software
-architecture. Final pin assignments, peripheral
-configuration, communication protocol, and
-control thresholds will be verified during
-implementation and testing.
-
-
-[example link to idealab](https://idealab.asu.edu)
-
+* **MCC-generated drivers:** clock (HFINTOSC 64 MHz), pins, ADC, PWM, DAC and UART, depending on the board.
+* **One `main` loop with a state machine:** `INIT → IDLE → RUN states… → STOP`. The loop runs every 1 ms from a timer tick.
+* **Safety check at the top of every loop:** if SAFE_OK = 0, the board goes to `STOP` before doing anything else.
+* **Debug output:** a debug LED and an optional `printf` over the Nano's virtual COM port (UART). This UART goes to the PC only, not to the other boards.
 
 ## Proposed Software Operating Sequence
 
-The robotic arm software will use a repeated
-control loop to receive commands, operate
-the arm, monitor the gripper, and report status.
+![Team 107 process diagram](image/Team107_Process_Diagram.png)
+**Figure 1:** One pick-and-place cycle across the three boards (also on the [Process Diagram](08-Process%20Diagram.md) page; click to enlarge).
 
 ### Step 1: System Initialization
 
-When the system starts, each PIC18F57Q43
-microcontroller will initialize its required
-peripherals, including GPIO, ADC, timers,
-servo control outputs, and UART interfaces
-where applicable.
+Each Curiosity Nano runs `SYSTEM_Initialize()`.
 
-The system will begin in a safe, inactive
-state until valid commands are received.
+* Motor PWM and servo outputs start stopped.
+* All ribbon outputs start low.
+* The Arm board's H-bridge inputs are also held low by pull-down resistors during reset.
 
-### Step 2: Receive User Commands
+### Step 2: Wait for Safe and Run
 
-The system will wait for commands requesting
-arm movement, positioning, or gripper operation.
+The Arm board waits until **SAFE_OK = 1** and **RUN_REQ = 1**. Both come from the User board: the E-stop is released and the Start/Pause button has been pressed. While waiting, the User board blinks the green LED.
 
-The responsible subsystem will interpret the
-command and determine the required action.
+### Step 3: Safety Check (every loop)
 
-### Step 3: Safety Check
+On all three boards, SAFE_OK = 0 forces the `STOP` state:
 
-Before commanding motion, the software will
-check applicable safety conditions.
+* the Arm board sets both PWM outputs to 0 %;
+* the Gripper board holds its position;
+* the User board turns on the red LED and sounds the buzzer.
 
-If a stop request or detected fault is active,
-the software will prevent new motion commands.
+After SAFE_OK returns, the user must press Start again; the boards do not resume on their own.
 
-### Step 4: Arm Movement
+### Step 4: Arm Movement to Pick
 
-The arm-control subsystems will generate the
-signals required to move the robotic arm
-toward the requested position.
-
-Movement details will depend on the final
-actuator and controller configurations.
+The Arm board reads SPEED_SET with its ADC and drives the joint toward the pick position with forward PWM. The joint runs at the set duty cycle for the programmed move time, then the board stops the motor and sets **ARM_IN_POS = 1** and **GRIP_CMD = 1**.
 
 ### Step 5: Gripper Operation
 
-The Gripper & Object Handling subsystem will
-receive an open or close command.
-
-The PIC will generate the appropriate servo
-control pulses for the Kitronik Klaw Mk2
-gripper mechanism.
+When the Gripper board sees GRIP_CMD = 1, it sends servo pulses to close the Kitronik Klaw Mk2.
 
 ### Step 6: Force Sensor Measurement
 
-The FSR 402 force sensor will measure contact
-pressure at the gripper.
-
-The sensor signal will pass through the
-MCP6004 signal-conditioning circuit before
-being measured by the PIC ADC.
+The FSR 402 signal is buffered by the MCP6004 and read by the Gripper board's ADC. The board also outputs the force as a voltage on **GRIP_FORCE**, from its DAC, so the User board can display it.
 
 ### Step 7: Gripper Control
 
-The software will compare the force sensor
-reading against a calibrated threshold.
+* **Force reaches the threshold:** the Gripper board stops closing and sets **OBJ_HELD = 1**.
+* **No grip within the time limit:** the gripper opens. The Arm board then clears GRIP_CMD and retries once; if the retry also fails, it signals a fault on its debug LED.
 
-If the threshold is reached, the software
-will stop commanding further closure or
-adjust the gripper position as appropriate.
+### Step 8: Move to Place and Release
 
-The final threshold and control behavior
-will be determined through testing.
+When the Arm board sees OBJ_HELD = 1:
 
-### Step 8: Status Communication
-
-The subsystems will exchange relevant
-commands and status information through
-their planned communication interfaces.
-
-The exact message format and timing will
-be finalized during integration.
+1. It clears ARM_IN_POS and drives the joint to the place position with reverse PWM.
+2. It sets ARM_IN_POS = 1 and **GRIP_CMD = 0**.
+3. The gripper opens and clears OBJ_HELD.
 
 ### Step 9: Repeat
 
-After completing an operation, the system
-will return to its command-processing loop
-and wait for the next requested action.
-
-## Software Development Status
-
-This operating sequence represents the
-proposed software behavior.
-
-Peripheral configurations, communication
-protocols, motion control methods, and
-safety responses will require implementation
-and verification before the system is
-considered operational.
-
+The User board counts completed cycles from ARM_IN_POS and OBJ_HELD. While RUN_REQ stays high, the cycle repeats. Pressing Start/Pause again clears RUN_REQ and the arm stops at the end of its current move.
 
 ## Subsystem Communication and Software Responsibilities
 
 ### System Architecture
 
-The Simple Educational Robotic Arm is divided
-into three subsystems, each controlled by a
-PIC18F57Q43 Curiosity Nano microcontroller.
+Each subsystem is responsible for its own sensors, actuators and local control. Only the eight ribbon signals cross between boards. Each board reads every signal it needs and drives only its own.
 
-Each subsystem is responsible for its own
-sensors, actuators, and local control functions.
+### Subsystem 1: Arm Motion Control (Yixiang Ren)
 
-The subsystems will communicate to coordinate
-arm movement, gripper operation, and system status.
+| Function | Peripheral / pin | Firmware behavior |
+|---|---|---|
+| Joint motor forward / reverse | PWM1_16BIT outputs on RC4 / RC5 → FAN8100N | Only one output is non-zero at a time. Duty cycle is scaled from SPEED_SET. Both outputs are 0 % in STOP. |
+| Speed request | ADCC on RA1 (SPEED_SET) | Read every move; averaged over several samples |
+| Ribbon inputs | RD0 SAFE_OK, RD1 RUN_REQ, RD3 OBJ_HELD | 10 kΩ pull-downs on the board, so a missing cable reads 0 |
+| Ribbon outputs | RD2 GRIP_CMD, RD4 ARM_IN_POS | Driven by the state machine |
+| Debug | RE0 LED, RE1 button (weak pull-up), UART1 to PC | Button steps one move at a time in test mode; the LED shows the current state |
 
-### Subsystem 1: Arm Control
+### Subsystem 2: Gripper & Object Handling (Canyon Miller)
 
-The arm-control software will:
+| Function | Peripheral / pin | Firmware behavior |
+|---|---|---|
+| Gripper servo | PWM on RB3 (50 Hz servo pulses) | Open / close on GRIP_CMD; hold position in STOP |
+| Grip force | ADC on RA0 (FSR 402 through MCP6004) | Compare with a calibrated threshold; stop closing at the threshold |
+| Force output | DAC1 on RA2 (GRIP_FORCE) | Voltage proportional to measured force |
+| Ribbon inputs | RD0 SAFE_OK, RD2 GRIP_CMD, RD4 ARM_IN_POS | Pull-downs, so a missing cable reads 0 |
+| Ribbon output | RD3 OBJ_HELD | 1 while the object is held |
+| Debug | RF4 LED, RB2 pushbutton | Manual open / close test |
 
-1. Receive movement commands.
-2. Determine the requested movement.
-3. Generate control signals for its actuators.
-4. Monitor applicable inputs and operating conditions.
-5. Report operating status to the other subsystems.
+### Subsystem 3: User Controls & Safety (Dunyue Yang)
 
-### Subsystem 2: Gripper & Object Handling
+| Function | Peripheral / pin | Firmware behavior |
+|---|---|---|
+| Emergency stop | RB0 input (normally closed contact) | Opening the switch sets SAFE_OK = 0 immediately |
+| Start / Pause | RB1 input | Debounced; toggles RUN_REQ |
+| Speed knob | ADC on RA0 (10 kΩ potentiometer) | Filtered and sent to the Arm board as SPEED_SET from DAC1 on RA2 |
+| Status | RB2 green LED, RB3 red LED, buzzer through ULN2003A on RC4 (PWM) | Green: running / idle; red + buzzer: stop or fault |
+| Ribbon outputs | RD0 SAFE_OK, RD1 RUN_REQ, RA2 SPEED_SET | SAFE_OK is driven high only while the E-stop is released and no fault is present |
+| Ribbon inputs | RD3 OBJ_HELD, RD4 ARM_IN_POS, RA1 GRIP_FORCE (ADC) | Used for the cycle counter and the status display |
 
-The gripper software will:
-
-1. Receive open and close commands.
-
-2. Generate servo control pulses for the
-   Kitronik Klaw Mk2 robotic gripper.
-
-3. Read the FSR 402 force sensor using the ADC.
-
-4. Monitor gripping force against a calibrated
-   threshold.
-
-5. Prevent additional closure when the force
-   threshold is reached.
-
-6. Report gripper status to the other subsystems.
-
-### Subsystem 3: User Controls & Safety
-
-The User Controls & Safety subsystem is responsible for
-monitoring user inputs, managing operating requests,
-and providing system status feedback.
-
-The PIC18F57Q43 Curiosity Nano will perform the
-following software functions:
-
-1. Monitor the normally closed emergency-stop switch
-   through the RB0 digital input.
-
-2. Read the Start/Pause button through RB1 to determine
-   the user's requested operating state.
-
-3. Read the 10 kΩ speed-control potentiometer through
-   the RA0 ADC input.
-
-4. Process the ADC value to generate an adjustable
-   SPEED_SET command for the arm-control subsystem.
-
-5. Control the green and red LEDs through RB2 and RB3
-   to indicate operating and fault conditions.
-
-6. Control the ULN2003A buzzer driver through RC4
-   to provide audible warnings.
-
-7. Exchange safety, operating, and status signals
-   with the other robotic subsystems.
-
-### Software Design Rationale
-
-The user-control functions are managed by a separate
-microcontroller to simplify software development
-and reduce the complexity of the motor-control system.
-
-The software will prioritize emergency-stop requests
-over normal operating commands.
-
-After an emergency-stop condition is cleared,
-the system will require a deliberate restart command
-before allowing normal operation to resume.
-
-This architecture supports PR-07 (Programmable Movement
-Control), PR-12 (Stop Robotic Motion), and
-PR-15 (Beginner Accessibility).
-
-The final software behavior and communication signals
-will be verified during system integration.
 ### Communication Interface
 
-The proposed communication system uses UART
-connections between the microcontrollers.
+The boards communicate over the **8-pin ribbon cable** with one signal per wire, at 0 / 3.3 V logic. The two analog signals are 0–3.3 V voltages. There is no serial protocol between boards: a signal's level *is* the message. The full table of signals, drivers, meanings and timing is on the [Message Structure](09-Message%20Structure.md) page.
 
-Each subsystem will have designated transmit
-and receive connections.
+| Pin | Signal | Driver → receiver(s) |
+|---|---|---|
+| 1 | SAFE_OK | User → Arm, Gripper |
+| 2 | RUN_REQ | User → Arm |
+| 3 | GRIP_CMD | Arm → Gripper |
+| 4 | OBJ_HELD | Gripper → Arm, User |
+| 5 | ARM_IN_POS | Arm → Gripper, User |
+| 6 | SPEED_SET (analog) | User → Arm |
+| 7 | GRIP_FORCE (analog) | Gripper → User |
+| 8 | GND | common |
 
-The current gripper schematic identifies:
+## Software Design Decision-Making
 
-- UART_TX: RB4
-- UART_RX: RE2
-- Common ground between connected boards
+**Why each board runs its own simple state machine.** Each teammate can write, test and debug their firmware alone, with jumpers standing in for the other boards. A state machine with named states (IDLE, MOVE_TO_PICK, WAIT_GRIP, MOVE_TO_PLACE, RELEASE, STOP) maps one-to-one onto the process diagram, so the code is easy for a beginner to follow (PR-15, PR-16).
 
-The final UART peripheral configuration and
-pin assignments must be verified in MCC.
+**Why parallel signals instead of messages.** The team first considered UART messages such as MOVE and GRIP_OPEN between boards. They were replaced with the 8-pin parallel signals for three reasons:
 
-### Proposed Communication Messages
+* no parsing, framing or checksum code is needed, and each board's link code is a few pin reads and writes;
+* every signal can be checked with an LED or a meter during bring-up (PR-18);
+* a crashed board or broken cable shows up as a 0 on its wires, which the receivers already treat as "stop" (PR-12).
 
-| Message | Purpose |
+**Why the safety check comes first in every loop.** Stopping does not wait for the current move to finish or for a message to arrive. SAFE_OK is a hardware level that every board reads at least once a millisecond.
+
+**Why the arm uses timed moves for now.** The first prototype has no joint position sensor. The Arm firmware keeps the move time and duty cycle as named constants, so they are easy to tune. A future encoder or potentiometer on the Arm board's expansion header can replace the timer without changing the rest of the state machine (PR-11).
+
+### Relationship to Product Requirements
+
+| Requirement | How the software meets it |
 |---|---|
-| MOVE | Request arm movement |
-| POSITION | Request a positioning operation |
-| GRIP_OPEN | Request gripper opening |
-| GRIP_CLOSE | Request gripper closing |
-| GRIP_STATUS | Report gripper state |
-| STOP | Request motion to stop |
-| ERROR | Report a detected fault |
+| PR-01 Pick-and-place sequence | The state machine and the ARM_IN_POS / GRIP_CMD / OBJ_HELD handshake run the full cycle |
+| PR-02 / PR-04 Repeatable, stable motion | Fixed move times and duty cycles; the ADC speed value is averaged; the cycle repeats without recalibration |
+| PR-03 / PR-08 Gripper control | Closing stops at a force threshold, and the gripper opens on command |
+| PR-07 / PR-16 Programmable movement | Speed from the knob; move times and thresholds are named constants a student can change and test |
+| PR-12 Stop robotic motion | SAFE_OK checked every loop on every board; restart needs a deliberate Start press |
+| PR-15 Beginner accessibility | One simple state machine per board, MCC-generated drivers, LED and serial debug output |
+| PR-18 Troubleshooting | Debug LEDs, test mode on the Arm board's debug button, and signals that can be checked with an LED or a meter |
 
-These messages are proposed examples rather
-than an implemented communication protocol.
+## Software Development Status
 
-The team will determine the final message
-format, addressing method, baud rate, and
-error-handling behavior during integration.
-
-### Coordination and Safety
-
-The subsystems will coordinate operations so
-that movement and gripping commands are
-processed in an appropriate sequence.
-
-Each controller will check relevant safety
-conditions before operating its actuators.
-
-If a fault or stop condition occurs, the
-affected subsystem will prevent further
-commanded motion and report its status.
-
-The final safety behavior will be validated
-during system testing.
-
-### Integration Status
-
-The communication architecture is currently
-proposed.
-
-Successful UART communication, command
-handling, subsystem coordination, and fault
-responses remain to be implemented and tested.
-
-
-
-## References
-
-
+The MCC configuration for each board is set up, including the Arm board's PWM, ADC and UART. The state machines described here are the proposed design. Move times, force thresholds and debounce times will be set during bench testing, and the handshake will be verified when the three boards are connected.

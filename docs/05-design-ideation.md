@@ -130,7 +130,7 @@ At this stage, ideas were not eliminated based on cost, complexity, or feasibili
 
 
 
-## ## Step 3: Organizing and Ranking Generated Ideas
+## Step 3: Organizing and Ranking Generated Ideas
 
 After generating possible features for the robotic arm, the ideas were reviewed and organized into groups based on the function they perform. Similar ideas were placed together so that the team could compare different solutions to the same design problem.
 
@@ -258,7 +258,7 @@ A three-level ranking system was used:
 | Documentation | Calibration troubleshooting procedure | High | Provides guidance for resolving homing and calibration problems. |
 | Documentation | FAQ documentation | Medium | Provides quick answers to common setup, programming, calibration, and operating questions. |
 
-## ## Step 4: Product Concepts
+## Step 4: Product Concepts
 
 After organizing and ranking the generated ideas, the highest-priority features were combined into three distinct robotic-arm concepts. Each concept addresses the project's primary goal of creating a low-cost desktop robotic arm capable of precise and repeatable pick-and-place operations. However, each concept emphasizes a different approach to meeting the user needs.
 
@@ -316,9 +316,9 @@ The system would be controlled by a microcontroller and connected to a computer 
 
 ### Concept 1 Visual
 
-**[<img width="724" height="724" alt="concept-1-simple-educational-robotic-arm" src="https://github.com/user-attachments/assets/f2bc1a16-a1ed-4234-b737-495c2964441c" />]**
+<img width="724" height="724" alt="concept-1-simple-educational-robotic-arm" src="https://github.com/user-attachments/assets/f2bc1a16-a1ed-4234-b737-495c2964441c" />
 
-The concept image should identify the rotating base, servo-driven shoulder and elbow, two-finger gripper, microcontroller, emergency-stop control, and USB connection.
+The concept image identifies the rotating base, servo-driven shoulder and elbow, two-finger gripper, microcontroller, emergency-stop control, and USB connection.
 
 ---
 
@@ -368,9 +368,9 @@ Expansion connections would also be included for sensors and future accessories.
 
 ### Concept 2 Visual
 
-**[<img width="724" height="724" alt="concept-2-modular-expandable-robotic-arm" src="https://github.com/user-attachments/assets/c1cfb3f8-9992-435e-a9dd-911e8477c2e5" />]**
+<img width="724" height="724" alt="concept-2-modular-expandable-robotic-arm" src="https://github.com/user-attachments/assets/c1cfb3f8-9992-435e-a9dd-911e8477c2e5" />
 
-The concept image should identify the modular arm sections, interchangeable gripper, quick-change tool mount, sensor expansion ports, camera mount, standard connectors, and microcontroller.
+The concept image identifies the modular arm sections, interchangeable gripper, quick-change tool mount, sensor expansion ports, camera mount, standard connectors, and microcontroller.
 
 ---
 
@@ -421,9 +421,9 @@ The software would support coordinated joint movement, adjustable speed, stored 
 
 ### Concept 3 Visual
 
-**[<img width="724" height="724" alt="concept-3-precision-automated-robotic-arm" src="https://github.com/user-attachments/assets/05f3b8ac-7e35-46b8-b538-7630bc2c97a5" />]**
+<img width="724" height="724" alt="concept-3-precision-automated-robotic-arm" src="https://github.com/user-attachments/assets/05f3b8ac-7e35-46b8-b538-7630bc2c97a5" />
 
-The concept image should identify the position-feedback joints, homing switches, parallel gripper, object sensor, microcontroller, emergency stop, USB connection, and stable base.
+The concept image identifies the position-feedback joints, homing switches, parallel gripper, object sensor, microcontroller, emergency stop, USB connection, and stable base.
 
 ---
 
@@ -452,6 +452,40 @@ These three concepts provide distinct approaches for the robotic arm while maint
 
 <img width="667" height="797" alt="image" src="https://github.com/user-attachments/assets/b085edd2-18be-4764-ba0e-65039828e152" />
 
+
+## Step 5: Concept Selection and Decision-Making
+
+### How the decision was made
+
+The team compared the three concepts against the product requirements and against what three students can build, wire and program in one semester with a PIC18F57Q43 Curiosity Nano on each board. Each concept was discussed against four questions:
+
+1. **Does it meet the core requirements?** All three concepts can run a programmed pick-and-place sequence (PR-01) and stop safely (PR-12).
+2. **Can it stay inside the budget and the class rules?** These are PR-17 and PR-14: through-hole parts, no breakout modules without approval, parts in stock and inside their ratings.
+3. **Is it approachable for a beginner?** This covers PR-15 and PR-16.
+4. **Can the work be split so that every member owns a board with its own sensor or actuator?** This is required by the course.
+
+**Concept 1 (Simple Educational)** was selected as the base design. It has the lowest cost and complexity and the strongest beginner focus, which matches the project's mission of a low barrier to entry. **Concept 3 (Precision)** was set aside for the first prototype: joint feedback on every axis, homing switches and coordinated multi-joint control would need more sensors, more firmware and more calibration than the schedule allows. From **Concept 2 (Modular)**, the team kept the modular *electrical* architecture: separate boards, standard connectors and spare I/O for future sensors. Concept 2's mechanical tool changer and camera mount were not kept.
+
+The selected design is therefore **Concept 1 with Concept 2's modular board structure**:
+
+| Concept 1 feature | What the team kept | Why |
+|---|---|---|
+| Rotating base, shoulder, elbow on servos | One arm joint driven by a 6 V DC gearmotor through an H-bridge; the gripper uses a servo | Gives the Arm board its own actuator and driver, separate from the Gripper board's servo, and keeps the first prototype to one powered joint |
+| Two-finger gripper with grip pads | Kitronik Klaw Mk2 servo gripper with an FSR 402 force sensor | Grip force sensing (PR-03) is cheap to add and protects the object |
+| Start / Stop / Home controls, status LEDs | E-stop, start/pause button, speed knob, green and red LEDs, buzzer on the User board | One board owns every user input and status output, so safety logic is in one place (PR-12, PR-15) |
+| Microcontroller + USB | One PIC18F57Q43 Curiosity Nano per board, each powered and programmed over USB | Each member can program and test their board alone |
+| Emergency stop and software limits | Hard-wired SAFE_OK line from the User board to every board, with pull-downs so an unplugged cable means "stop" | Stopping does not depend on any software message (PR-12, Regulation 6.3) |
+| (from Concept 2) expansion I/O, standard connectors | Keyed 8-pin ribbon connectors between boards and a spare-I/O header on the Arm board | Boards can be replaced or extended without redesign (PR-10, PR-11) |
+
+### How the final design differs from the concepts
+
+The final design deviates from the ideation in three places:
+
+* **No joint position feedback or homing switches in the first prototype.** Concept 3's joint feedback, and the potentiometer in an early Arm board design, were removed to keep the prototype simple and within budget. The arm runs the joint motor at a set speed for a set time and then reports ARM_IN_POS. To keep this upgrade path open (PR-11), the Arm board brings out an analog-capable pin and 3.3 V on its expansion header, so a potentiometer or magnetic encoder can be added later without a new PCB.
+* **One DC-motor joint instead of three servo joints.** The three-board split needs each board to use a different peripheral: H-bridge PWM, servo PWM with an ADC, and user I/O. A DC gearmotor with an H-bridge on the Arm board meets this, and it is enough to demonstrate a repeatable pick-and-place motion.
+* **Boards talk over eight parallel signals, not a serial protocol.** Early ideas included PC and serial command interfaces. The team chose an 8-pin ribbon with one wire per signal because it can be checked with a multimeter or LED, needs no protocol code to bring up, and keeps the safety signal independent of firmware. See [Message Structure](09-Message%20Structure.md).
+
+The updated design is shown in the [Team Block Diagram](06-team-block-diagram.md).
 
 ## Step Six (video link)
 Embedded a YouTube video that covers the 

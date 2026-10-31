@@ -20,64 +20,56 @@ title: Team Block Diagram
 **Figure 1:** Team block diagram (click the image to enlarge).
 
 ## Results
-1. We divided the system by physical ownership. Every sensor and actuator is wired only to the microcontroller on its own board, so no raw sensor or motor signal ever crosses a ribbon cable. Only high-level status and command signals are shared between boards. This keeps the whole team within 7 usable pins.<br>
-2. Yes. Each board has its own microcontroller, at least one ribbon connector, and at least one sensor or actuator: the Arm board has a motor and a position sensor, the Gripper board has a servo plus object and force sensors, and the User board has an E-stop, buttons, a speed knob, LEDs and a buzzer. The three roles are unique. Together they use different peripherals.<br>
-3. Losing the User board means SAFE_OK is never driven, so the system stays safely stopped and cannot run. Losing the Gripper board breaks the chain between the other two boards, because it sits in the middle. Losing the Arm board removes all motion. We reduce these risks in four ways:<br>
-  (1).Every connector has a test header, so jumpers can simulate a missing teammate's signals and the other boards can still be tested.<br>
-  (2). We use a cable that can run directly from the Arm board to the User board, so the chain survives without the Gripper board.<br>
-  (3). All three boards use the same MCU, the same pin map and a shared handshake module, so any teammate can write a stub for another board's interface.<br>
-  (4). The Arm board gets a local stop input that is ANDed with SAFE_OK in hardware, so safety does not depend on a single board.<br>
+1. **Interconnections are kept to a minimum.** The system is divided by physical ownership. Every sensor and actuator is wired only to the microcontroller on its own board, so no raw sensor or motor signal crosses a ribbon cable. Only high-level status and command signals are shared between boards: five digital, two analog and ground. This fits the whole team on one 8-pin connector, with one wire per signal.<br>
+2. **Every teammate meets the minimum project requirements.** Each board has its own microcontroller, at least one ribbon connector, and at least one sensor or actuator, and each board uses different peripherals:
+    * The Arm board has a DC gearmotor, an H-bridge and two PWM outputs.
+    * The Gripper board has a servo (PWM) and a force sensor (ADC).
+    * The User board has an E-stop, buttons, a speed knob (ADC), a DAC output for SPEED_SET, LEDs and a buzzer.<br>
+3. **Losing a teammate's board is a known risk.**
+    * If the User board is missing, SAFE_OK is never driven, so the system stays safely stopped and cannot run.
+    * If the Gripper board is missing, the chain between the other two boards breaks, because it sits in the middle.
+    * If the Arm board is missing, there is no motion.
 
-## Conclusions and Future Work
+   We reduce these risks in four ways:<br>
+  (1) Every board's digital inputs have pull-down resistors and every board has test points or headers, so jumpers can simulate a missing teammate's signals and the other boards can still be tested.<br>
+  (2) The Gripper board passes pins 1–8 straight through from Connector 1 to Connector 2, so a single cable can run directly from the Arm board to the User board and the chain still works without the Gripper board.<br>
+  (3) All three boards use the same MCU, the same pin map and the same signal definitions, so any teammate can write a stub for another board's interface.<br>
+  (4) Safety does not depend on firmware messages. SAFE_OK is a dedicated wire from the User board's E-stop logic, and the pull-downs on the receiving boards turn a broken or unplugged cable into "stop".<br>
 
 ## Design Decision-Making Process
 
-The team divided the robotic arm into three independent
-subsystems: Arm Motion Control, Gripper & Object Handling,
-and User Controls & Safety.
+**Why three boards split by function.** The arm was divided into Arm Motion Control, Gripper & Object Handling, and User Controls & Safety, so that each member owns one physical function end to end and each board can be built and tested alone. Grouping all user inputs and status outputs on one board puts the safety logic in a single place. Keeping the motor on its own board keeps motor current and noise away from the other boards.
 
-This architecture was selected to simplify hardware
-development, reduce communication complexity, and
-allow each subsystem to be tested independently.
+**Why an 8-pin parallel ribbon instead of a serial bus.** Each signal has its own wire and exactly one driver, so the link needs no protocol firmware. It can be checked with a multimeter or an LED, and a fault on one wire does not corrupt the others. The two analog signals (SPEED_SET and GRIP_FORCE) are sent as voltages from a DAC, which avoids encoding numbers. Every Curiosity Nano runs at 3.3 V, so all ribbon signals use the same 0 / 3.3 V levels.
 
-The User Controls & Safety subsystem uses a PIC18F57Q43
-Curiosity Nano to monitor the emergency stop, Start/Pause
-button, and speed control potentiometer.
+**Why a daisy chain (Arm – Gripper – User).** The Gripper sits in the middle because it exchanges signals with both other boards, and it passes the ribbon through 1:1 so the Arm and User boards still see every signal.
 
-LED indicators and a ULN2003A buzzer driver provide
-visual and audible feedback.
+**Why each board has its own power.** Each board has its own 9 V adapter input and regulators for its actuator: the 6 V motor rail on the Arm board, the 5 V servo rail on the Gripper board and the 5 V buzzer rail on the User board. Every Nano is powered from USB. This way each board can be powered and tested alone, and motor current never flows through a teammate's board. Grounds are joined through ribbon pin 8.
 
-The 8-pin team connector allows the subsystem to
-exchange control and status signals with the other boards.
+### How the block diagram meets the product requirements
 
-### Relationship to Product Requirements
-
-| Subsystem | Related Requirements |
+| Requirement | How the architecture meets it |
 |---|---|
-| Arm Motion Control | PR-01, PR-02, PR-04 |
-| Gripper & Object Handling | PR-03, PR-08 |
-| User Controls & Safety | PR-07, PR-12, PR-14, PR-15 |
-
-The modular design allows each subsystem to support
-specific product requirements while contributing
-to the overall pick-and-place operation.
-
-The emergency-stop circuit provides stop-request
-monitoring. The final motion-stopping behavior
-must be verified during system integration.
+| PR-01 Pick-and-place sequence | The ARM_IN_POS → GRIP_CMD → OBJ_HELD handshake sequences the arm and gripper across boards |
+| PR-02 / PR-04 Repeatable, stable motion | The Arm board drives its joint from a regulated 6 V rail with PWM speed control, independent of the other boards' loads |
+| PR-03 / PR-08 Gripper control | The Gripper board's servo and FSR 402 close the grip on command and report OBJ_HELD and GRIP_FORCE |
+| PR-07 / PR-16 Programmable movement | Speed (SPEED_SET) and the sequence are set in firmware and by the speed knob, and the result is visible on the arm |
+| PR-10 / PR-11 Modular, expandable | Independent boards, keyed connectors, pass-through wiring and spare-I/O headers |
+| PR-12 Stop motion | The E-stop on the User board drives SAFE_OK low, and every board stops when SAFE_OK is 0, including when the cable is unplugged |
+| PR-14 Electrical limits | Each board has its own fused supply and regulators sized in its power budget; all logic levels are 3.3 V |
+| PR-15 Beginner accessibility | Each board does one job, and signals can be watched with an LED or a meter |
 
 ## Conclusions and Future Work
 
-The current block diagram establishes the hardware
-architecture and communication interfaces for Team 107.
+The block diagram fixes the hardware architecture, the parts on each board, the power arrangement and the 8-pin interface for Team 107.
 
-Future work includes verifying connector pin assignments,
-testing communication between the three microcontrollers,
-and validating the safety and control functions.
+Future work includes:
 
-The block diagram will be updated as necessary
-based on integration testing and instructor feedback.
+* building the three boards and testing the ribbon signals between them;
+* verifying the SAFE_OK stop behavior with the cable connected and with it unplugged;
+* adding joint position feedback on the Arm board's expansion header if testing shows that timed moves are not repeatable enough.
 
+The block diagram will be updated after integration testing and instructor feedback.
 
 ## Resources
 
