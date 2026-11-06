@@ -844,7 +844,7 @@
   <h1>Message Structure</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>Team 107's boards do not exchange serial messages. Each "message" is the level of one wire on the <strong>8-pin ribbon cable</strong> that links the User Controls &amp; Safety, Gripper &amp; Object Handling and Arm Motion Control boards in a daisy chain. This page defines every signal and the order in which they change during a cycle. The <a href="../08-Process%20Diagram/">Process Diagram</a> shows the same cycle from each board's point of view.</p>
+<p>Team 107's boards do not exchange serial messages. Each "message" is the level of one wire on the <strong>8-pin team link</strong> (a 2 × 4 pin header on each board, connected with female-to-female jumper wires) that links the User Controls &amp; Safety, Gripper &amp; Object Handling and Arm Motion Control boards in a daisy chain. This page defines every signal and the order in which they change during a cycle. The <a href="../08-Process%20Diagram/">Process Diagram</a> shows the same cycle from each board's point of view.</p>
 <h2 id="signal-definitions">Signal Definitions</h2>
 <p>All logic signals use 0 / 3.3 V levels, because all three Curiosity Nanos run at 3.3 V. Each signal has exactly <strong>one driver</strong>. The Gripper board passes all eight pins straight through (1:1), so every board sees every signal.</p>
 <table>
@@ -945,10 +945,10 @@
 </table>
 <p><strong>Electrical rules</strong></p>
 <ul>
-<li>Every digital input has a 10 kΩ pull-down, so a missing cable or an unpowered board reads 0.</li>
+<li>Every digital input has a 10 kΩ pull-down, so a missing wire or an unpowered board reads 0.</li>
 <li>Every digital output has a 330 Ω series resistor, which limits current if two boards ever drive the same wire by mistake.</li>
 <li>Analog inputs have a 1 kΩ / 0.1 µF RC filter before the ADC.</li>
-<li>The connectors are keyed 2 × 4 shrouded headers, so the cable cannot be plugged in backwards.</li>
+<li>The connectors are plain 2 × 4 pin headers joined by individual jumper wires, so nothing is keyed. Pin 1 and the signal names are marked next to every header, and GND uses a fixed wire colour. A wire on the wrong pin cannot cause damage: the link carries only 3.3 V logic and GND, every output has a 330 Ω series resistor and every input has a pull-down.</li>
 </ul>
 <h2 id="message-sequence">Message Sequence</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/Team107_Message_Sequence.png" data-desc-position="bottom"><img alt="Team 107 message sequence" src="../image/Team107_Message_Sequence.png"></a>

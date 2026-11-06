@@ -1205,7 +1205,7 @@
 <h2 id="simple-educational-robotic-arm-team-107">Simple Educational Robotic Arm — Team 107</h2>
 <h3 id="overview">Overview</h3>
 <p>The software controls the movement, positioning and gripping of the Simple Educational Robotic Arm. Each of the three boards (Arm Motion Control, Gripper &amp; Object Handling, User Controls &amp; Safety) runs its own firmware on a PIC18F57Q43 Curiosity Nano. The firmware is written in C with MPLAB X, XC8 and MCC Melody.</p>
-<p>The three programs never send messages to each other. Each one reads and drives the <strong>eight parallel signals of the team ribbon cable</strong>, where every signal has one wire and one driver. A pick-and-place cycle is a handshake on those wires. The flowchart of one cycle is on the <a href="../08-Process%20Diagram/">Process Diagram</a> page, and the signal definitions and timing are on the <a href="../09-Message%20Structure/">Message Structure</a> page.</p>
+<p>The three programs never send messages to each other. Each one reads and drives the <strong>eight parallel signals of the team link</strong>, where every signal has one wire and one driver. A pick-and-place cycle is a handshake on those wires. The flowchart of one cycle is on the <a href="../08-Process%20Diagram/">Process Diagram</a> page, and the signal definitions and timing are on the <a href="../09-Message%20Structure/">Message Structure</a> page.</p>
 <h3 id="software-objectives">Software Objectives</h3>
 <p>The proposed software will:</p>
 <ol>
@@ -1214,7 +1214,7 @@
 <li>Drive the arm joint between a pick position and a place position, with speed set by PWM.</li>
 <li>Close the gripper until the FSR 402 shows enough force, then report that the object is held.</li>
 <li>Sequence the arm and gripper through the ARM_IN_POS → GRIP_CMD → OBJ_HELD handshake.</li>
-<li>Stop all motion whenever SAFE_OK goes low (E-stop pressed, fault, or cable unplugged) and show the state with LEDs and the buzzer.</li>
+<li>Stop all motion whenever SAFE_OK goes low (E-stop pressed, fault, or a wire unplugged) and show the state with LEDs and the buzzer.</li>
 </ol>
 <h3 id="firmware-structure-all-three-boards">Firmware Structure (all three boards)</h3>
 <p>Every board uses the same simple structure, so any teammate can read or stub another board's code:</p>
@@ -1231,7 +1231,7 @@
 <p>Each Curiosity Nano runs <code>SYSTEM_Initialize()</code>.</p>
 <ul>
 <li>Motor PWM and servo outputs start stopped.</li>
-<li>All ribbon outputs start low.</li>
+<li>All team-link outputs start low.</li>
 <li>The Arm board's H-bridge inputs are also held low by pull-down resistors during reset.</li>
 </ul>
 <h3 id="step-2-wait-for-safe-and-run">Step 2: Wait for Safe and Run</h3>
@@ -1266,7 +1266,7 @@
 <p>The User board counts completed cycles from ARM_IN_POS and OBJ_HELD. While RUN_REQ stays high, the cycle repeats. Pressing Start/Pause again clears RUN_REQ and the arm stops at the end of its current move.</p>
 <h2 id="subsystem-communication-and-software-responsibilities">Subsystem Communication and Software Responsibilities</h2>
 <h3 id="system-architecture">System Architecture</h3>
-<p>Each subsystem is responsible for its own sensors, actuators and local control. Only the eight ribbon signals cross between boards. Each board reads every signal it needs and drives only its own.</p>
+<p>Each subsystem is responsible for its own sensors, actuators and local control. Only the eight team-link signals cross between boards. Each board reads every signal it needs and drives only its own.</p>
 <h3 id="subsystem-1-arm-motion-control-yixiang-ren">Subsystem 1: Arm Motion Control (Yixiang Ren)</h3>
 <table>
 <thead>
@@ -1288,12 +1288,12 @@
 <td>Read every move; averaged over several samples</td>
 </tr>
 <tr>
-<td>Ribbon inputs</td>
+<td>Link inputs</td>
 <td>RD0 SAFE_OK, RD1 RUN_REQ, RD3 OBJ_HELD</td>
-<td>10 kΩ pull-downs on the board, so a missing cable reads 0</td>
+<td>10 kΩ pull-downs on the board, so a missing wire reads 0</td>
 </tr>
 <tr>
-<td>Ribbon outputs</td>
+<td>Link outputs</td>
 <td>RD2 GRIP_CMD, RD4 ARM_IN_POS</td>
 <td>Driven by the state machine</td>
 </tr>
@@ -1330,12 +1330,12 @@
 <td>Voltage proportional to measured force</td>
 </tr>
 <tr>
-<td>Ribbon inputs</td>
+<td>Link inputs</td>
 <td>RD0 SAFE_OK, RD2 GRIP_CMD, RD4 ARM_IN_POS</td>
-<td>Pull-downs, so a missing cable reads 0</td>
+<td>Pull-downs, so a missing wire reads 0</td>
 </tr>
 <tr>
-<td>Ribbon output</td>
+<td>Link output</td>
 <td>RD3 OBJ_HELD</td>
 <td>1 while the object is held</td>
 </tr>
@@ -1377,19 +1377,19 @@
 <td>Green: running / idle; red + buzzer: stop or fault</td>
 </tr>
 <tr>
-<td>Ribbon outputs</td>
+<td>Link outputs</td>
 <td>RD0 SAFE_OK, RD1 RUN_REQ, RA2 SPEED_SET</td>
 <td>SAFE_OK is driven high only while the E-stop is released and no fault is present</td>
 </tr>
 <tr>
-<td>Ribbon inputs</td>
+<td>Link inputs</td>
 <td>RD3 OBJ_HELD, RD4 ARM_IN_POS, RA1 GRIP_FORCE (ADC)</td>
 <td>Used for the cycle counter and the status display</td>
 </tr>
 </tbody>
 </table>
 <h3 id="communication-interface">Communication Interface</h3>
-<p>The boards communicate over the <strong>8-pin ribbon cable</strong> with one signal per wire, at 0 / 3.3 V logic. The two analog signals are 0–3.3 V voltages. There is no serial protocol between boards: a signal's level <em>is</em> the message. The full table of signals, drivers, meanings and timing is on the <a href="../09-Message%20Structure/">Message Structure</a> page.</p>
+<p>The boards communicate over the <strong>8-pin jumper-wire link</strong> with one signal per wire, at 0 / 3.3 V logic. The two analog signals are 0–3.3 V voltages. There is no serial protocol between boards: a signal's level <em>is</em> the message. The full table of signals, drivers, meanings and timing is on the <a href="../09-Message%20Structure/">Message Structure</a> page.</p>
 <table>
 <thead>
 <tr>
@@ -1447,7 +1447,7 @@
 <ul>
 <li>no parsing, framing or checksum code is needed, and each board's link code is a few pin reads and writes;</li>
 <li>every signal can be checked with an LED or a meter during bring-up (PR-18);</li>
-<li>a crashed board or broken cable shows up as a 0 on its wires, which the receivers already treat as "stop" (PR-12).</li>
+<li>a crashed board or loose wire shows up as a 0 on its wires, which the receivers already treat as "stop" (PR-12).</li>
 </ul>
 <p><strong>Why the safety check comes first in every loop.</strong> Stopping does not wait for the current move to finish or for a message to arrive. SAFE_OK is a hardware level that every board reads at least once a millisecond.</p>
 <p><strong>Why the arm uses timed moves for now.</strong> The first prototype has no joint position sensor. The Arm firmware keeps the move time and duty cycle as named constants, so they are easy to tune. A future encoder or potentiometer on the Arm board's expansion header can replace the timer without changing the rest of the state machine (PR-11).</p>

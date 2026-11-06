@@ -2921,12 +2921,12 @@
 </tr>
 <tr>
 <td>Emergency stop and software limits</td>
-<td>Hard-wired SAFE_OK line from the User board to every board, with pull-downs so an unplugged cable means "stop"</td>
+<td>Hard-wired SAFE_OK line from the User board to every board, with pull-downs so an unplugged wire means "stop"</td>
 <td>Stopping does not depend on any software message (PR-12, Regulation 6.3)</td>
 </tr>
 <tr>
 <td>(from Concept 2) expansion I/O, standard connectors</td>
-<td>Keyed 8-pin ribbon connectors between boards and a spare-I/O header on the Arm board</td>
+<td>2 × 4 pin-header connectors between boards and a spare-I/O header on the Arm board</td>
 <td>Boards can be replaced or extended without redesign (PR-10, PR-11)</td>
 </tr>
 </tbody>
@@ -2936,7 +2936,7 @@
 <ul>
 <li><strong>No joint position feedback or homing switches in the first prototype.</strong> Concept 3's joint feedback, and the potentiometer in an early Arm board design, were removed to keep the prototype simple and within budget. The arm runs the joint motor at a set speed for a set time and then reports ARM_IN_POS. To keep this upgrade path open (PR-11), the Arm board brings out an analog-capable pin and 3.3 V on its expansion header, so a potentiometer or magnetic encoder can be added later without a new PCB.</li>
 <li><strong>One DC-motor joint instead of three servo joints.</strong> The three-board split needs each board to use a different peripheral: H-bridge PWM, servo PWM with an ADC, and user I/O. A DC gearmotor with an H-bridge on the Arm board meets this, and it is enough to demonstrate a repeatable pick-and-place motion.</li>
-<li><strong>Boards talk over eight parallel signals, not a serial protocol.</strong> Early ideas included PC and serial command interfaces. The team chose an 8-pin ribbon with one wire per signal because it can be checked with a multimeter or LED, needs no protocol code to bring up, and keeps the safety signal independent of firmware. See <a href="../09-Message%20Structure/">Message Structure</a>.</li>
+<li><strong>Boards talk over eight parallel signals, not a serial protocol.</strong> Early ideas included PC and serial command interfaces. The team chose an 8-pin parallel link with one jumper wire per signal because it can be checked with a multimeter or LED, needs no protocol code to bring up, and keeps the safety signal independent of firmware. See <a href="../09-Message%20Structure/">Message Structure</a>.</li>
 </ul>
 <p>The updated design is shown in the <a href="../06-team-block-diagram/">Team Block Diagram</a>.</p>
 
