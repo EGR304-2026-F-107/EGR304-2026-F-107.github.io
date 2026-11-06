@@ -4,7 +4,7 @@ title: Process Diagram
 
 ## Introduction
 
-The process diagram shows how one pick-and-place cycle runs across Team 107's three boards: **User Controls & Safety** (Dunyue Yang), **Arm Motion Control** (Yixiang Ren) and **Gripper & Object Handling** (Canyon Miller). Each board has its own column. Arrows between columns are changes on the 8-pin ribbon cable; the exact signals are defined on the [Message Structure](09-Message%20Structure.md) page, and the firmware behind each box is described in the [Software Proposal](07-Software%20Proposal.md).
+The process diagram shows how one pick-and-place cycle runs across Team 107's three boards: **User Controls & Safety** (Dunyue Yang), **Arm Motion Control** (Yixiang Ren) and **Gripper & Object Handling** (Canyon Miller). Each board has its own column. Arrows between columns are changes on the 8-pin jumper-wire link; the exact signals are defined on the [Message Structure](09-Message%20Structure.md) page, and the firmware behind each box is described in the [Software Proposal](07-Software%20Proposal.md).
 
 ## Research Question
 
@@ -25,12 +25,12 @@ The diagram answers this by showing, for every step, which board acts, which sig
 4. **Grip.** The Gripper board closes the claw until the FSR 402 reaches the force threshold, then sets OBJ_HELD = 1. It also outputs the measured force on GRIP_FORCE, and the User board displays it.
 5. **Move to place.** The Arm board clears ARM_IN_POS and drives the joint in reverse with PWM on RC5. At the place position it sets ARM_IN_POS = 1 and GRIP_CMD = 0.
 6. **Release.** The gripper opens and clears OBJ_HELD. The User board counts the cycle. If RUN_REQ is still 1, the cycle repeats.
-7. **Stop path (any time).** If SAFE_OK becomes 0 because the E-stop is pressed, a fault occurs, or the cable is unplugged, the Arm board sets both PWM outputs to 0 %, the Gripper board holds, and the User board turns on the red LED and buzzer. The user must release the E-stop and press Start again to continue.
+7. **Stop path (any time).** If SAFE_OK becomes 0 because the E-stop is pressed, a fault occurs, or a wire is unplugged, the Arm board sets both PWM outputs to 0 %, the Gripper board holds, and the User board turns on the red LED and buzzer. The user must release the E-stop and press Start again to continue.
 
 ## Results
 
-1. **We divided the system by physical ownership.** Every sensor and actuator is wired only to the microcontroller on its own board, so no raw sensor or motor signal crosses the ribbon cable. Only status, command and two 0–3.3 V analog values are shared, and they fit in 7 signal pins plus ground.
-2. **Each board meets the subsystem requirements.** Each board has its own microcontroller, a ribbon connector, and at least one sensor or actuator:
+1. **We divided the system by physical ownership.** Every sensor and actuator is wired only to the microcontroller on its own board, so no raw sensor or motor signal crosses the team link. Only status, command and two 0–3.3 V analog values are shared, and they fit in 7 signal pins plus ground.
+2. **Each board meets the subsystem requirements.** Each board has its own microcontroller, a 2 × 4 team-link header, and at least one sensor or actuator:
     * the Arm board has the DC gearmotor and FAN8100N H-bridge;
     * the Gripper board has the servo claw and the FSR 402 force sensor;
     * the User board has the E-stop, Start/Pause button, speed knob, LEDs and buzzer.
@@ -41,10 +41,10 @@ The diagram answers this by showing, for every step, which board acts, which sig
 
     We reduce these risks in four ways:
 
-    1. Every input has a pull-down, so a missing board or cable reads as "stop".
+    1. Every input has a pull-down, so a missing board or wire reads as "stop".
     2. Each signal has one driver, so any board can be tested alone by pulling its inputs high or low with jumpers.
-    3. All three boards use the same PIC18F57Q43 Curiosity Nano and the same ribbon pin order, so any teammate can write a stub for another board.
-    4. The Gripper board passes every ribbon pin straight through (1:1), so the User board's SAFE_OK reaches the Arm board on the same wire.
+    3. All three boards use the same PIC18F57Q43 Curiosity Nano and the same team-link pin order, so any teammate can write a stub for another board.
+    4. The Gripper board passes every team-link pin straight through (1:1), so the User board's SAFE_OK reaches the Arm board on the same wire.
 
 ## Resources
 

@@ -17,5 +17,5 @@ title: Team Organization
 | Canyon Miller | Gripper & Object Handling | Servo gripper, FSR 402 force sensing, OBJ_HELD and GRIP_FORCE outputs |
 | Dunyue Yang | User Controls & Safety | Emergency stop, start/pause and speed inputs, status LEDs and buzzer, SAFE_OK / RUN_REQ / SPEED_SET outputs |
 
-Each member owns one board end to end (block diagram, component selection, schematic, BOM and power budget, documented in their individual datasheet). Team-level work, including the ribbon pin map, the team block diagram, the software proposal and this website, is shared by all three. More detail on team goals and communication is in the [Appendix](Appendix/App-Team-Org.md).
+Each member owns one board end to end (block diagram, component selection, schematic, BOM and power budget, documented in their individual datasheet). Team-level work, including the team-link pin map, the team block diagram, the software proposal and this website, is shared by all three. More detail on team goals and communication is in the [Appendix](Appendix/App-Team-Org.md).
 

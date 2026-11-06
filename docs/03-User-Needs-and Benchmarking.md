@@ -428,7 +428,7 @@ The ranked needs were carried into the [Product Requirements](04-Product-Require
 
 | Need category (rank) | Where it appears in the current design |
 |---|---|
-| Safety (1) | User Controls & Safety board: normally closed E-stop drives SAFE_OK on the ribbon; every board stops when SAFE_OK is 0 or the cable is unplugged |
+| Safety (1) | User Controls & Safety board: normally closed E-stop drives SAFE_OK on the team link; every board stops when SAFE_OK is 0 or a wire is unplugged |
 | Accuracy & Repeatability (2) | Arm Motion Control board: regulated 6 V motor rail and PWM speed control, so the same command gives the same motion every cycle |
 | Gripper & Object Handling (3) | Gripper & Object Handling board: servo claw with an FSR 402 force sensor; the arm waits for OBJ_HELD before carrying the object |
 | Programming & Control (4) | One simple state machine per board on the PIC18F57Q43, with speed set from a knob ([Software Proposal](07-Software%20Proposal.md)) |
@@ -438,7 +438,7 @@ The ranked needs were carried into the [Product Requirements](04-Product-Require
 | Sensors, Vision & Expansion (8) | Spare-pin expansion headers on each board for later sensors; vision is left for future work |
 | Documentation & Troubleshooting (9) | Test points, status and debug LEDs, and the team and individual websites |
 | Education & User Experience (10) | Simple start, pause, stop and speed controls with clear LED and buzzer feedback |
-| Assembly, Wiring & Components (11) | Keyed 8-pin ribbon cable with one signal per wire ([Message Structure](09-Message%20Structure.md)) |
+| Assembly, Wiring & Components (11) | 8-pin jumper-wire link between labelled 2 × 4 pin headers, one signal per wire ([Message Structure](09-Message%20Structure.md)) |
 
 ## Appendix
 

@@ -4,7 +4,7 @@ title: Message Structure
 
 ## Introduction
 
-Team 107's boards do not exchange serial messages. Each "message" is the level of one wire on the **8-pin ribbon cable** that links the User Controls & Safety, Gripper & Object Handling and Arm Motion Control boards in a daisy chain. This page defines every signal and the order in which they change during a cycle. The [Process Diagram](08-Process%20Diagram.md) shows the same cycle from each board's point of view.
+Team 107's boards do not exchange serial messages. Each "message" is the level of one wire on the **8-pin team link** (a 2 × 4 pin header on each board, connected with female-to-female jumper wires) that links the User Controls & Safety, Gripper & Object Handling and Arm Motion Control boards in a daisy chain. This page defines every signal and the order in which they change during a cycle. The [Process Diagram](08-Process%20Diagram.md) shows the same cycle from each board's point of view.
 
 ## Signal Definitions
 
@@ -23,10 +23,10 @@ All logic signals use 0 / 3.3 V levels, because all three Curiosity Nanos run at
 
 **Electrical rules**
 
-* Every digital input has a 10 kΩ pull-down, so a missing cable or an unpowered board reads 0.
+* Every digital input has a 10 kΩ pull-down, so a missing wire or an unpowered board reads 0.
 * Every digital output has a 330 Ω series resistor, which limits current if two boards ever drive the same wire by mistake.
 * Analog inputs have a 1 kΩ / 0.1 µF RC filter before the ADC.
-* The connectors are keyed 2 × 4 shrouded headers, so the cable cannot be plugged in backwards.
+* The connectors are plain 2 × 4 pin headers joined by individual jumper wires, so nothing is keyed. Pin 1 and the signal names are marked next to every header, and GND uses a fixed wire colour. A wire on the wrong pin cannot cause damage: the link carries only 3.3 V logic and GND, every output has a 330 Ω series resistor and every input has a pull-down.
 
 ## Message Sequence
 

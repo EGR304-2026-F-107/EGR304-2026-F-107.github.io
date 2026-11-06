@@ -468,8 +468,8 @@ The selected design is therefore **Concept 1 with Concept 2's modular board stru
 | Two-finger gripper with grip pads | Kitronik Klaw Mk2 servo gripper with an FSR 402 force sensor | Grip force sensing (PR-03) is cheap to add and protects the object |
 | Start / Stop / Home controls, status LEDs | E-stop, start/pause button, speed knob, green and red LEDs, buzzer on the User board | One board owns every user input and status output, so safety logic is in one place (PR-12, PR-15) |
 | Microcontroller + USB | One PIC18F57Q43 Curiosity Nano per board, each powered and programmed over USB | Each member can program and test their board alone |
-| Emergency stop and software limits | Hard-wired SAFE_OK line from the User board to every board, with pull-downs so an unplugged cable means "stop" | Stopping does not depend on any software message (PR-12, Regulation 6.3) |
-| (from Concept 2) expansion I/O, standard connectors | Keyed 8-pin ribbon connectors between boards and a spare-I/O header on the Arm board | Boards can be replaced or extended without redesign (PR-10, PR-11) |
+| Emergency stop and software limits | Hard-wired SAFE_OK line from the User board to every board, with pull-downs so an unplugged wire means "stop" | Stopping does not depend on any software message (PR-12, Regulation 6.3) |
+| (from Concept 2) expansion I/O, standard connectors | 2 × 4 pin-header connectors between boards and a spare-I/O header on the Arm board | Boards can be replaced or extended without redesign (PR-10, PR-11) |
 
 ### How the final design differs from the concepts
 
@@ -477,6 +477,6 @@ The final design deviates from the ideation in three places:
 
 * **No joint position feedback or homing switches in the first prototype.** Concept 3's joint feedback, and the potentiometer in an early Arm board design, were removed to keep the prototype simple and within budget. The arm runs the joint motor at a set speed for a set time and then reports ARM_IN_POS. To keep this upgrade path open (PR-11), the Arm board brings out an analog-capable pin and 3.3 V on its expansion header, so a potentiometer or magnetic encoder can be added later without a new PCB.
 * **One DC-motor joint instead of three servo joints.** The three-board split needs each board to use a different peripheral: H-bridge PWM, servo PWM with an ADC, and user I/O. A DC gearmotor with an H-bridge on the Arm board meets this, and it is enough to demonstrate a repeatable pick-and-place motion.
-* **Boards talk over eight parallel signals, not a serial protocol.** Early ideas included PC and serial command interfaces. The team chose an 8-pin ribbon with one wire per signal because it can be checked with a multimeter or LED, needs no protocol code to bring up, and keeps the safety signal independent of firmware. See [Message Structure](09-Message%20Structure.md).
+* **Boards talk over eight parallel signals, not a serial protocol.** Early ideas included PC and serial command interfaces. The team chose an 8-pin parallel link with one jumper wire per signal because it can be checked with a multimeter or LED, needs no protocol code to bring up, and keeps the safety signal independent of firmware. See [Message Structure](09-Message%20Structure.md).
 
 The updated design is shown in the [Team Block Diagram](06-team-block-diagram.md).
